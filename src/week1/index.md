@@ -1,68 +1,51 @@
 # Week 1 – Command Line and Running C Programs
 
-## Lab Logistics
-
-In this class, you are assigned to lab sections, in which you will be in the CSE basement lab rooms to work hands-on on activities related to the tools and techniques that you’ll be using on programming assignments.
-
-Labs are graded by participation, based on your attendance and engagement with the lab activity. Throughout the lab, you will fill in a shared Google Doc with notes and results from what you try and learn. This will be shared with the group of students around you so you have a collective record of your activities (and so we can comment on your progress!)
-
-Your TA/tutor will share the link to the Google Docs with you at the beginning of the lab. When the lab prompts you to write something in the Google doc, be sure to put your name next to your contributions so that we can confirm your participation!
-
-## Meet your Group!
-
-We will split into groups of 6-8 students for discussion. For week 1, you may sit
-wherever you want and choose who you want to work with. Starting week 2, we will have
-assigned seating and groups. These
-groups will be somewhat stable throughout the quarter, though some small changes
-will likely happen. You will have a tutor or TA assigned to your group for help
-and discussion.
-
-Your discussion leader (the tutor/TA in your lab) will share a Google Doc with
-your group where you can fill in notes as you work; this document is only for
-your group. Your discussion leader will _not_ take notes for you. 
-
-**Write down in notes**: In your groups, share, and note in the running notes
-document (discussion leaders, you answer these as well!):
-
-- How you'd like people to refer to you (pronounce your name/nickname, pronouns
-like he/her/they, etc)
-- Your major
-- One of:
-    - A UCSD student organization you're a member of or interested in
-    - Your favorite place you've found on campus so far
-    - A useful campus shortcut or trick you know
-- Your answer to the following question. Get to know your fellow group members!
-  
-If you could wake up tomorrow and be any (non-human) animal, what animal would you choose to be and why? Would you want to be a pet or be free?
-Have you had any pets growing up?
 
 ## Github
 
 Much of our work this quarter will happen through [Github](http://github.com), which is a platform for sharing code and collaborating on projects. You should make sure you have a Github account – you're free to use an existing one if you already have one. We will make use of the resources available in the [Github Student Developer Pack](https://education.github.com/discount_requests/application?type=student). This may require signing up with a `@ucsd.edu` email address, or adding it to your account, in order to verify your student status.
 
+
 ### Making an Account
 
 For this lab, you **do** need to make a Github account right away. You **do not** need the Student developer pack yet, but you should submit the application in lab if possible so that you'll have the needed resources going forward.
 
-**Write down in your Google Doc**:
+TODO slide for making Github account w/timer
 
-For each student, their `@ucsd` email and their Github username they will use for this class (this is helpful for the TAs to know who is who!), and a link to their Github profile, which looks something like [https://github.com/jpolitz/](https://github.com/jpolitz/).
+### Creating a Group Repository in Github Classroom
 
-### Making a Repository
+TODO slide/demo showing how to do this and then timer for making the group
+TODO instructions for this
 
-From your Github profile page, click the `+` in the upper right to make a new **repository** (you can call it something like `lab1`). For lab work, your repositories can be _public_ (for assignments we will show you how to make them be _private_).
+### Adding Some information about you!
 
-**Definition**: A **repository** is a place to store code and other files. It has some similarities to a shared folder in Google Drive: it stores a collection of files and folders, and there are ways to share it with others. The main special thing about repositories is that they store a detailed history of changes to files, which turns out to be really important for programming projects.
+TODO slide/instructions/demo showing how to do this
 
-There are many ways to interact with a repository; we'll see a few today and many more throughout the quarter. After you create the repository, you'll see a page like this:
+**Each** group member should create a file in the group repository called
+`<your-username>.txt` (replace `<your-username>` with your actual UCSD
+username.) matching exactly this format:
 
-![image](./assets/new_repo.png)
+```
+Name to use:
+Major:
+Github username:
+Org:
+Place:
+Trick:
+```
 
-For a first step, you'll make a README file directly on `github.com`. Click the `README` link on your empty repository page and you'll be taken to an editor where you can write some text. You can write anything you like for this first section; when you're done, click the `Commit changes...` button.
+Write text answering these prompts in that format:
 
-**Write down in your Google Doc**:
+- How you'd like people to refer to you (pronounce your name/nickname, pronouns
+like he/her/they, etc)
+- Your major
+- Your Github username
+- One of:
+    - A UCSD student organization you're a member of or interested in
+    - Your favorite place you've found on campus so far
+    - A useful campus shortcut or trick you know
 
-For each student, a screenshot of their repository after adding the README file. If anyone ran into errors or issues, describe them!
+TODO pull push instructions, match exactly this format
 
 ### Github Codespaces
 
@@ -78,19 +61,7 @@ This will open a new Codespace (sometimes it takes a minute to start up), which 
 
 (A cute name will be randomly generated for each new Codespace you make. Check out the URL to see what name you got!)
 
-The `README` file you made can be seen in the file navigation on the left. You can click on it to open it in a new editor tab (it may have opened by default when the Codespace started, as well). You can type into it to make edits. You may need to double click on the file in the file navigation to open it in the editor.
-
-**Do now**: Type some edits into the `README` file. Then, open a *new tab* and go find the repository again from your Github page. Do you see the edits to the file there?
-
-**Write down in your Google Doc**: For each student, a screenshot of the edited text in your Codespace, and a screenshot of the repository on Github showing the contents of the README. (NOTE: there will be a difference in these two screenshots!)
-
-To propagate the changes from our Codespace to the repository, we need to **commit** and **push** them. We'll talk in detail about these in future labs and lectures; for now we'll just show you how in the Codespace interface and defer explanations to later.
-
-On the left sidebar there is a *“Source Control”* icon. Click on this, you'll see a `M` next to your README file listing, which means “modified”. Click on the `+` next to the `M` to stage the changes. Then, write a short message in the text box (something simple like “Edited README” suffices). Finally, click the checkmark icon to commit the changes.
-
-Then, click the three dots next to the checkmark and choose “Push”. This will send the changes to the repository on Github.
-
-**Write down in your Google Doc**: For each student, a screenshot of the repository on Github showing the contents of the README including the edits.
+TODO editing files (maybe everyone concurrently edits and adds a new line to their info?)
 
 ### Github Codespaces Summary
 
