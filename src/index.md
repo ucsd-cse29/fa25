@@ -21,14 +21,14 @@ better!
 ## <a name="basics"></a> Basics
 
 - Lecture (attend the one you're enrolled in):
-    - Joe/A section: 10am [Catalyst Lecture Hall](https://map.concept3d.com/?id=1005#!m/576554?share) 0125
-    - Aaron/B section: 1pm [Solis Lecture Hall](https://map.concept3d.com/?id=1005#!m/237105?share) 104
-- Discussions (attend either):
-    - Wed 8am [Warren Lecture Hall](https://map.concept3d.com/?id=1005#!m/246292?share) 2001
-    - Fri 4pm [Solis Lecture Hall](https://map.concept3d.com/?id=1005#!m/237105?share) 104
-- Labs: Tuesdays (check your schedule!). Either B260 or B270 in the [CSE building](https://map.concept3d.com/?id=1005#!m/164780?share)
-- Exams: [AP&M B349](https://map.concept3d.com/?id=1005#!m/167186?share), flexible scheduling in weeks 3, 6, and 9
-- Final exam: [AP&M B349](https://map.concept3d.com/?id=1005#!m/167186?share), flexible scheduling in week 10
+    - Joe/A section: 10am [Center Hall 119](https://map.concept3d.com/?id=1005#!m/163044?share)
+    - Aaron/B section: 1pm [Warren Lecture Hall 2005](https://map.concept3d.com/?id=1005#!m/246292?share)
+- Discussions (attend either or both):
+    - Mon 3pm [Center 115](https://map.concept3d.com/?id=1005#!m/163044?share)
+    - Mon 4pm [Ledden Auditorium](https://map.concept3d.com/?id=1005#!m/639912?share)
+- Labs: Tuesdays (check your schedule!). Either B240 or B250 in the [CSE building](https://map.concept3d.com/?id=1005#!m/164780?share)
+- Exams: [AP&M Testing Center](https://map.concept3d.com/?id=1005#!m/167186?share), flexible scheduling in weeks 3, 6, and 9
+- Final exam: [AP&M Testing Center](https://map.concept3d.com/?id=1005#!m/167186?share), flexible scheduling in week 10
 - Professor office hours – Joe and Aaron each have 2 hours. Come to either and
 ask anything you need. Overall, the afternoon times are only for CSE29
 questions, and the morning times are for general advising and may have non-CSE29
