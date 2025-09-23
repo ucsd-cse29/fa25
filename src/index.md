@@ -1,6 +1,6 @@
 ![doodle](./doodle.jpg)
 
-# UCSD CSE29 FA24 Syllabus and Logistics
+# UCSD CSE29 FA25 Syllabus and Logistics
 
 - [Aaron Schulman](https://cseweb.ucsd.edu/~schulman/) (Instructor)
 - [Joe Gibbs Politz](https://jpolitz.github.io) (Instructor)
@@ -12,33 +12,32 @@
 [Grading](#grading) -
 [Policies](#policy)
 
-CSE 29 introduces you to the broad field of systems programming, including 1) the basics of how programs execute on a computer, 2) programming in C with direct access to memory and system calls, 3) software tools to manage and interact with code and programs. All very cool stuff that makes every programmer better!
+CSE 29 introduces you to the broad field of systems programming, including 1)
+the basics of how programs execute on a computer, 2) programming in C with
+direct access to memory and system calls, 3) software tools to manage and
+interact with code and programs. All very cool stuff that makes every programmer
+better!
 
 ## <a name="basics"></a> Basics
 
 - Lecture (attend the one you're enrolled in):
     - Joe/A section: 10am [Catalyst Lecture Hall](https://map.concept3d.com/?id=1005#!m/576554?share) 0125
-    - Aaron/B section: 12pm (noon) [Solis Lecture Hall](https://map.concept3d.com/?id=1005#!m/237105?share) 104
+    - Aaron/B section: 1pm [Solis Lecture Hall](https://map.concept3d.com/?id=1005#!m/237105?share) 104
 - Discussions (attend either):
     - Wed 8am [Warren Lecture Hall](https://map.concept3d.com/?id=1005#!m/246292?share) 2001
     - Fri 4pm [Solis Lecture Hall](https://map.concept3d.com/?id=1005#!m/237105?share) 104
 - Labs: Tuesdays (check your schedule!). Either B260 or B270 in the [CSE building](https://map.concept3d.com/?id=1005#!m/164780?share)
-- Exams: [AP&M B349](https://map.concept3d.com/?id=1005#!m/167186?share), flexible scheduling in weeks 3, 5, and 8
+- Exams: [AP&M B349](https://map.concept3d.com/?id=1005#!m/167186?share), flexible scheduling in weeks 3, 6, and 9
 - Final exam: [AP&M B349](https://map.concept3d.com/?id=1005#!m/167186?share), flexible scheduling in week 10
 - Professor office hours – Joe and Aaron each have 2 hours. Come to either and
 ask anything you need. Overall, the afternoon times are only for CSE29
 questions, and the morning times are for general advising and may have non-CSE29
 students present as well.
-    - Aaron:
-        - Tuesday 10-11am (prioritizes CSE29, CSE lab B250)
-        - Tuesday 3-4pm (prioritizes general advising, CSE office #3120)
-    - Joe:
-        - Tuesday 9-10am (prioritizes general advising, CSE office #3206)
-        - Tuesday 1-2pm (prioritizes CSE29, CSE lab B250)
-- Office Hours – See the [Office Hours Calendar](https://ucsd-cse29.github.io/fa24/index.html#office-hours-calendar)
-- Podcasts: [podcast.ucsd.edu](https://podcast.ucsd.edu)
-- Q&A forum: [Piazza](https://piazza.com/ucsd/fall2024/cse29/home)
-- Gradescope: [https://www.gradescope.com](https://www.gradescope.com)
+    - Aaron: TBD
+    - Joe: TBD
+- Office Hours: TBD
+- Q&A forum: TBD
+- PrairieLearn: [https://us.prairielearn.com](https://us.prairielearn.com)
 - Textbook/readings: [Dive Into Systems](https://diveintosystems.org/book/), plus additional readings we will assign (all free/online)
   - Free: [MIT Missing Semester](https://missing.csail.mit.edu/)
   - Not free but pretty cheap: [Julia Evans Zines](https://wizardzines.com/), especially [The Pocket Guide to Debugging](https://wizardzines.com/zines/debugging-guide/)
@@ -47,7 +46,7 @@ students present as well.
 
 ### Office Hours Calendar
 
-<iframe src="https://calendar.google.com/calendar/embed?src=c_b354a60fd90d70b416c5ebd8a4c1997692dcad6b9ad42806997478e11386eb3d%40group.calendar.google.com&ctz=America%2FLos_Angeles" style="border:solid 1px #777" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+Coming soon!
 
 ## <a name="schedule"></a> Schedule
 
@@ -55,376 +54,19 @@ The schedule below outlines topics, due dates, and links to assignments. We'll
 typically update the material for the upcoming week before Monday's lecture so
 you can see what's coming.
 
-### Week 10 – File I/O and Goodbye 👋🥲
-
-- **Readings & Resources**
-  - [File Input/Output](https://diveintosystems.org/book/C2-C_depth/IO.html#_file_inputoutput)
-  - [Using Text Files in C](https://diveintosystems.org/book/C2-C_depth/IO.html#_using_text_files_in_c)
-  - [File I/O Functions in stdio.h](https://diveintosystems.org/book/C2-C_depth/IO.html#_standard_and_file_io_functions_in_stdio_h)
-
-- **Lecture Materials**
-  - **Friday:**
-    - <u>Joe's Lecture:</u> [Recording](https://podcast.ucsd.edu/watch/fa24/cse29_a00/28) 
-    - <u>Aaron's Lecture:</u> [Recording](https://podcast.ucsd.edu/watch/fa24/cse29_b00/28)
-  - **Wednesday:**
-    - <u>Joe's Lecture:</u> [Annotated Handout](https://drive.google.com/file/d/1OBI6f1fZGoGmyqWwWX2KTRZsVmWa4OhU/view?usp=share_link) |
-                            [Recording](https://podcast.ucsd.edu/watch/fa24/cse29_a00/27) 
-    - <u>Aaron's Lecture:</u> [Recording](https://podcast.ucsd.edu/watch/fa24/cse29_b00/27)
-  - **Monday:**
-    - <u>Joe's Lecture:</u> [Recording](https://podcast.ucsd.edu/watch/fa24/cse29_a00/26)             
-    - <u>Aaron's Lecture:</u> [Recording](https://podcast.ucsd.edu/watch/fa24/cse29_b00/26)
-
-### Week 9 – Process Creation and Control 🦃
-
-- **Announcements**
-  - [Quiz 9](https://us.prairielearn.com/pl/course_instance/160202) is available on PrairieLearn, due Tue Dec 3 at 8am.
-
-- **Readings & Resources**
-  - [Processes](https://diveintosystems.org/book/C13-OS/processes.html)
-
-- **Lecture Materials**
-  - **Wednesday:**
-    - <u>Joe's Lecture:</u> [shell.c](https://github.com/ucsd-cse29/fa24-25-w9m-fork/blob/master/proc/shell.c) | [Recording](https://podcast.ucsd.edu/watch/fa24/cse29_a00/25)
-    - <u>Aaron's Lecture:</u> [Recording](https://podcast.ucsd.edu/watch/fa24/cse29_b00/25)
-  - **Monday:**
-    - [Repository](https://github.com/ucsd-cse29/fa24-25-w9m-fork/tree/master)
-    - <u>Joe's Lecture:</u> [Annotated Handout](https://github.com/ucsd-cse29/fa24-25-w9m-fork/blob/master/annotated-lecture-23-w9m.pdf) |
-                            [Recording](https://podcast.ucsd.edu/watch/fa24/cse29_a00/24)                   
-    - <u>Aaron's Lecture:</u> [Slides](https://github.com/ucsd-cse29/fa24/blob/main/src/lec/week9/29-fa24-l24.pdf) | [Recording](https://podcast.ucsd.edu/watch/fa24/cse29_b00/24)
-
-### Week 8 – Allocators and Virtual Memory
-
-- **Readings & Resources**
-  - [Virtual Memory, Malloc, and Free](https://drive.google.com/file/d/1bBV6LI-GcPjO8U0fyIOcrPKrsweWPd64/view)
-  - [C Libraries](https://diveintosystems.org/book/C2-C_depth/advanced_libraries.html)
-  - [C Libraries Continued](https://diveintosystems.org/book/C2-C_depth/advanced_writing_libraries.html#_c_libraries_)
- 
-- **Lab Quiz**
-  - [Link to Answers](https://piazza.com/class/m0gwg9yze003k8/post/753)
-
-- **Lecture Materials**
-  - **Friday:**
-    - <u>Joe's Lecture:</u> [jstr.c using my\_malloc](https://github.com/ucsd-cse29/fa24-18-malloc/blob/main/lecture/jstr.c) | 
-                            [Code After](https://github.com/ucsd-cse29/fa24-18-malloc/tree/main/coalesce) | 
-                            [Recording](https://podcast.ucsd.edu/watch/fa24/cse29_a00/23)
-    - <u>Aaron's Lecture:</u> [Slides](https://github.com/ucsd-cse29/fa24/blob/main/src/lec/week8/29-fa24-l23.pdf) | [Recording](https://podcast.ucsd.edu/watch/fa24/cse29_b00/23) 
-  - **Wednesday:**
-    - <u>Joe's Lecture:</u> [Code Before](https://github.com/ucsd-cse29/fa24-18-malloc/blob/main/lecture/mem.c) | 
-                        [Code After](https://github.com/ucsd-cse29/fa24-18-malloc/blob/main/lecture/mem-after-wed.c) | 
-                        [Handout](https://github.com/ucsd-cse29/fa24-18-malloc/blob/main/lecture/lecture.pdf) | 
-                        [Annotated Handout](https://github.com/ucsd-cse29/fa24-18-malloc/blob/main/lecture/annotated-lecture-22-w8f.pdf) |
-                        [Recording](https://podcast.ucsd.edu/watch/fa24/cse29_a00/22)
-    - <u>Aaron's Lecture:</u> [Audio Recording](https://podcast.ucsd.edu/watch/fa24/cse29_b00/22)
-  - **Monday:**
-    - [Repository](https://github.com/ucsd-cse29/fa24-18-malloc/blob/main/mem.c)
-    - <u>Joe's Lecture:</u> [Recording](https://podcast.ucsd.edu/watch/fa24/cse29_a00/21)
-    - <u>Aaron's Lecture:</u> [Audio Recording](https://podcast.ucsd.edu/watch/fa24/cse29_b00/21) 
-
-- **Discussion Materials**
-  - **Friday:**  [Repository](https://github.com/ucsd-cse29/discussion8-yash) |
-                 [Recording](https://podcast.ucsd.edu/watch/fa24/cse29_b01/8)
-  - **Wednesday:**  [Repository](https://github.com/ucsd-cse29/discussion-arunan/blob/main/discussion8) |
-                    [Recording](https://podcast.ucsd.edu/watch/fa24/cse29_a01/7)
-
-
-
-### Week 7 – Implementing an Allocator
-
-- **Announcements**
-  - [Week 7 Quiz](https://us.prairielearn.com/pl/course_instance/160202/assessment_instance/8888148) is available on PrairieLearn, due Tue Nov 19 at 8am
-
-- **Readings & Resources**
-  - [The `void*` Type](https://diveintosystems.org/book/C2-C_depth/advanced_voidstar.html)
-  - [Pointer Arithmetic](https://diveintosystems.org/book/C2-C_depth/advanced_pointer_arithmetic.html)
-  - [Virtual Memory](https://diveintosystems.org/book/C13-OS/vm.html)
-
-- **Lecture Materials**
-  - **Friday:**
-    - <u>Joe's Lecture:</u> [Recording](https://podcast.ucsd.edu/watch/fa24/cse29_a00/20)
-    - <u>Aaron's Lecture:</u>
-              [Slides](https://github.com/ucsd-cse29/fa24/blob/main/src/lec/week7/29-fa24-l21.pdf) |
-              [Recording](https://podcast.ucsd.edu/watch/fa24/cse29_b00/20)
-  - **Wednesday:**
-    - [Repository](https://github.com/ucsd-cse29/fa24-18-malloc/blob/main/mem.c)
-    - <u>Joe's Lecture:</u> 
-              [Annotated Handout](https://github.com/ucsd-cse29/fa24-18-malloc/blob/main/annotated-lecture-18-w7w.pdf) | 
-              [Recording](https://podcast.ucsd.edu/watch/fa24/cse29_a00/19)
-    - <u>Aaron's Lecture:</u> 
-              [Slides](https://github.com/ucsd-cse29/fa24/blob/main/src/lec/week7/29-fa24-l20.pdf) | 
-              [Recording](https://podcast.ucsd.edu/watch/fa24/cse29_b00/19)
-  - **Monday:** (No lecture)
-
-  - **Discussion Materials**
-    - **Friday:**  [Recording](https://podcast.ucsd.edu/watch/fa24/cse29_b01/7)        
-    - **Wednesday:**  [Recording](https://podcast.ucsd.edu/watch/fa24/cse29_a01/6)
-                      
-### Week 6 – URLs, Servers, and a Bit of Everything
-
-- **Announcements**
-  - [Week 6 Quiz](https://us.prairielearn.com/pl/course_instance/160202/assessment_instance/8826046) is available on PrairieLearn, due Wed Nov 13 at 8am
-  - [PA3 - Web Server](https://ucsd-cse29.github.io/fa24/pa/pa3/index.html) is available and due Monday, November 11 at 10:10 pm
-  - [PA2 Resubmission](https://github.com/ucsd-cse29/pa2-hashing-and-passwords) is available and due Wednesday, November 13 at 10:10 pm
-
-- **Lecture Materials**
-  - **Friday:**
-    - <u>Joe's Lecture:</u> 
-      [Annotated Handout](https://drive.google.com/file/d/1naQFWTSb7POHc6J_Iji6bCUIkfQ8NYz1/view?usp=share_link) | 
-      [Recording](https://podcast.ucsd.edu/watch/fa24/cse29_a00/18)
-    - <u>Aaron's Lecture:</u> 
-      [Slides](https://github.com/ucsd-cse29/fa24/blob/main/src/lec/week6/29-fa24-l19.pdf) | 
-      [Recording](https://podcast.ucsd.edu/watch/fa24/cse29_b00/18)
-  - **Wednesday:**
-    - <u>Joe's Lecture:</u> [Recording](https://podcast.ucsd.edu/watch/fa24/cse29_a00/17)
-    - <u>Aaron's Lecture:</u> [Recording](https://podcast.ucsd.edu/watch/fa24/cse29_b00/17)
-  - **Monday:**
-    - [Repository (same as Lab 5)](https://github.com/ucsd-cse29/lab5-starter)
-    - <u>Joe's Lecture:</u> 
-              [Annotated Repository](https://github.com/ucsd-cse29/lab5-starter/blob/lecture/number-server.c) | 
-              [Recording](https://podcast.ucsd.edu/watch/fa24/cse29_a00/16)
-    - <u>Aaron's Lecture:</u> [Recording](https://podcast.ucsd.edu/watch/fa24/cse29_b00/16)
-                    
-- **Discussion Materials**
-  - **Friday:**  [Repository](https://github.com/ucsd-cse29/discussion6-yash) |
-                 [Recording](https://podcast.ucsd.edu/watch/fa24/cse29_b01/6)
-  - **Wednesday:**  [Repository](https://github.com/ucsd-cse29/discussion-arunan/blob/main/discussion6.c) |
-                    [Recording](https://podcast.ucsd.edu/watch/fa24/cse29_a01/5)
-
-### Week 5 – Managing (Heap) Memory
-
-- **Readings & Resources**
-  - [Memory Layout and Scope](https://diveintosystems.org/book/C2-C_depth/scope_memory.html)
-  - [Debugging Memory with Valgrind](https://diveintosystems.org/book/C3-C_debug/valgrind.html)
-  - [GDB Commands in Detail](https://diveintosystems.org/book/C3-C_debug/gdb_commands.html)
-
-- **Lecture Materials**
-  - **Friday:**
-    - <u>Joe's Lecture:</u> [Recording](https://podcast.ucsd.edu/watch/fa24/cse29_a00/15)
-    - <u>Aaron's Lecture:</u> 
-                    [Slides](https://github.com/ucsd-cse29/fa24/blob/main/src/lec/week5/29-fa24-l16.pdf) | 
-                    [Recording](https://podcast.ucsd.edu/watch/fa24/cse29_b00/15)
-
-  - **Wednesday:**
-    - [Repository](https://github.com/ucsd-cse29/fa24-15-w5w-arraylist)
-    - <u>Joe's Lecture:</u> [Recording](https://podcast.ucsd.edu/watch/fa24/cse29_a00/14)
-    - <u>Aaron's Lecture:</u> [Recording](https://podcast.ucsd.edu/watch/fa24/cse29_b00/14)
-
-  - **Monday:**
-    - [Repository](https://github.com/ucsd-cse29/fa24-14-w5m-join-for-free)
-    - <u>Joe's Lecture:</u> [Handout](https://github.com/ucsd-cse29/fa24-14-w5m-join-for-free/blob/main/handout/lecture-07-w5m.pdf) |
-                            [Annotated Handout](https://github.com/ucsd-cse29/fa24-14-w5m-join-for-free/blob/main/annotated-lecture-14-w5m.pdf) |
-                            [Recording](https://podcast.ucsd.edu/watch/fa24/cse29_a00/13)
-    - <u>Aaron's Lecture:</u> 
-                [Slides](https://github.com/ucsd-cse29/fa24/blob/main/src/lec/week5/29-fa24-l14.pdf) | 
-                [Recording](https://podcast.ucsd.edu/watch/fa24/cse29_b00/13)
-
-- **Discussion Materials**
-  - **Friday:** [Repository](https://github.com/ucsd-cse29/discussion5-yash) |
-                [Recording](https://podcast.ucsd.edu/watch/fa24/cse29_b01/5)
-  - **Wednesday:**  [Repository](https://github.com/ucsd-cse29/discussion-arunan/blob/main/discussion5.c) |
-                    [Recording](https://podcast.ucsd.edu/watch/fa24/cse29_a01/4)
-
-
-### Week 4 – Representations and Memory
-
-- **Announcements**
-  - [Week 4 Quiz](https://us.prairielearn.com/pl/course_instance/160202/assessment_instance/8634020) is available on PrairieLearn
-  - [PA1 Grades](https://piazza.com/class/m0gwg9yze003k8/post/274) have been released; that Piazza post has information about grading process we'll use all quarter.
-  - [PA2 - Hashing and Passwords](https://github.com/ucsd-cse29/pa2-hashing-and-passwords) is due this Friday, October 25, at 10PM
-
-- **Readings & Resources**
-  - [Pointer Variables](https://diveintosystems.org/book/C2-C_depth/pointers_functions.html)
-  - [Structs](https://diveintosystems.org/book/C2-C_depth/structs.html)
-  - [Dynamic Memory Allocation](https://diveintosystems.org/book/C2-C_depth/dynamic_memory.html)
-
-- **Lecture Materials**
-  - **Friday:**
-    - [Repository](https://github.com/ucsd-cse29/fa24-12-w4w-restr)
-    - <u>Joe's Lecture:</u>
-                  [Handout](https://github.com/ucsd-cse29/fa24-12-w4w-restr/blob/main/handout/lecture-12-w4w.pdf) | 
-                  [Recording](https://podcast.ucsd.edu/watch/fa24/cse29_a00/12)
-    - <u>Aaron's Lecture:</u> 
-                  [Slides](https://github.com/ucsd-cse29/fa24/blob/main/src/lec/week3/29-fa24-l11.pdf) | 
-                  [Recording](https://podcast.ucsd.edu/watch/fa24/cse29_b00/12)
-  - **Wednesday:**
-    - [Repository](https://github.com/ucsd-cse29/fa24-12-w4w-restr)
-    - <u>Joe's Lecture:</u>
-                  [Handout](https://github.com/ucsd-cse29/fa24-12-w4w-restr/blob/main/handout/lecture-12-w4w.pdf) | 
-                  [Annotated Handout](https://github.com/ucsd-cse29/fa24-12-w4w-restr/blob/main/handout/annotated-lecture-12-w4w.pdf) |
-                  [Recording](https://podcast.ucsd.edu/watch/fa24/cse29_a00/11)
-    - <u>Aaron's Lecture:</u> 
-                  [Slides](https://github.com/ucsd-cse29/fa24/blob/main/src/lec/week3/29-fa24-l11.pdf) | 
-                  [Recording](https://podcast.ucsd.edu/watch/fa24/cse29_b00/11)
-  - **Monday:**
-    - [Repository](https://github.com/ucsd-cse29/fa24-11-w4m-the-beginning-of-the-endian/) | 
-      [Notes PDF](https://github.com/ucsd-cse29/fa24-11-w4m-the-beginning-of-the-endian/blob/main/lecture.pdf)
-    - <u>Videos:</u> [Strings/Pointers](https://youtu.be/t7ESfE0DywA) | [Endianness](https://youtu.be/HOY3tyZe9bc)
-    
-- **Discussion Materials**
-  - **Friday:** [Repository](https://github.com/ucsd-cse29/discussion4-yash) | [Recording](https://podcast.ucsd.edu/watch/fa24/cse29_b01/4)
-  - **Wednesday:** [Repository](https://github.com/ucsd-cse29/discussion-arunan/blob/main/discussion4.c) |
-                [Recording](https://podcast.ucsd.edu/watch/fa24/cse29_a01/3)
-
-### Week 3 – Where (Some) Things are in Memory
-
-- **Announcements**
-  - Make sure to go to your exam slot that you reserved on [PrairieTest](https://us.prairietest.com/)!
-  - [PA2](https://github.com/ucsd-cse29/pa2-hashing-and-passwords) is available and is due Friday, October 25 at 10pm!
-
-- **Readings & Resources**
-  - [Debugging with GDB](https://diveintosystems.org/book/C3-C_debug/gdb.html)
-  - [Pointers and Functions](https://diveintosystems.org/book/C2-C_depth/pointers_functions.html)
-  - [Arrays in C](https://diveintosystems.org/book/C2-C_depth/arrays.html)
-  - [GDB Quick Reference Guide](https://users.ece.utexas.edu/~adnan/gdb-refcard.pdf)
-  - [GDB Tips and Tricks](https://docs.google.com/document/d/1wiNoKEqqhx1YIIr4JhbLWu-8-5llhm4y4CN3vIMSs4k)
-  - [VIM Tips and Tricks](https://docs.google.com/document/d/1MnTBAfKlIcYQQfIxhw31aWTYdRUnSnQT4cHP3k_Iit0)
-
-- **Lecture Materials**
-  - **Friday:**
-    - [Repository](https://github.com/ucsd-cse29/fa24-10-w3f-casting-and-hashing)
-    - <u>Joe's Lecture:</u>
-                  [Slides](https://github.com/ucsd-cse29/fa24-10-w3f-casting-and-hashing/blob/main/29-fa24-l10.pdf) | 
-                  [Recording](https://podcast.ucsd.edu/watch/fa24/cse29_a00/9)
-    - <u>Aaron's Lecture:</u> 
-                  [Slides](https://github.com/ucsd-cse29/fa24-10-w3f-casting-and-hashing/blob/main/29-fa24-l10.pdf) | 
-                  [Recording](https://podcast.ucsd.edu/watch/fa24/cse29_b00/9)
-
-  - **Wednesday:**
-    - [Repository](https://github.com/ucsd-cse29/fa24-09-w3w-pointers-and-casting) 
-    - <u>Joe's Lecture:</u>
-                  [Slides](https://github.com/ucsd-cse29/fa24-09-w3w-pointers-and-casting/blob/main/29-fa24-l9.pdf) | 
-                  [Recording](https://podcast.ucsd.edu/watch/fa24/cse29_a00/8)
-    - <u>Aaron's Lecture:</u> 
-                  [Slides](https://github.com/ucsd-cse29/fa24-09-w3w-pointers-and-casting/blob/main/29-fa24-l9.pdf) | 
-                  [Recording](https://podcast.ucsd.edu/watch/fa24/cse29_b00/8)
-
-  - **Monday:**
-    - [Repository](https://github.com/ucsd-cse29/fa24-08-w3m-stack-and-memory)
-    - <u>Joe's Lecture:</u>
-                  [Handout](https://github.com/ucsd-cse29/fa24-08-w3m-stack-and-memory) |
-                  [Annotated Handout](https://github.com/ucsd-cse29/fa24-08-w3m-stack-and-memory/blob/main/annotated-lecture-08-w3m.pdf) |
-                  [Recording](https://podcast.ucsd.edu/watch/fa24/cse29_a00/7)
-    - <u>Aaron's Lecture:</u> 
-                  [Recording](https://podcast.ucsd.edu/watch/fa24/cse29_b00/7)
-
-- **Discussion Materials**
-  - **Friday:** [Repository](https://github.com/ucsd-cse29/discussion3-yash) |
-                [Recording](https://podcast.ucsd.edu/watch/fa24/cse29_b01/3)
-  - **Wednesday:** [Repository](https://github.com/ucsd-cse29/discussion-arunan/blob/main/discussion_3.c) |
-                  [Recording](https://podcast.ucsd.edu/watch/fa24/cse29_a01/2)
-
-
-
-### Week 2 – Number Representations, Sizes, and Signs
-
-- **Announcements**
-  - **Quiz 2** is available on [PrairieLearn](https://us.prairielearn.com/pl/course_instance/160202), due Tue Oct 15 at 8am.
-  - Reminder: [PA1](https://github.com/ucsd-cse29/pa1-utf8) is due this Thursday, Oct 10, at 10:10pm (that's 10/10 at 10:10pm)
-  - The week 2 lab will use some of your work so far on PA1. You don't need to be done or mostly done, but you will get the most out of lab if you have *started*.
-  - Reservations are open for exam slots on [PrairieTest](https://us.prairietest.com/), log in with your `@ucsd.edu` account
-    - This week you can reserve a spot for a practice exam just to get used to finding the lab, signing in, etc. It is **not** a CSE29-specific practice, just a general tutorial in using the testing center
-    - This week you *must* reserve a spot for our first test in the class, which happens next week. The format will be similar to the quizzes; administered through PrairieLearn with a mix of conceptual/mechanical questions and coding questions.
-    - Reservations are open until the end of the quarter for the remaining tests if you want to reserve your time now.
-
-- **Readings**
-  - [Binary and Data Representaion (Sec 4.1-4.6)](https://diveintosystems.org/book/C4-Binary/bases.html)
-
-- **Lecture Materials**
-  - **Friday:**
-    - [Repository](https://github.com/ucsd-cse29/fa24-07-w2f-hex-p)
-    - <u>Joe's Lecture:</u>
-                  [Handout](https://github.com/ucsd-cse29/fa24-07-w2f-hex-p/blob/main/lecture-07-w2f.pdf) |
-                  [Annotated Handout](https://github.com/ucsd-cse29/fa24-07-w2f-hex-p/blob/main/annotated-lecture-07-w2f.pdf) |
-                  [Recording](https://podcast.ucsd.edu/watch/fa24/cse29_a00/6)
-    - <u>Aaron's Lecture:</u> 
-                  [Recording](https://podcast.ucsd.edu/watch/fa24/cse29_b00/6)
-  - **Wednesday:**
-    - [Repository](https://github.com/ucsd-cse29/fa24-06-w2w-size-and-sign)
-    - <u>Joe's Lecture:</u> 
-                      [Handout](https://github.com/ucsd-cse29/fa24-06-w2w-size-and-sign/blob/main/lecture-06-w2w.pdf) |
-                      [Annotated Handout](https://github.com/ucsd-cse29/fa24-06-w2w-size-and-sign/blob/main/annotated-lecture-06-w2w.pdf) |
-                      [Recording](https://podcast.ucsd.edu/watch/fa24/cse29_a00/5)
-    - <u>Aaron's Lecture:</u> 
-                  [Slides](https://github.com/ucsd-cse29/fa24/blob/main/src/lec/week2/29-fa24-l6.pdf) |
-                  [Recording](https://podcast.ucsd.edu/watch/fa24/cse29_b00/5)
-  - **Monday:**
-    - [Repository](https://github.com/ucsd-cse29/fa24-05-w2m-size-and-sign)
-    - <u>Joe's Lecture:</u> 
-                      [Handout](https://github.com/ucsd-cse29/fa24-05-w2m-size-and-sign/blob/main/lecture-05-w2m.pdf) |
-                      [Annotated Handout](https://github.com/ucsd-cse29/fa24-05-w2m-size-and-sign/blob/main/annotated-lecture-05-w2m.pdf) |
-                      [Recording](https://podcast.ucsd.edu/watch/fa24/cse29_a00/4)
-    - <u>Aaron's Lecture:</u> 
-                  [Slides](https://github.com/ucsd-cse29/fa24/blob/main/src/lec/week2/29-fa24-l5.pdf) |
-                  [Recording](https://podcast.ucsd.edu/watch/fa24/cse29_b00/4)
-
-
-- **Discussion Materials**
-  - **Friday:** [Repository](https://github.com/ucsd-cse29/discussion-week2-yash) |
-                  [Recording](https://podcast.ucsd.edu/watch/fa24/cse29_b01/1)
-  - **Wednesday:** [Repository](https://github.com/ucsd-cse29/discussion-arunan/blob/main/discussion_2.c) |
-                  [Recording](https://podcast.ucsd.edu/watch/fa24/cse29_a01/1) |
-                  [GDB Quick Reference Guide](https://users.ece.utexas.edu/~adnan/gdb-refcard.pdf)
-
-
-
-
 ### Week 1 – Strings, Memory and Bitwise Representations (in C)
-
-- **Announcements**
-    - **PA 1** is available on [GitHub](https://github.com/ucsd-cse29/pa1-utf8), due Thu Oct 10 at 10:10pm.
-    - **Quiz 1** is available on [PrairieLearn](https://us.prairielearn.com/pl/course_instance/160202), due Tue Oct 8 at 8am.
-    - Lab attendance is **required** and a lot happens there, make sure to go to lab.
-    - Submit the [welcome survey](https://docs.google.com/forms/d/e/1FAIpQLSeJknloDw6HVo7j7FFWt8_i2HqzeOhzgaPyJ3z7GJrDVCwCuw/viewform) before lab on Tuesday of week 1.
 
 - **Readings**
   - [The UNIX Command Line](https://diveintosystems.org/book/Appendix2/cmdln_basics.html)
   - [Arrays and Strings (In C)](https://diveintosystems.org/book/C1-C_intro/arrays_strings.html)
 
 - **Lecture Materials**
-  - **Friday:**   
-    - [Repository](https://github.com/ucsd-cse29/fa24-04-w1f-utf8)
-    - <u>Joe's Lecture:</u> 
-                  [Handout](https://github.com/ucsd-cse29/fa24-04-w1f-utf8/blob/main/lecture-04-w1f.pdf) | 
-                  [Annotated Handout](https://github.com/ucsd-cse29/fa24-04-w1f-utf8/blob/main/annotated-lecture-04-w1f.pdf) |
-                  [Recording](https://podcast.ucsd.edu/watch/fa24/cse29_a00/3)
-    - <u>Aaron's Lecture:</u> 
-                  [Slides](https://github.com/ucsd-cse29/fa24/blob/main/src/lec/week1/29-fa24-l4.pdf) |
-                  [Recording](https://podcast.ucsd.edu/watch/fa24/cse29_b00/3)
-  - **Wednesday:** 
-    - [Repository](https://github.com/ucsd-cse29/fa24-03-w1w-strings-and-bits) 
-    - <u>Joe's Lecture:</u> 
-                  [Handout](https://github.com/ucsd-cse29/fa24-03-w1w-strings-and-bits/blob/main/lecture-03-w1w.pdf) | 
-                  [Annotated Handout](https://github.com/ucsd-cse29/fa24-03-w1w-strings-and-bits/blob/main/annotated-lecture-03-w1w.pdf) |
-                  [Recording](https://podcast.ucsd.edu/watch/fa24/cse29_a00/2)
-    - <u>Aaron's Lecture:</u> 
-                  [Slides](https://github.com/ucsd-cse29/fa24/blob/main/src/lec/week1/29-fa24-l3.pdf) |
-                  [Recording](https://podcast.ucsd.edu/watch/fa24/cse29_b00/2)
-  - **Monday:** 
-    - [Repository](https://github.com/ucsd-cse29/fa24-02-w1m-strings) 
-    - <u>Joe's Lecture:</u> [Handout](https://github.com/ucsd-cse29/fa24-02-w1m-strings/blob/main/lecture-02-w1m.pdf) |
-                      [Annotated Handout](https://github.com/ucsd-cse29/fa24-02-w1m-strings/blob/main/annotated-lecture-02-w1m.pdf) |
-                      [Recording](https://podcast.ucsd.edu/watch/fa24/cse29_a00/1)
-    - <u>Aaron's Lecture:</u> 
-                      [Slides](https://github.com/ucsd-cse29/fa24/blob/main/src/lec/week1/29-fa24-l2.pdf) |
-                      [Recording](https://podcast.ucsd.edu/watch/fa24/cse29_b00/1)
-
-- **Discussion Materials**
-  - **Wednesday:** [Repository](https://github.com/ucsd-cse29/discussion-arunan/blob/main/discussion_1.c) | [Recording](https://drive.google.com/file/d/17ULGJwpimfNfkU7o8WTouEPml3u4xin6/view?usp=sharing)
 
 ### Week 0 – Welcome!
 
 - **Announcements**
+    - **Problem Set 1** is available on [PrairieLearn](https://us.prairielearn.com/pl/course_instance/195644/assessments), due Mon Oct 6 at 11:59pm
     - Lab attendance is **required** and a lot happens there, make sure to go to lab.
-    - Submit the [welcome survey](https://docs.google.com/forms/d/e/1FAIpQLSeJknloDw6HVo7j7FFWt8_i2HqzeOhzgaPyJ3z7GJrDVCwCuw/viewform) before lab on Tuesday of week 1.
-    - Assignments, quizzes, and other things with deadlines will start in week 1.
-    - No discussion on Friday of week 0 (discussion starts in week 1).
-
-- **Lecture Materials**
-    - **Friday:** 
-      - [Repository](https://github.com/ucsd-cse29/fa24-01-w1f-hello)
-      - <u>Joe's Lecture:</u> 
-                    [Annotated Handout](https://github.com/ucsd-cse29/fa24-01-w0f-hello/blob/main/annotated-lecture-01-w0f.pdf) 
-      - <u>Aaron's Lecture:</u> 
-                    [Slides](https://github.com/ucsd-cse29/fa24/blob/main/src/lec/week0/29-fa24-l1.pdf)
 
 ## Syllabus
 
@@ -432,7 +74,7 @@ There are several components to the course:
 
 - **Lab sessions**
 - **Lecture and discussion sessions**
-- **Weekly quizzes**
+- **Problem sets**
 - **Assignments**
 - **Exams**
 
@@ -446,67 +88,64 @@ The lab sessions and groups will be led by TAs and tutors, who will note your
 participation in these discussions for credit. Note that you must
 **participate**, not merely **attend**, for credit.
 
-If you miss lab, you'll still be held accountable for understanding the
-relevant material via Exams and Assignments. You can miss 2 labs
-without it impacting your grade (see [Grading](#grading) below). There is no
-way to make up a lab, even for illness, travel, or emergencies. Our preference
-would be to require all 10 labs for an A, and have some kind of excused
-absences. However, tracking excused absences doesn't really scale, so the “two
-for any reason” policy is how we handle it. You don't need to justify your
-missed labs. Contact the instructor if you'll miss more than 2 labs for
-unavoidable reasons.
+For each lab there are 4 possible points to earn:
+
+- **1** for being present
+- **2** for being an active, professional, productive participant while present
+- **1** for submitting and/or getting work checked off that was done in lab
+
+If you miss lab, you can earn the third point by submitting work late, but
+cannot earn back the 3 points related to participation.
 
 ### Lecture and Discussion Sessions
 
 Lecture sessions are on Monday, Wednesday, and Friday, and discussion sections
-are Wednesday and Friday. We recommend attending every lecture and one of the
-two discussion sections.
+are Monday. We recommend attending every lecture and one of the two discussion
+sections.
 
-### Weekly Quizzes
+In a typical discussion section two things will happen:
 
-Each week there will be a (p)review quiz given on Gradescope or PrairieLearn to
-both review content you've seen and preview upcoming content, due before labs
-start on Tuesday at 8am.
+- TAs will go over programming work in the problem sets, sometimes reviewing,
+  sometimes doing work on the active problem set.
+- There will be time to work on problem sets and ask questions of the TAs and
+  your peers
 
-You can submit these repeatedly with no penalty up to the deadline. The purpose
-of this quiz is to make sure everyone has checked in on the concepts we will be
-using in lab. They are open for late submission until the end of the quarter;
-see [Grading](#grading) below for how late submissions impact grades.
+### Problem Sets
+
+On Mondays of even weeks (2, 4, 6, 8, 1), a _problem set_ is due.
+
+Problem sets have a collection of small programming problems that provide
+practice on concepts and techniques from lecture, lab, and the reading.  In
+addition, a subset of each problem set has programming problems that are
+directly related to completing the current assignment (e.g. some of the code may
+even be copy-pasteable).
 
 ### Assignments
 
 The course has 5 **assignments** that involve programming and writing.
 Individual assignments will have detailed information about submission
-components; in general you'll submit some code and some written work to
-Gradescope. Two files will have special meaning in this class: in `CREDITS.txt`
-you'll put information about who or what helped you with the assignment, and in
-`DESIGN.txt` you'll put answers to open-ended written design questions.
+components; in general you'll submit some code and some written work (to
+PrairieLearn).
 
-For each assignment, we will give a **0-3** score along with feedback:
+For each assignment, we will give a **0-4** score along with feedback:
 
-- **3** for a complete submission with high code and writing quality with few mistakes, and no significant errors
-- **2** for a complete submission with some mistakes or some unclear writing
+- **4** for a complete submission with high code and writing quality with few mistakes, and no significant errors
+- **3** for a complete submission with some mistakes **or** some unclear writing
+- **2** for a complete submission with some mistakes **and** some unclear writing, or a submission with high code or writing quality, but missing the other
 - **1** for a submission missing key components, or with clear inaccuracies in multiple components
 - **0** for no submission or a submission unrecognizable as a partial or complete submission
 
 After each assignment is graded, you'll have a chance to *resubmit* it based on
 the feedback you received, which will detail what you need to do to increase
-your score.
-
-- For an original score of **0** or **1**, you can raise your score to **2** (but not to **3**)
-- For an original score of **2**, you can raise your score to **3**
+your score. You can increase your score by up to **2** points on resubmit (e.g.
+0 to 2, 1 to 3, 2 to 4, 3 to 4)
 
 This is also the only late policy for assignments. Unsubmitted assignments are
 initially given a **0**, and can get a maximum of **2** points on resubmission.
 
 ### Exams
 
-This course is participating in a pilot study of a **computer-based testing
-facility** on campus ([see this
-paper](https://zilles.cs.illinois.edu/papers/zilles_cbtf_fie_2018.pdf) if you're
-interested in some background).
-
-Exams will take place in [AP&M
+Exams will use the testing facility in [AP&M
 B349](https://map.concept3d.com/?id=1005#!m/167186?share), which is a computer
 lab. You will schedule your exam at a time that's convenient for you in the
 given exam week, and you will go to that lab and check in for your exam at the
@@ -524,18 +163,20 @@ exams and exercises so you can get used to the format we'll use before you take
 the first one. The exams will have a mix of questions; they will typically
 include some that involve programming and interacting with a terminal.
 
-There are three exams during the quarter in weeks 3, 5, and 8. On each you'll
-get a **Full Pass** (2 points), **Partial Pass** (1 point), or
-**Try Again** (0 points) as your score.
+There are three exams during the quarter in weeks 3, 6, and 9. On each you'll
+get a score from 0-4.
 
 We don't have a traditionally-scheduled final exam for this course (you can
 ignore the block provided in Webreg).  Instead, in week 10, you'll have the
-opportunity to retake **up to two** of the exams from during the quarter to
-improve your score up to a **Full Pass** regardless of the score on the first
-attempt. The retakes may be different than the original exam, but will
-test the same learning outcomes. This is also the only make-up option for missed
-exams during the quarter: if you miss an exam for any reason it will be scored
-as 0, and you can use one of your retake opportunities on that exam.
+opportunity to retake exams from during the quarter to improve your score **up
+to a 4**, regardless of the score on the first attempt. The retakes may be
+different than the original exam, but will test the same learning outcomes. This
+is also the only make-up option for missed exams during the quarter: if you miss
+an exam for any reason it will be scored as 0, and you can use one of your
+retake opportunities on that exam.
+
+Exams during the quarter are all 45m long, the make-up slot is 2h long and gives
+the opportunity to make up any or all of the in-quarter exams.
 
 ## Grading
 
@@ -544,28 +185,27 @@ C in the course. You must reach that achievement level in _all_ of the
 categories to get an A, B, or C.
 
 - **A** achievement:
-    - 8 or more lab participation (out of 10 labs)
-    - At least 12 total assignment points (e.g. any scores that add up to 12: [3, 3, 2, 2, 2], [3, 3, 3, 2, 1], [3, 3, 3, 3, 0], etc)
-    - At least 5 total exam points (**Full Pass** on any 2 of the exams, **Partial Pass** on the other)
+    - ≥34/40 lab points
+    - ≥16/20 assignment points
+    - ≥10/12 exam points
 - **B** achievement:
-    - 6 or 7 lab participation
-    - At least 10 total assignment points (e.g. any scores that add up to 10: [2, 2, 2, 2, 2], [3, 3, 3, 1, 0], etc)
-    - At least 4 total exam points (2 **Full Pass** and one **No Pass**, 1 **Full Pass** and 2 **Partial Pass**)
+    - 30-33 lab points
+    - 13-15 assignment points
+    - 8-9 exam points
 - **C** achievement:
-    - 4 or 5 lab participation
-    - At least 8 total assignment points
-    - At least 3 total exam points
-
+    - 24-29 lab participation
+    - 10-12 assignment points
+    - 6-7 exam points
 
 Pluses and minuses will be given around the boundaries of these categories the
-based on quiz performance and to-be-determined cutoffs. We don't publish an
-exact number for these in advance, but it's consistent across the class. Some
+based on problem set performance and to-be-determined cutoffs. We don't publish
+an exact number for these in advance, but it's consistent across the class. Some
 general examples: if you complete all the quizzes completely, correctly, and on
 time, you'll get a `+` modifier. If you meet some of the criteria for the next
-higher letter grade but not all, you **may** get a `+` modifier (e.g. B+ for 7 lab
-participation, 12 assignment points, 5 exam points). If you submit no quizzes on
-time or don't get them done completely or correctly, you will get a `-`
-modifier.
+higher letter grade but not all, you **may** get a `+` modifier (e.g. B+ for 7
+lab participation, 12 assignment points, 5 exam points). If you submit no
+quizzes on time or don't get them done completely or correctly, you will get a
+`-` modifier.
 
 ## Policies
 
@@ -578,8 +218,8 @@ You can use code that we provide or that your group develops in lab as part of
 your assignment. If you use code that you developed with other students (whether
 in lab or outside it), got from Piazza, or got from the internet, say which
 students you worked with and a sentence or two about what you did together in
-`CREDITS.txt`.  All of the *writing* in assignments (e.g. in `DESIGN.txt`) must
-be your own.
+`CREDITS.txt`.  All of the *writing* in assignments (e.g. in open-ended written
+questions) must be your own.
 
 You **can** use an AI assistant like ChatGPT or Copilot to help you author
 assignments in this class. If you do, you are **required** to include in
@@ -600,16 +240,15 @@ violations.
 
 ### Exams and Academic Integrity
 
-Examples for exams will be posted in the week before they happen.  You're free
-to collaborate with others on preparing for the exam, trying things out
-beforehand, and so on.
+Problem sets are the best preparation for the exams.  You're free to collaborate
+with others on preparing for the exam, trying things out beforehand, and so on.
 
 You **cannot** share details of _your_ exam with others until after you receive
 your grade for it. You **cannot** communicate with anyone during the exam.
 
-### Quizzes and Academic Integrity
+### Problem Sets and Academic Integrity
 
-You can work on weekly quizzes with other students.
+You can work on problem sets with other students.
 
 ## FAQ/AFQ (Anticipated Frequent Questions)
 
@@ -635,19 +274,25 @@ Attend and complete all the work required while waitlisted (this is consistent w
 
 **I missed lab, what should I do?**
 
-You cannot makeup missed lab credit (but have a few “allowed” misses). Make sure you understand the material from lab because it will be used on exams and assignments; try to do the parts that don't involve discussion on your own, and review your group's lab notes.
+The lab page will have instructions on how to submit the make-up, which can get you 1 (of 4 possible) points.
 
-**I missed a quiz deadline, what should I do?**
+**I missed a problem set deadline, what should I do?**
 
-You can submit it late until the end of the quarter. Generally we allow lots (think like 1/3 to 1/2) of the quizzes to be late without it impacting your grade, but do take them seriously before lab so you're prepared.
+You can submit it late until the end of the quarter. Generally we allow lots
+(think like 1/3 to 1/2) of the psets to be late without it impacting your grade.
+They are there to give you focused practice and to prepare you for the exams and
+the assignments.
 
 **I missed an assignment deadline, what should I do?**
 
-Some time after each assignment deadline (usually around 2 weeks) there is a late/resubmission deadline. You can resubmit then. See the assignment section above for grading details about resubmissions.
+Some time after each assignment deadline (usually around 2 weeks) there is a
+late/resubmission deadline. You can resubmit then. See the assignment section
+above for grading details about resubmissions.
 
 **I missed a assignment resubmission deadline, what should I do?**
 
-You cannot get an extension on assignment resubmissions; we cannot support multiple late deadlines and still grade all the coursework on time.
+You cannot get an extension on assignment resubmissions; we cannot support
+multiple late deadlines and still grade all the coursework on time.
 
 **I missed my exam time, what should I do?**
 
@@ -655,12 +300,17 @@ Stay tuned for announcements about scheduling make-ups in week 10.
 
 **Where is the financial aid survey?**
 
-We do this for you; as long as you submit a quiz or do a lab participation in the first two weeks, we will mark you as commencing academic activity.
+We do this for you; as long as you submit a quiz or do a lab participation in
+the first two weeks, we will mark you as commencing academic activity.
 
 **When are the midterms scheduled?**
 
-The midterms will be flexibly scheduled during the quarter using a testing center. More details will come; you will need to set aside some outside-of-class time to do them, but there is not a specific class-wide time you have to put on your calendar.
+The midterms will be flexibly scheduled during the quarter using a testing
+center. More details will come; you will need to set aside some outside-of-class
+time to do them, but there is not a specific class-wide time you have to put on
+your calendar.
 
 **I have a conflict with the final exam time, what can I do?**
 
-The final exam will also be flexibly scheduled during week 10 using the testing center.
+The final exam will also be flexibly scheduled during week 10 using the testing
+center.
