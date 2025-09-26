@@ -193,7 +193,7 @@ categories to get an A, B, or C.
     - 13-15 assignment points
     - 8-9 exam points
 - **C** achievement:
-    - 24-29 lab participation
+    - 24-29 lab points
     - 10-12 assignment points
     - 6-7 exam points
 
