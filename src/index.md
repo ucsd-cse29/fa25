@@ -182,7 +182,7 @@ an exam for any reason it will be scored as 0, and you can use one of your
 retake opportunities on that exam.
 
 Exams during the quarter are all 45m long, the make-up slot is 2h long and gives
-the opportunity to make up any or all of the in-quarter exams.
+the opportunity to make up any or all 3 of the in-quarter exams.
 
 ## Grading
 
