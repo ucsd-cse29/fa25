@@ -73,8 +73,8 @@ you can see what's coming.
 
 - **Lecture Materials**
   - **Friday:**
-    - <u>Joe's Lecture:</u> [Lecture Notes](https://drive.google.com/file/d/1-Z0ggi29P8svzGcyvmSL8cYtSVz0Qdgc/view?usp=share_link)                  
-    - <u>Aaron's Lecture: [Lecture Slides](lec/week0/29-fa25-l1.pdf)</u> 
+    - <u>Joe's Lecture:</u> [Notes](https://drive.google.com/file/d/1-Z0ggi29P8svzGcyvmSL8cYtSVz0Qdgc/view?usp=share_link)                  
+    - <u>Aaron's Lecture:</u> [Slides](lec/week0/29-fa25-l1.pdf) 
 
 ## Syllabus
 
