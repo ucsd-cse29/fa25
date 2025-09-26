@@ -200,11 +200,9 @@ categories to get an A, B, or C.
 Pluses and minuses will be given around the boundaries of these categories the
 based on problem set performance and to-be-determined cutoffs. We don't publish
 an exact number for these in advance, but it's consistent across the class. Some
-general examples: if you complete all the quizzes completely, correctly, and on
-time, you'll get a `+` modifier. If you meet some of the criteria for the next
-higher letter grade but not all, you **may** get a `+` modifier (e.g. B+ for 7
-lab participation, 12 assignment points, 5 exam points). If you submit no
-quizzes on time or don't get them done completely or correctly, you will get a
+general examples: if you complete all the problem sets completely, correctly, and on
+time, you'll get a `+` modifier. If you submit no
+problem sets on time or don't get them done completely or correctly, you will get a
 `-` modifier.
 
 ## Policies
