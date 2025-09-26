@@ -72,7 +72,9 @@ you can see what's coming.
   - Lab attendance is **required** and a lot happens there, make sure to go to lab.
 
 - **Lecture Materials**
-  - 
+  - **Friday:**
+    - <u>Joe's Lecture:</u> [Lecture Notes](https://drive.google.com/file/d/1-Z0ggi29P8svzGcyvmSL8cYtSVz0Qdgc/view?usp=share_link)                  
+    - <u>Aaron's Lecture:</u> 
 
 ## Syllabus
 
