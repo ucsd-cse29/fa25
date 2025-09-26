@@ -62,11 +62,17 @@ you can see what's coming.
 
 - **Lecture Materials**
 
+- **Announcements**
+  - **Problem Set 1** will be available on [PrairieLearn](https://us.prairielearn.com/pl/course_instance/195644/assessments), after lab, due Mon Oct 6 at 11:59pm
+
+
 ### Week 0 – Welcome!
 
 - **Announcements**
-    - **Problem Set 1** is available on [PrairieLearn](https://us.prairielearn.com/pl/course_instance/195644/assessments), due Mon Oct 6 at 11:59pm
-    - Lab attendance is **required** and a lot happens there, make sure to go to lab.
+  - Lab attendance is **required** and a lot happens there, make sure to go to lab.
+
+- **Lecture Materials**
+  - 
 
 ## Syllabus
 
