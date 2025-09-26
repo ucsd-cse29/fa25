@@ -33,7 +33,7 @@ better!
 ask anything you need. Overall, the afternoon times are only for CSE29
 questions, and the morning times are for general advising and may have non-CSE29
 students present as well.
-    - Aaron: TBD
+    - Aaron: Monday 3:30pm-4:30pm and Wednesday 11am-12pm CSE3120
     - Joe: TBD
 - Office Hours: TBD
 - Q&A forum: TBD
