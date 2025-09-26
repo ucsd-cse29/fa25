@@ -112,7 +112,7 @@ In a typical discussion section two things will happen:
 
 ### Problem Sets
 
-On Mondays of even weeks (2, 4, 6, 8, 1), a _problem set_ is due.
+On Mondays of even weeks (2, 4, 6, 8, 10), a _problem set_ is due.
 
 Problem sets have a collection of small programming problems that provide
 practice on concepts and techniques from lecture, lab, and the reading.  In
