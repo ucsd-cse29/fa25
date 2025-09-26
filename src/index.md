@@ -28,7 +28,7 @@ better!
     - Mon 4pm [Ledden Auditorium](https://map.concept3d.com/?id=1005#!m/639912?share)
 - Labs: Tuesdays (check your schedule!). Either B240 or B250 in the [CSE building](https://map.concept3d.com/?id=1005#!m/164780?share)
 - Exams: [AP&M Testing Center](https://map.concept3d.com/?id=1005#!m/167186?share), flexible scheduling in weeks 3, 6, and 9
-- Final exam: [AP&M Testing Center](https://map.concept3d.com/?id=1005#!m/167186?share), flexible scheduling in week 10
+- Final exam: [AP&M Testing Center](https://map.concept3d.com/?id=1005#!m/167186?share), flexible scheduling in final exam week
 - Professor office hours – Joe and Aaron each have 2 hours. Come to either and
 ask anything you need. Overall, the afternoon times are only for CSE29
 questions, and the morning times are for general advising and may have non-CSE29
@@ -173,7 +173,7 @@ There are three exams during the quarter in weeks 3, 6, and 9. On each you'll
 get a score from 0-4.
 
 We don't have a traditionally-scheduled final exam for this course (you can
-ignore the block provided in Webreg).  Instead, in week 10, you'll have the
+ignore the block provided in Webreg).  Instead, in final exam week, you'll have the
 opportunity to retake exams from during the quarter to improve your score **up
 to a 4**, regardless of the score on the first attempt. The retakes may be
 different than the original exam, but will test the same learning outcomes. This
@@ -300,7 +300,7 @@ multiple late deadlines and still grade all the coursework on time.
 
 **I missed my exam time, what should I do?**
 
-Stay tuned for announcements about scheduling make-ups in week 10.
+Stay tuned for announcements about scheduling make-ups in final exam week.
 
 **Where is the financial aid survey?**
 
@@ -316,5 +316,5 @@ your calendar.
 
 **I have a conflict with the final exam time, what can I do?**
 
-The final exam will also be flexibly scheduled during week 10 using the testing
+The final exam will also be flexibly scheduled during final exam week using the testing
 center.
