@@ -66,7 +66,7 @@ you can see what's coming.
 - **Lecture Materials**
   - **Monday:**
     - <u>Joe's Lecture:</u> [Notes](lec/week1/Annotated-lecture-02-w1m.pdf)                  
-    - <u>Aaron's Lecture:</u> 
+    - <u>Aaron's Lecture:</u> [Slides](lec/week1/29-fa25-l2.pdf) 
 
 
 
@@ -78,7 +78,7 @@ you can see what's coming.
 - **Lecture Materials**
   - **Friday:**
     - <u>Joe's Lecture:</u> [Notes](lec/week0/Annotated-lecture-01-w0f.pdf)                  
-    - <u>Aaron's Lecture:</u> [Slides](lec/week0/29-fa25-l1.pdf) 
+    - <u>Aaron's Lecture:</u> [Slides](lec/week0/29-fa25-l1.pdf)
 
 ## Syllabus
 
