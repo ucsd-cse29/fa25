@@ -34,7 +34,7 @@ ask anything you need. Overall, the afternoon times are only for CSE29
 questions, and the morning times are for general advising and may have non-CSE29
 students present as well.
     - Aaron: Monday 3:30pm-4:30pm and Wednesday 11am-12pm CSE3120
-    - Joe: TBD
+    - Joe: Tuesday 1:00pm-2:00pm (CSE29-focused) and 
 - Office Hours: TBD
 - Q&A forum: TBD
 - PrairieLearn: [https://us.prairielearn.com](https://us.prairielearn.com)
@@ -65,6 +65,7 @@ you can see what's coming.
 
 - **Lecture Materials**
   - **Monday:**
+    - [Repository](https://github.com/ucsd-cse29/fa25-02-w1m-strings)
     - <u>Joe's Lecture:</u> [Notes](lec/week1/Annotated-lecture-02-w1m.pdf)                  
     - <u>Aaron's Lecture:</u> [Slides](lec/week1/29-fa25-l2.pdf) 
 
