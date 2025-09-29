@@ -56,14 +56,18 @@ you can see what's coming.
 
 ### Week 1 – Strings, Memory and Bitwise Representations (in C)
 
+- **Announcements**
+  - **Problem Set 1** will be available on [PrairieLearn](https://us.prairielearn.com/pl/course_instance/195644/assessments), after lab, due Mon Oct 6 at 11:59pm
+
 - **Readings**
   - [The UNIX Command Line](https://diveintosystems.org/book/Appendix2/cmdln_basics.html)
   - [Arrays and Strings (In C)](https://diveintosystems.org/book/C1-C_intro/arrays_strings.html)
 
 - **Lecture Materials**
+  - **Monday:**
+    - <u>Joe's Lecture:</u> [Notes](lec/week1/Annotated-lecture-02-w1m.pdf)                  
+    - <u>Aaron's Lecture:</u> 
 
-- **Announcements**
-  - **Problem Set 1** will be available on [PrairieLearn](https://us.prairielearn.com/pl/course_instance/195644/assessments), after lab, due Mon Oct 6 at 11:59pm
 
 
 ### Week 0 – Welcome!
@@ -73,7 +77,7 @@ you can see what's coming.
 
 - **Lecture Materials**
   - **Friday:**
-    - <u>Joe's Lecture:</u> [Notes](https://drive.google.com/file/d/1-Z0ggi29P8svzGcyvmSL8cYtSVz0Qdgc/view?usp=share_link)                  
+    - <u>Joe's Lecture:</u> [Notes](lec/week0/Annotated-lecture-01-w0f.pdf)                  
     - <u>Aaron's Lecture:</u> [Slides](lec/week0/29-fa25-l1.pdf) 
 
 ## Syllabus
