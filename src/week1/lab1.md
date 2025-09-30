@@ -12,10 +12,10 @@ September 30, 2025
 On the lab machines, you can open a terminal either one of two ways:
 * On the toolbar at the bottom of the screen, there are a few icons on the far right. The last one (shaped like a black rectangle) will open a new terminal.
 
-⠀![](terminal_toolbar.jpeg)
+⠀![](assets/terminal_toolbar.jpeg)
 * Right-click on the desktop, and a menu of options will appear. Select the option to create a new terminal. 
 
-⠀![](terminal_right_click.jpeg)
+⠀![](assets/terminal_right_click.jpeg)
 
 The following are some commands you can run in your terminal. To run a command, type it in and press enter.
 
