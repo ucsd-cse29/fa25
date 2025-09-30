@@ -4,7 +4,7 @@
 
 # Labs
 
-[Lab 1](./src/week1/lab1.md)
+[Lab 1](./week1/lab1.md)
 
 # Assignments
 
