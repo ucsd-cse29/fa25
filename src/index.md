@@ -69,6 +69,9 @@ you can see what's coming.
     - <u>Joe's Lecture:</u> [Notes](lec/week1/Annotated-lecture-02-w1m.pdf)                  
     - <u>Aaron's Lecture:</u> [Slides](lec/week1/29-fa25-l2.pdf) 
 
+- **Lab**
+  - [Lab 1 Form and Reference](./src/week1/lab1.md)
+
 
 
 ### Week 0 – Welcome!
