@@ -70,7 +70,7 @@ you can see what's coming.
     - <u>Aaron's Lecture:</u> [Slides](lec/week1/29-fa25-l2.pdf) 
 
 - **Lab**
-  - [Lab 1 Form and Reference](./src/week1/lab1.md)
+  - [Lab 1 Form and Reference](week1/lab1.md)
 
 
 
