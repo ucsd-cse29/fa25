@@ -67,7 +67,7 @@ you can see what's coming.
   - **Wednesday:**
     - [Repository](https://github.com/ucsd-cse29/fa25-03-w1w-more-strings)
     - <u>Joe's Lecture:</u> [Notes](lec/week1/Annotated-lecture-03-w1w.pdf)                  
-    - <u>Aaron's Lecture:</u> 
+    - <u>Aaron's Lecture:</u> [Slides](lec/week1/29-fa25-l3.pdf) 
 
   - **Monday:**
     - [Repository](https://github.com/ucsd-cse29/fa25-02-w1m-strings)
