@@ -35,8 +35,8 @@ questions, and the morning times are for general advising and may have non-CSE29
 students present as well.
     - Aaron: Monday 3:30pm-4:30pm and Wednesday 11am-12pm CSE3120
     - Joe: Tuesday 1:00pm-2:00pm (CSE B260 in the labs) and Wednesday 1:00-2:00pm (CSE 3206 Joe's Office)
-- Office Hours: TBD
-- Q&A forum: TBD
+- Office Hours: See the [Office Hours Calendar](#office-hours-calendar)
+- Q&A forum: [Piazza](https://piazza.com/class/mfzu0oi0j2q354)
 - PrairieLearn: [https://us.prairielearn.com](https://us.prairielearn.com)
 - Textbook/readings: [Dive Into Systems](https://diveintosystems.org/book/), plus additional readings we will assign (all free/online)
   - Free: [MIT Missing Semester](https://missing.csail.mit.edu/)
