@@ -103,3 +103,6 @@ With your current setup, each time you log in to your `ieng6` account, you have 
 
 Try to log onto your remote account again. **You shouldn’t be prompted for a password anymore.** If you are, ask for help and carefully review the steps above with your group.
 
+# Lab Work Checkoff
+
+To get the last one point for lab work checkoff this week, you just need to make a submission on Gradescope for `pa1`! 
