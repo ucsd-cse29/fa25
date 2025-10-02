@@ -8,3 +8,5 @@
 
 # Assignments
 
+- [PA 1](./pa/pa1/index.md)
+
