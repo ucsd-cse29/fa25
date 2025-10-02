@@ -21,20 +21,18 @@ better!
 ## <a name="basics"></a> Basics
 
 - Lecture (attend the one you're enrolled in):
-    - Joe/A section: 10am [Center Hall 119](https://map.concept3d.com/?id=1005#!m/163044?share)
-    - Aaron/B section: 1pm [Warren Lecture Hall 2005](https://map.concept3d.com/?id=1005#!m/246292?share)
+  - Joe/A section: 10am [Center Hall 119](https://map.concept3d.com/?id=1005#!m/163044?share)
+  - Aaron/B section: 1pm [Warren Lecture Hall 2005](https://map.concept3d.com/?id=1005#!m/246292?share)
 - Discussions (attend either or both):
-    - Mon 3pm [Center 115](https://map.concept3d.com/?id=1005#!m/163044?share)
-    - Mon 4pm [Ledden Auditorium](https://map.concept3d.com/?id=1005#!m/639912?share)
+  - Mon 3pm [Center 115](https://map.concept3d.com/?id=1005#!m/163044?share)
+  - Mon 4pm [Ledden Auditorium](https://map.concept3d.com/?id=1005#!m/639912?share)
 - Labs: Tuesdays (check your schedule!). Either B240 or B250 in the [CSE building](https://map.concept3d.com/?id=1005#!m/164780?share)
 - Exams: [AP&M Testing Center](https://map.concept3d.com/?id=1005#!m/167186?share), flexible scheduling in weeks 3, 6, and 9
 - Final exam: [AP&M Testing Center](https://map.concept3d.com/?id=1005#!m/167186?share), flexible scheduling in final exam week
 - Professor office hours – Joe and Aaron each have 2 hours. Come to either and
-ask anything you need. Overall, the afternoon times are only for CSE29
-questions, and the morning times are for general advising and may have non-CSE29
-students present as well.
-    - Aaron: Monday 3:30pm-4:30pm and Wednesday 11am-12pm CSE3120
-    - Joe: Tuesday 1:00pm-2:00pm (CSE B260 in the labs) and Wednesday 1:00-2:00pm (CSE 3206 Joe's Office)
+  ask anything you need. Overall, the afternoon times are only for CSE29
+  questions, and the morning times are for general advising and may have non-CSE29
+  students present as well. - Aaron: Monday 3:30pm-4:30pm and Wednesday 11am-12pm CSE3120 - Joe: Tuesday 1:00pm-2:00pm (CSE B260 in the labs) and Wednesday 1:00-2:00pm (CSE 3206 Joe's Office)
 - Office Hours: See the [Office Hours Calendar](#office-hours-calendar)
 - Q&A forum: [Piazza](https://piazza.com/class/mfzu0oi0j2q354)
 - PrairieLearn: [https://us.prairielearn.com](https://us.prairielearn.com)
@@ -57,36 +55,42 @@ you can see what's coming.
 ### Week 1 – Strings, Memory and Bitwise Representations (in C)
 
 - **Announcements**
+
   - **Problem Set 1** will be available on [PrairieLearn](https://us.prairielearn.com/pl/course_instance/195644/assessments), after lab, due Mon Oct 6 at 11:59pm
 
 - **Readings**
   - [The UNIX Command Line](https://diveintosystems.org/book/Appendix2/cmdln_basics.html)
   - [Arrays and Strings (In C)](https://diveintosystems.org/book/C1-C_intro/arrays_strings.html)
+- **Bitwise Videos**
+
+  - [Brief Bitwise Operators Intro](https://www.youtube.com/watch?v=iU-0YhRFf7Y)
+  - [Counting 0 bits](https://www.youtube.com/watch?v=M5mVVJHpNQ8)
 
 - **Lecture Materials**
+
   - **Wednesday:**
+
     - [Repository](https://github.com/ucsd-cse29/fa25-03-w1w-more-strings)
-    - <u>Joe's Lecture:</u> [Notes](lec/week1/Annotated-lecture-03-w1w.pdf)                  
-    - <u>Aaron's Lecture:</u> [Slides](lec/week1/29-fa25-l3.pdf) 
+    - <u>Joe's Lecture:</u> [Notes](lec/week1/Annotated-lecture-03-w1w.pdf)
+    - <u>Aaron's Lecture:</u> [Slides](lec/week1/29-fa25-l3.pdf)
 
   - **Monday:**
     - [Repository](https://github.com/ucsd-cse29/fa25-02-w1m-strings)
-    - <u>Joe's Lecture:</u> [Notes](lec/week1/Annotated-lecture-02-w1m.pdf)                  
-    - <u>Aaron's Lecture:</u> [Slides](lec/week1/29-fa25-l2.pdf) 
+    - <u>Joe's Lecture:</u> [Notes](lec/week1/Annotated-lecture-02-w1m.pdf)
+    - <u>Aaron's Lecture:</u> [Slides](lec/week1/29-fa25-l2.pdf)
 
 - **Lab**
   - [Lab 1 Form and Reference](./week1/lab1.md)
 
-
-
 ### Week 0 – Welcome!
 
 - **Announcements**
+
   - Lab attendance is **required** and a lot happens there, make sure to go to lab.
 
 - **Lecture Materials**
   - **Friday:**
-    - <u>Joe's Lecture:</u> [Notes](lec/week0/Annotated-lecture-01-w0f.pdf)                  
+    - <u>Joe's Lecture:</u> [Notes](lec/week0/Annotated-lecture-01-w0f.pdf)
     - <u>Aaron's Lecture:</u> [Slides](lec/week0/29-fa25-l1.pdf)
 
 ## Syllabus
@@ -136,7 +140,7 @@ In a typical discussion section two things will happen:
 On Mondays of even weeks (2, 4, 6, 8, 10), a _problem set_ is due.
 
 Problem sets have a collection of small programming problems that provide
-practice on concepts and techniques from lecture, lab, and the reading.  In
+practice on concepts and techniques from lecture, lab, and the reading. In
 addition, a subset of each problem set has programming problems that are
 directly related to completing the current assignment (e.g. some of the code may
 even be copy-pasteable).
@@ -156,7 +160,7 @@ For each assignment, we will give a **0-4** score along with feedback:
 - **1** for a submission missing key components, or with clear inaccuracies in multiple components
 - **0** for no submission or a submission unrecognizable as a partial or complete submission
 
-After each assignment is graded, you'll have a chance to *resubmit* it based on
+After each assignment is graded, you'll have a chance to _resubmit_ it based on
 the feedback you received, which will detail what you need to do to increase
 your score. You can increase your score by up to **2** points on resubmit (e.g.
 0 to 2, 1 to 3, 2 to 4, 3 to 4)
@@ -172,13 +176,13 @@ lab. You will schedule your exam at a time that's convenient for you in the
 given exam week, and you will go to that lab and check in for your exam at the
 time you picked. The exam will be proctored by staff from the [Triton Testing
 Center](https://tritontesting.ucsd.edu/) (not by the course staff from this
-course).  No study aids or devices are allowed to be used in the testing center.
+course). No study aids or devices are allowed to be used in the testing center.
 You will need only a photo ID and something to write with (scratch paper is
 available on request).
 
 The Triton Testing Center has shared a [document of rules and tips](./images/Helpful_Tips_CBTF.pdf) for using the testing center.
 
-The exams will be administered through 
+The exams will be administered through
 [PrairieLearn](https://www.prairielearn.com/about); we will give you practice
 exams and exercises so you can get used to the format we'll use before you take
 the first one. The exams will have a mix of questions; they will typically
@@ -188,7 +192,7 @@ There are three exams during the quarter in weeks 3, 6, and 9. On each you'll
 get a score from 0-4.
 
 We don't have a traditionally-scheduled final exam for this course (you can
-ignore the block provided in Webreg).  Instead, in final exam week, you'll have the
+ignore the block provided in Webreg). Instead, in final exam week, you'll have the
 opportunity to retake exams from during the quarter to improve your score **up
 to a 4**, regardless of the score on the first attempt. The retakes may be
 different than the original exam, but will test the same learning outcomes. This
@@ -206,17 +210,17 @@ C in the course. You must reach that achievement level in _all_ of the
 categories to get an A, B, or C.
 
 - **A** achievement:
-    - ≥34/40 lab points
-    - ≥16/20 assignment points
-    - ≥10/12 exam points
+  - ≥34/40 lab points
+  - ≥16/20 assignment points
+  - ≥10/12 exam points
 - **B** achievement:
-    - 30-33 lab points
-    - 13-15 assignment points
-    - 8-9 exam points
+  - 30-33 lab points
+  - 13-15 assignment points
+  - 8-9 exam points
 - **C** achievement:
-    - 24-29 lab points
-    - 10-12 assignment points
-    - 6-7 exam points
+  - 24-29 lab points
+  - 10-12 assignment points
+  - 6-7 exam points
 
 Pluses and minuses will be given around the boundaries of these categories the
 based on problem set performance and to-be-determined cutoffs. We don't publish
@@ -237,7 +241,7 @@ You can use code that we provide or that your group develops in lab as part of
 your assignment. If you use code that you developed with other students (whether
 in lab or outside it), got from Piazza, or got from the internet, say which
 students you worked with and a sentence or two about what you did together in
-`CREDITS.txt`.  All of the *writing* in assignments (e.g. in open-ended written
+`CREDITS.txt`. All of the _writing_ in assignments (e.g. in open-ended written
 questions) must be your own.
 
 You **can** use an AI assistant like ChatGPT or Copilot to help you author
@@ -259,7 +263,7 @@ violations.
 
 ### Exams and Academic Integrity
 
-Problem sets are the best preparation for the exams.  You're free to collaborate
+Problem sets are the best preparation for the exams. You're free to collaborate
 with others on preparing for the exam, trying things out beforehand, and so on.
 
 You **cannot** share details of _your_ exam with others until after you receive
