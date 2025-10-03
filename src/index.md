@@ -68,6 +68,11 @@ you can see what's coming.
 
 - **Lecture Materials**
 
+  - **Friday:**
+
+    - <u>Joe's Lecture:</u>
+    - <u>Aaron's Lecture:</u> [Slides](lec/week1/29-fa25-l4.pdf)
+      
   - **Wednesday:**
 
     - [Repository](https://github.com/ucsd-cse29/fa25-03-w1w-more-strings)
