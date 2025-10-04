@@ -70,7 +70,7 @@ you can see what's coming.
 
   - **Friday:**
 
-    - <u>Joe's Lecture:</u>
+    - <u>Joe's Lecture:</u> [Notes](lec/week1/Annotated-lecture-04-w1f.pdf)
     - <u>Aaron's Lecture:</u> [Slides](lec/week1/29-fa25-l4.pdf)
       
   - **Wednesday:**
