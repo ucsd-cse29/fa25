@@ -65,6 +65,11 @@ If this is your first time connecting to GitHub, you might get a warning about t
 
 After a successful connection, it should output `Hi <your-username>! You've successfully authenticated, but GitHub does not provide shell access`.
 
+# Part 3: Whiteboard Activity - UTF-8 Strings
+1. ★彡:)
+2. ¿Sí?
+3. ㅋ😂!
+4. Jé😀
 
 # Lab Work Checkoff
 
