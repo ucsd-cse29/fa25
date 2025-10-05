@@ -72,7 +72,7 @@ you can see what's coming.
 
     - <u>Joe's Lecture:</u> [Notes](lec/week1/Annotated-lecture-04-w1f.pdf)
     - <u>Aaron's Lecture:</u> [Slides](lec/week1/29-fa25-l4.pdf)
-      
+
   - **Wednesday:**
 
     - [Repository](https://github.com/ucsd-cse29/fa25-03-w1w-more-strings)
@@ -87,7 +87,7 @@ you can see what's coming.
 - **Lab**
   - [Lab 1 Form and Reference](./week1/lab1.md)
 
-### Week 0 – Welcome!
+### Week 0 – Welcome
 
 - **Announcements**
 
@@ -227,13 +227,10 @@ categories to get an A, B, or C.
   - 10-12 assignment points
   - 6-7 exam points
 
-Pluses and minuses will be given around the boundaries of these categories the
-based on problem set performance and to-be-determined cutoffs. We don't publish
-an exact number for these in advance, but it's consistent across the class. Some
-general examples: if you complete all the problem sets completely, correctly, and on
-time, you'll get a `+` modifier. If you submit no
-problem sets on time or don't get them done completely or correctly, you will get a
-`-` modifier.
+**Problem sets**: Problem set performance will determine pluses and minuses. We don't publish
+an exact number for these in advance, but it's consistent across the class.
+
+Some general examples: if you complete all the problem sets completely, correctly, and on time, you'll get a `+` modifier. If you submit no problem sets on time or don't get _any of them_ done completely or correctly, you will get a `-` modifier.
 
 ## Policies
 
