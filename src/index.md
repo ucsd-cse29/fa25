@@ -30,9 +30,9 @@ better!
 - Exams: [AP&M Testing Center](https://map.concept3d.com/?id=1005#!m/167186?share), flexible scheduling in weeks 3, 6, and 9
 - Final exam: [AP&M Testing Center](https://map.concept3d.com/?id=1005#!m/167186?share), flexible scheduling in final exam week
 - Professor office hours – Joe and Aaron each have 2 hours. Come to either and
-  ask anything you need. Overall, the afternoon times are only for CSE29
-  questions, and the morning times are for general advising and may have non-CSE29
-  students present as well. - Aaron: Monday 3:30pm-4:30pm and Wednesday 11am-12pm CSE3120 - Joe: Tuesday 1:00pm-2:00pm (CSE B260 in the labs) and Wednesday 1:00-2:00pm (CSE 3206 Joe's Office)
+  ask anything you need.
+    - Aaron: Monday 3:30pm-4:30pm and Wednesday 11am-12pm CSE3120
+    - Joe: Tuesday 1:00pm-2:00pm (CSE B260 in the labs) and Wednesday 1:00-2:00pm (CSE 3206 Joe's Office)
 - Office Hours: See the [Office Hours Calendar](#office-hours-calendar)
 - Q&A forum: [Piazza](https://piazza.com/class/mfzu0oi0j2q354)
 - PrairieLearn: [https://us.prairielearn.com](https://us.prairielearn.com)
@@ -51,6 +51,13 @@ better!
 The schedule below outlines topics, due dates, and links to assignments. We'll
 typically update the material for the upcoming week before Monday's lecture so
 you can see what's coming.
+
+### Week 2 - Number Representations, Sizes, and Signs
+
+- **Readings**
+  - [Binary and Data Representaion (Sec 4.1-4.6)](https://diveintosystems.org/book/C4-Binary/bases.html)
+  - [Arrays in C](https://diveintosystems.org/book/C2-C_depth/arrays.html)
+  - [Scanf](https://diveintosystems.org/book/C2-C_depth/IO.html#_scanf) and [fgets](https://diveintosystems.org/book/C2-C_depth/IO.html#_file_inputoutput) (though this week we'll only use `fgets` with `stdin`
 
 ### Week 1 – Strings, Memory and Bitwise Representations (in C)
 
