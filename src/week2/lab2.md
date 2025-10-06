@@ -71,6 +71,8 @@ After a successful connection, it should output `Hi <your-username>! You've succ
 3. ㅋ😂!
 4. Jé😀
 
-# Lab Work Checkoff
+# Part 4: Submitting the PA (Lab Work Checkoff)
 
-To get the last one point for lab work checkoff this week, you just need to make a submission on Gradescope for `pa1`! 
+**PA 1 GitHub Classroom Link:** [https://classroom.github.com/a/pGoD-4Uz](https://classroom.github.com/a/pGoD-4Uz)
+
+To get the 1 point for lab work checkoff this week, you just need to make a submission on Gradescope for `pa1`! 
