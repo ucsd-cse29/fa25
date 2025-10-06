@@ -58,6 +58,13 @@ you can see what's coming.
   - [Binary and Data Representaion (Sec 4.1-4.6)](https://diveintosystems.org/book/C4-Binary/bases.html)
   - [Arrays in C](https://diveintosystems.org/book/C2-C_depth/arrays.html)
   - [Scanf](https://diveintosystems.org/book/C2-C_depth/IO.html#_scanf) and [fgets](https://diveintosystems.org/book/C2-C_depth/IO.html#_file_inputoutput) (though this week we'll only use `fgets` with `stdin`
+ 
+- **Lecture Materials**
+
+  - **Monday:**
+
+    - <u>Joe's Lecture:</u>
+    - <u>Aaron's Lecture:</u> [Slides](lec/week2/29-fa25-l5.pdf)
 
 - **Lecture Materials**
 
