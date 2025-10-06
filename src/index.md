@@ -59,6 +59,12 @@ you can see what's coming.
   - [Arrays in C](https://diveintosystems.org/book/C2-C_depth/arrays.html)
   - [Scanf](https://diveintosystems.org/book/C2-C_depth/IO.html#_scanf) and [fgets](https://diveintosystems.org/book/C2-C_depth/IO.html#_file_inputoutput) (though this week we'll only use `fgets` with `stdin`
 
+- **Lecture Materials**
+
+  - **Monday:**
+    - <u>Joe's Lecture:</u> [Notes](lec/week2/Annotated-lecture-05-w2m.pdf)
+    - <u>Aaron's Lecture:</u> 
+
 ### Week 1 – Strings, Memory and Bitwise Representations (in C)
 
 - **Announcements**
