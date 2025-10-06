@@ -63,14 +63,8 @@ you can see what's coming.
 
   - **Monday:**
 
-    - <u>Joe's Lecture:</u>
-    - <u>Aaron's Lecture:</u> [Slides](lec/week2/29-fa25-l5.pdf)
-
-- **Lecture Materials**
-
-  - **Monday:**
     - <u>Joe's Lecture:</u> [Notes](lec/week2/Annotated-lecture-05-w2m.pdf)
-    - <u>Aaron's Lecture:</u> 
+    - <u>Aaron's Lecture:</u> [Slides](lec/week2/29-fa25-l5.pdf)
 
 ### Week 1 – Strings, Memory and Bitwise Representations (in C)
 
