@@ -76,3 +76,25 @@ After a successful connection, it should output `Hi <your-username>! You've succ
 **PA 1 GitHub Classroom Link:** [https://classroom.github.com/a/pGoD-4Uz](https://classroom.github.com/a/pGoD-4Uz)
 
 To get the 1 point for lab work checkoff this week, you just need to make a submission on Gradescope for `pa1`! 
+
+## Important git commands
+### git status
+Gets the status of our repository. It returns which files are untracked (new) modified (changed) and deleted.
+
+###  git add [filename(s)]
+When we are done making changes to a file, we "stage" it to mark it as ready to be committed. Using the `git add` command with the path of the changed file(s) will stage each to be included in the next commit. 
+
+Important Note: using `git add .` will stage all changed and/or new files in the current directory.
+
+### git commit -m “message”
+A commit is a package of associated changes. Running the `git commit` command will take all of our staged files, and package them into a single commit. We specify the `-m` option to specify we want to write a commit message, and write our commit message in the “”. Without `-m`, git opens a vim window to write the commit message.
+
+### git push
+Pushes the commit with our changes to the remote repository (i.e. GitHub).
+
+### git pull
+Retrieves the latest changes from GitHub to our local computer. 
+
+### git log
+Prints this log of all our changes into our terminal. From this log we can see the date, author, and message associated with each commit. The HEAD -> marker points to the latest commit locally, while the origin/ marker points to the latest commit on the remote. After running `git push`, both of these markers should be on the same line.
+
