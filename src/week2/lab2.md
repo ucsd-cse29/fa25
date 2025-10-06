@@ -5,10 +5,14 @@
 
 **GitHub**: website that holds (repos)itories; can contribute and share with others
 
+
+
 # Part 2: SSH Keys on GitHub
+### Command to get the Github People repo 
+`$ git clone git@github.com:Monip1/lab2-people.git`
 
 
- Recall from last lab how to log into your ieng6 account:
+Recall from last lab how to log into your ieng6 account:
 
 <code>
 $ ssh <span class="code-replace-me" contenteditable>your account name</span>@ieng6.ucsd.edu
