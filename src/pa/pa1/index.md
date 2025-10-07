@@ -140,7 +140,7 @@ You can use any code from class, lab, or discussion in your work.
 
 ## What to Hand In
 
-- Any `.c` files you wrote (can be one file or many; it's totally reasonable to only have one). We will run `gcc *.c -o utfanalyzer` to compile your code, so you should make sure it works when we do that.
+- Any `.c` files you wrote (can be one file or many; it's totally reasonable to only have one). We will run `gcc *.c -o utf8analyzer` to compile your code, so you should make sure it works when we do that.
 - A file `DESIGN.md` (with exactly that name) containing the answers to the design questions
 - Your tests are in files `tests/*.txt`
 
