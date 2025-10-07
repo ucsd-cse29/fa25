@@ -15,7 +15,7 @@
 Recall from last lab how to log into your ieng6 account:
 
 <code>
-$ ssh <span class="code-replace-me" contenteditable>your account name</span>@ieng6.ucsd.edu
+$ ssh <span class="code-replace-me" contenteditable>yourusername</span>@ieng6.ucsd.edu
 </code>
 
 **Please log into ieng6.** Within your ieng6 account, use the following command to generate a new key pair, replacing `github_email` with your **GitHub email address**:
