@@ -87,7 +87,7 @@ If you set up the SSH Keys correctly in the previous steps, now you should be ab
 
 **PA 1 GitHub Classroom Link:** [https://classroom.github.com/a/pGoD-4Uz](https://classroom.github.com/a/pGoD-4Uz)
 
-To get the 1 point for lab work checkoff this week, you just need to make a submission on Gradescope for `pa1`! 
+To get the final 1 point for lab work checkoff this week (out of 4 total points), you just need to make a submission on Gradescope for `pa1`! 
 
 ## Important git commands
 ### $ git status
