@@ -24,11 +24,7 @@ You can do your programming however you like; using `vim` on `ieng6` will give y
 practice for labs, exams, and problem sets, but you are not required to use any
 particular environment (we'd have no way to check anyway).
 
-To get started, clone the starter code repository in your environment of choice:
-
-```
-git clone https://github.com/ucsd-cse29/pa1-utf8
-```
+To get started, follow the instructions in lab 2 and create a [GitHub Classroom](https://classroom.github.com/a/pGoD-4Uz) assignment.
 
 ## UTF-8 Analyzer
 
@@ -148,4 +144,7 @@ You can use any code from class, lab, or discussion in your work.
 - A file `DESIGN.md` (with exactly that name) containing the answers to the design questions
 - Your tests are in files `tests/*.txt`
 
-Hand in to the `pa1` assignment on Gradescope. The submission system will show you the output of compiling and running your program on the test input described above to make sure the baseline format of your submission works. You will not get feedback about your overall grade before the deadline.
+Hand in to the `pa1` assignment on Gradescope. You can either submit a link to your GitHub Classroom Repository or upload
+the files from your computer.
+
+The submission system will show you the output of compiling and running your program on the test input described above to make sure the baseline format of your submission works. You will not get feedback about your overall grade before the deadline.
