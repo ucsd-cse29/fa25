@@ -11,6 +11,9 @@
 ### Command to get the Github People repo 
 `$ git clone git@github.com:Monip1/lab2-people.git`
 
+This command should fail. We need to set up SSH Keys on GitHub to fix that!
+
+### Setting up SSH Keys on GitHub
 
 Recall from last lab how to log into your ieng6 account:
 
@@ -67,6 +70,12 @@ $ ssh -T git@github.com
 If this is your first time connecting to GitHub, you might get a warning about the “authenticity of host can’t be established”. This is a warning for you to make sure that you’re connecting to the right thing. For the purposes of this lab, we assume that GitHub didn’t suddenly get hacked, so you can safely respond with “yes”. But if you’re really paranoid, you can check GitHub’s public key fingerprint [here](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/githubs-ssh-key-fingerprints).
 
 After a successful connection, it should output `Hi <your-username>! You've successfully authenticated, but GitHub does not provide shell access`.
+
+### Command to get the Github People repo (Take 2!)
+
+If you set up the SSH Keys correctly in the previous steps, now you should be able clone the repo: 
+
+`$ git clone git@github.com:Monip1/lab2-people.git`
 
 # Part 3: Whiteboard Activity - UTF-8 Strings
 1. ★彡:)
