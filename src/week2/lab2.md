@@ -30,7 +30,6 @@ You’ll be prompted to “Enter a file in which to save the key”. Press Enter
 
 By default, the public SSH key is saved to a file at `~/.ssh/id_rsa.pub`.
 
-{: .note }
 Instead of typing out the whole filename, you can type out some prefix of the name (e.g. `~/.ssh/id`), and **press Tab to autocomplete the name**.
 In this case, tab complete won’t complete the full filename, since the private key happens to be named `id_rsa`.
 *Please* be too lazy to type out entire filenames and use tab complete instead\!
@@ -82,15 +81,15 @@ After a successful connection, it should output `Hi <your-username>! You've succ
 To get the 1 point for lab work checkoff this week, you just need to make a submission on Gradescope for `pa1`! 
 
 ## Important git commands
-### git status
+### $ git status
 Gets the status of our repository. It returns which files are untracked (new) modified (changed) and deleted.
 
-###  git add [filename(s)]
+###  $ git add [filename(s)]
 When we are done making changes to a file, we "stage" it to mark it as ready to be committed. Using the `git add` command with the path of the changed file(s) will stage each to be included in the next commit. 
 
-### git commit -m “message”
+### $ git commit -m “message”
 A commit is a package of associated changes. Running the `git commit` command will take all of our staged files, and package them into a single commit. We specify the `-m` option to specify we want to write a commit message, and write our commit message in the “”. Without `-m`, git opens a vim window to write the commit message.
 
-### git push
+### $ git push
 Pushes the commit with our changes to the remote repository (i.e. GitHub).
 

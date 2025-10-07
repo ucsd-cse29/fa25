@@ -66,6 +66,9 @@ you can see what's coming.
     - <u>Joe's Lecture:</u> [Notes](lec/week2/Annotated-lecture-05-w2m.pdf)
     - <u>Aaron's Lecture:</u> [Slides](lec/week2/29-fa25-l5.pdf)
 
+- **Lab**
+  - [Lab 2 Reference](week2/lab2.md)
+
 ### Week 1 – Strings, Memory and Bitwise Representations (in C)
 
 - **Announcements**
