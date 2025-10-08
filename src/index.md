@@ -61,6 +61,8 @@ you can see what's coming.
  
 - **Lecture Materials**
 
+  - **Wednesday:**
+    - <u>Joe's Lecture:</u> [Handout](lec/week2/lecture-05-w2m.pdf)
   - **Monday:**
     - [Repository](https://github.com/ucsd-cse29/fa25-05-w2m-bin-to-dec/tree/main)
     - <u>Joe's Lecture:</u> [Notes](lec/week2/Annotated-lecture-05-w2m.pdf)
