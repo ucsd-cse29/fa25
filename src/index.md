@@ -53,11 +53,14 @@ typically update the material for the upcoming week before Monday's lecture so
 you can see what's coming.
 
 ### Week 2 - Number Representations, Sizes, and Signs
+- **Announcements**
+  - [PA 1](pa/pa1/index.md) is due Thursday 10/9 at 11:59pm. 
+  - Exam 1 is next week, please make a reservation ASAP for exam slots on [PrairieTest](https://us.prairietest.com/) by logging in with your @ucsd.edu account. 
 
 - **Readings**
   - [Binary and Data Representaion (Sec 4.1-4.6)](https://diveintosystems.org/book/C4-Binary/bases.html)
   - [Arrays in C](https://diveintosystems.org/book/C2-C_depth/arrays.html)
-  - [Scanf](https://diveintosystems.org/book/C2-C_depth/IO.html#_scanf) and [fgets](https://diveintosystems.org/book/C2-C_depth/IO.html#_file_inputoutput) (though this week we'll only use `fgets` with `stdin`
+  - [Scanf](https://diveintosystems.org/book/C2-C_depth/IO.html#_scanf) and [fgets](https://diveintosystems.org/book/C2-C_depth/IO.html#_file_inputoutput) (though this week we'll only use `fgets` with `stdin`)
  
 - **Lecture Materials**
 
