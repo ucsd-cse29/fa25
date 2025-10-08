@@ -15,29 +15,43 @@
 \usepackage{verbatim}
 
 \begin{document}
-\lstinputlisting{numbers.c}
-\begin{shell}
-$ gcc numbers.c -o numbers
-$ ./numbers 
-is_ascii(a 97) = true
-is_ascii((*@^^^^fffd@*) -128) = true
-is_ascii( 127) = true
-is_ascii( 0) = true
-is_ascii( 1) = true
-is_ascii( 2) = true
-... lots of output ... 
-is_ascii(z 122) = true
-is_ascii({ 123) = true
-is_ascii(| 124) = true
-is_ascii(} 125) = true
-is_ascii(~ 126) = true
-is_ascii( 127) = true
-is_ascii((*@^^^^fffd@*) -128) = true
-is_ascii((*@^^^^fffd@*) -127) = true
-... lots more output
-is_ascii((*@^^^^fffd@*) -1) = true
-\end{shell}
 
+\begin{minipage}{0.45\textwidth}
+    \lstinputlisting{is_ascii_lessthan.c}
+    \lstinputlisting{is_ascii_bitand.c}
+\end{minipage}
+\hfill
+\begin{minipage}{0.45\textwidth}
+    Consider each of these inputs. What does each produce on each of the implementations? Why?
+    \begin{itemize}
+        \item {\tt 0x48 (0b01001000)}
+        \item {\tt 0xFF (0b11111111)}
+        \item {\tt 0x0A (0b00001010)}
+    \end{itemize}
+\end{minipage}
+
+\vspace{3em}
+
+What is the code point encoded by each of the following UTF-8 byte sequences?
+You may find it useful to give your answer as the hexademical value of the code
+point. (e.g. code point 200 would be {\tt 0xC8})
+
+\begin{itemize}
+    \item {\tt 0xE2 0x9C 0x94} (heavy check mark \emoji{heavy-check-mark})
+
+    \vspace{3em}
+    \item {\tt 0xC3 0xAA} (e with circumflex, {\HiraginoSans ê})
+\end{itemize}
+
+\vspace{3em}
+
+What is the UTF-8 encoding of the following code points?
+
+\begin{itemize}
+    \item {\tt 0x3bb} (lambda, {\HiraginoSans λ})
+    \vspace{3em}
+    \item {\tt 0x1F600} (grinning face, \emoji{grinning-face})
+\end{itemize}
 \newpage
 
 \lstinputlisting{code_point_at.c}

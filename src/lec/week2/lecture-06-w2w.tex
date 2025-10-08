@@ -1,0 +1,43 @@
+\documentclass[12pt, oneside]{article}
+\usepackage{fontspec}
+
+\usepackage{emoji}
+
+\setmainfont{DejaVu Serif}
+\setsansfont{DejaVu Sans}
+\setmonofont{DejaVu Sans Mono}
+
+\newfontfamily\HiraginoSans{Hiragino Sans}
+
+
+\include{header}
+
+\usepackage{verbatim}
+
+\begin{document}
+\lstinputlisting[basicstyle=\ttfamily\scriptsize]{size.c}
+\begin{shell}[basicstyle=\ttfamily\scriptsize]
+$ gcc size.c -o size
+$ ./size 
+sizeof(char): 1
+sizeof(int8_t): 1
+sizeof(uint8_t): 1
+sizeof(int16_t): 2
+sizeof(uint16_t): 2
+sizeof(int32_t): 4
+sizeof(int64_t): 8
+sizeof(int): 4
+sizeof(c): 1
+sizeof(i): 4
+sizeof(c * 4000): 4
+sizeof(c + 1): 4
+sizeof(c2): 1
+s: 11001000             u: 11001000
+s as hhx: c8            u as hhx: c8
+s as x: ffffffc8        u as x: c8
+s < 127: 0 u < 127: 1
+\end{shell}
+
+\newpage
+
+\end{document}
