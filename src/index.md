@@ -27,8 +27,8 @@ better!
   - Mon 3pm [Center 115](https://map.concept3d.com/?id=1005#!m/163044?share)
   - Mon 4pm [Ledden Auditorium](https://map.concept3d.com/?id=1005#!m/639912?share)
 - Labs: Tuesdays (check your schedule!). Either B240 or B250 in the [CSE building](https://map.concept3d.com/?id=1005#!m/164780?share)
-- Exams: [AP&M Testing Center](https://map.concept3d.com/?id=1005#!m/167186?share), flexible scheduling in weeks 3, 6, and 9
-- Final exam: [AP&M Testing Center](https://map.concept3d.com/?id=1005#!m/167186?share), flexible scheduling in final exam week
+- Exams: [AP&M Testing Center](https://map.concept3d.com/?id=1005#!m/167186?share), flexible scheduling in weeks 3, 6, and 9 on [PrairieTest](https://us.prairietest.com/)
+- Final exam: [AP&M Testing Center](https://map.concept3d.com/?id=1005#!m/167186?share), flexible scheduling in final exam week on [PrairieTest](https://us.prairietest.com/)
 - Professor office hours – Joe and Aaron each have 2 hours. Come to either and
   ask anything you need.
     - Aaron: Monday 3:30pm-4:30pm and Wednesday 11am-12pm CSE3120
@@ -55,7 +55,7 @@ you can see what's coming.
 ### Week 2 - Number Representations, Sizes, and Signs
 - **Announcements**
   - [PA 1](pa/pa1/index.md) is due Thursday 10/9 at 11:59pm. 
-  - Exam 1 is next week, please make a reservation ASAP for exam slots on [PrairieTest](https://us.prairietest.com/) by logging in with your @ucsd.edu account. 
+  - Exam 1 is next week, please make a reservation ASAP for exam slots on [PrairieTest](https://us.prairietest.com/) by logging in with your @ucsd.edu account. See more info in the under [Exams](#exams) part of the syllabus below. 
 
 - **Readings**
   - [Binary and Data Representaion (Sec 4.1-4.6)](https://diveintosystems.org/book/C4-Binary/bases.html)
@@ -65,10 +65,11 @@ you can see what's coming.
 - **Lecture Materials**
 
   - **Wednesday:**
-    - <u>Joe's Lecture:</u> [Handout](lec/week2/lecture-05-w2m.pdf)
+    - <u>Joe's Lecture:</u> [Handout](lec/week2/lecture-05-w2m.pdf) | [Annotated Handout](lec/week2/Annotated-lecture-06-w2w.pdf)
+    - <u>Aaron's Lecture:</u> 
   - **Monday:**
     - [Repository](https://github.com/ucsd-cse29/fa25-05-w2m-bin-to-dec/tree/main)
-    - <u>Joe's Lecture:</u> [Notes](lec/week2/Annotated-lecture-05-w2m.pdf)
+    - <u>Joe's Lecture:</u> [Annotated Handout](lec/week2/Annotated-lecture-05-w2m.pdf)
     - <u>Aaron's Lecture:</u> [Slides](lec/week2/29-fa25-l5.pdf)
 
 - **Lab**
@@ -92,18 +93,18 @@ you can see what's coming.
 
   - **Friday:**
 
-    - <u>Joe's Lecture:</u> [Notes](lec/week1/Annotated-lecture-04-w1f.pdf)
+    - <u>Joe's Lecture:</u> [Annotated Handout](lec/week1/Annotated-lecture-04-w1f.pdf)
     - <u>Aaron's Lecture:</u> [Slides](lec/week1/29-fa25-l4.pdf)
 
   - **Wednesday:**
 
     - [Repository](https://github.com/ucsd-cse29/fa25-03-w1w-more-strings)
-    - <u>Joe's Lecture:</u> [Notes](lec/week1/Annotated-lecture-03-w1w.pdf)
+    - <u>Joe's Lecture:</u> [Annotated Handout](lec/week1/Annotated-lecture-03-w1w.pdf)
     - <u>Aaron's Lecture:</u> [Slides](lec/week1/29-fa25-l3.pdf)
 
   - **Monday:**
     - [Repository](https://github.com/ucsd-cse29/fa25-02-w1m-strings)
-    - <u>Joe's Lecture:</u> [Notes](lec/week1/Annotated-lecture-02-w1m.pdf)
+    - <u>Joe's Lecture:</u> [Annotated Handout](lec/week1/Annotated-lecture-02-w1m.pdf)
     - <u>Aaron's Lecture:</u> [Slides](lec/week1/29-fa25-l2.pdf)
 
 - **Lab**
@@ -199,7 +200,8 @@ initially given a **0**, and can get a maximum of **2** points on resubmission.
 
 Exams will use the testing facility in [AP&M
 B349](https://map.concept3d.com/?id=1005#!m/167186?share), which is a computer
-lab. You will schedule your exam at a time that's convenient for you in the
+lab. You will schedule your exam on [PrairieTest](https://us.prairietest.com/) 
+by logging in with your @ucsd.edu account. You can schedule the exam at a time that's convenient for you in the
 given exam week, and you will go to that lab and check in for your exam at the
 time you picked. The exam will be proctored by staff from the [Triton Testing
 Center](https://tritontesting.ucsd.edu/) (not by the course staff from this
