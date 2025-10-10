@@ -65,10 +65,10 @@ you can see what's coming.
 - **Lecture Materials**
 
   - **Friday:**
-    - <u>Joe's Lecture:</u>[Handout](lec/week2/lecture-07-w2f.pdf)
+    - [Repository](https://github.com/ucsd-cse29/fa25-07-w2f-concat/tree/main)
+    - <u>Joe's Lecture:</u>[Handout](lec/week2/lecture-07-w2f.pdf) | [Annotated Handout](lec/week2/Annotated-lecture-07-w2f.pdf)
   - **Wednesday:**
-    - <u>Joe's Lecture:</u> [Handout](lec/week2/lecture-05-w2m.pdf) | [Annotated Handout](lec/week2/Annotated-lecture-06-w2w.pdf)
-    - <u>Aaron's Lecture:</u> 
+    - <u>Joe's Lecture:</u> [Handout](lec/week2/lecture-05-w2m.pdf) | [Annotated Handout](lec/week2/Annotated-lecture-06-w2w.pdf) 
   - **Monday:**
     - [Repository](https://github.com/ucsd-cse29/fa25-05-w2m-bin-to-dec/tree/main)
     - <u>Joe's Lecture:</u> [Annotated Handout](lec/week2/Annotated-lecture-05-w2m.pdf)
