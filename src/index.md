@@ -66,7 +66,7 @@ you can see what's coming.
 
   - **Friday:**
     - [Repository](https://github.com/ucsd-cse29/fa25-07-w2f-concat/tree/main)
-    - <u>Joe's Lecture:</u>[Handout](lec/week2/lecture-07-w2f.pdf) | [Annotated Handout](lec/week2/Annotated-lecture-07-w2f.pdf)
+    - <u>Joe's Lecture:</u> [Handout](lec/week2/lecture-07-w2f.pdf) | [Annotated Handout](lec/week2/Annotated-lecture-07-w2f.pdf)
   - **Wednesday:**
     - <u>Joe's Lecture:</u> [Handout](lec/week2/lecture-05-w2m.pdf) | [Annotated Handout](lec/week2/Annotated-lecture-06-w2w.pdf) 
   - **Monday:**
