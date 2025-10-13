@@ -62,7 +62,7 @@ you can see what's coming.
 **Lecture Materials**
   - **Monday:**
     - <u>Joe's Lecture:</u> [Handout](lec/week3/week3-monday.pdf)
-    - <u>Aaron's Lecture:</u> 
+    - <u>Aaron's Lecture:</u> [Slides](lec/week3/29-fa25-l8.pdf) Code on `ieng6` in dir `/home/linux/ieng6/CSE29_FA25_B00/public/lectures/10-10-strcat-memory`
 
 ### Week 2 - Number Representations, Sizes, and Signs
 - **Announcements**
