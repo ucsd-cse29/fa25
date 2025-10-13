@@ -59,9 +59,9 @@ you can see what's coming.
   - [Arrays in C](https://diveintosystems.org/book/C2-C_depth/arrays.html)
   - [Pointers and Functions](https://diveintosystems.org/book/C2-C_depth/pointers_functions.htm)
 
-- **Lecture Materials**
+**Lecture Materials**
   - **Monday:**
-    - <u>Joe's Lecture:</u> [Handout](lec/week3/week3-week3-monday.pdf)
+    - <u>Joe's Lecture:</u> [Handout](lec/week3/week3-monday.pdf)
     - <u>Aaron's Lecture:</u> 
 
 ### Week 2 - Number Representations, Sizes, and Signs
