@@ -52,6 +52,13 @@ The schedule below outlines topics, due dates, and links to assignments. We'll
 typically update the material for the upcoming week before Monday's lecture so
 you can see what's coming.
 
+### Week 3 – Where (Some) Things Are in Mmeory
+
+**Reading**
+  - [Debugging with GDB](https://diveintosystems.org/book/C3-C_debug/gdb.html)
+  - [Arrays in C](https://diveintosystems.org/book/C2-C_depth/arrays.html)
+  - [Pointers and Functions](https://diveintosystems.org/book/C2-C_depth/pointers_functions.htm)
+
 ### Week 2 - Number Representations, Sizes, and Signs
 - **Announcements**
   - [PA 1](pa/pa1/index.md) is due Thursday 10/9 at 11:59pm. 
