@@ -54,10 +54,15 @@ you can see what's coming.
 
 ### Week 3 – Where (Some) Things Are in Mmeory
 
-**Reading**
+**Readings**
   - [Debugging with GDB](https://diveintosystems.org/book/C3-C_debug/gdb.html)
   - [Arrays in C](https://diveintosystems.org/book/C2-C_depth/arrays.html)
   - [Pointers and Functions](https://diveintosystems.org/book/C2-C_depth/pointers_functions.htm)
+
+- **Lecture Materials**
+  - **Monday:**
+    - <u>Joe's Lecture:</u> [Handout](lec/week3/week3-week3-monday.pdf)
+    - <u>Aaron's Lecture:</u> 
 
 ### Week 2 - Number Representations, Sizes, and Signs
 - **Announcements**
