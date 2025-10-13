@@ -1,0 +1,26 @@
+\documentclass[12pt, oneside, landscape]{article}
+\usepackage{wallpaper}
+\include{header}
+\begin{document}
+  \ThisULCornerWallPaper{1}{memory-template.pdf}
+  \begin{minipage}{0.45\textwidth}
+  \lstinputlisting[basicstyle=\ttfamily\scriptsize]{args.c}
+\begin{shell}[linewidth=10cm]
+$ gcc args.c -o args
+$ ./args "Hello " "CSE29"
+Argv: 0x7ffcda761c38
+Arg index 0: 0x7ffcda7626e8: ./args
+Arg index 1: 0x7ffcda7626ef: Hello
+Arg index 2: 0x7ffcda7626f6: CSE29
+a: 0x7ffe600146ef, b: 0x7ffe600146f6
+result: 0x7ffe600130d0
+Hello CSE29
+\end{shell}
+  \end{minipage}
+  \newpage
+  \ThisULCornerWallPaper{1}{memory-template2.pdf}
+
+  \begin{minipage}{0.45\textwidth}
+  \lstinputlisting[basicstyle=\ttfamily\scriptsize]{append.c}
+  \end{minipage}
+\end{document}
