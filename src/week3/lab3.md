@@ -29,7 +29,8 @@ $ gcc -Wall YOUR_CODE.c -o YOUR_CODE
 
 
 # Part 3: Debugging with `gdb`
-## Intro to gdb commands:
+
+### Intro to gdb commands:
 - To use gdb, make sure you’ve compiled your program with “debug symbols”
 ```
 $ gcc -g YOUR_CODE.c 
@@ -51,7 +52,7 @@ or
 (gdb) bt
 ```
 
-## Use the following commands to print out values at the point the program stopped: 
+### Use the following commands to print out values at the point the program stopped: 
 - `(gdb) info locals`
 - `(gdb) info args`
 - `(gdb) print VALUE (or p VALUE)`
