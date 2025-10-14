@@ -5,9 +5,9 @@ If you don’t have a laptop or it isn’t set up with a linux terminal, work fr
 
 1. Generate a new pair of ssh keys (on your laptop, or on your lab computer)
 - `cd` to your `.ssh` directory, (if it doesn’t exist, first create it with `mkdir ~/.ssh`)
-- Run: `ssh-keygen -t rsa -b 4096 -C YOUR_EMAIL_ADDRESS`
-  - Filename to save the key in: `id_for_ieng6`
-  - Leave the passphrase blank (just press enter)
+- **IF YOU ALREADY HAVE AN 'id_rsa', SKIP THIS STEP** (otherwise you'll overwrite your github keys)
+- If you don't have an id_rsa, run: `ssh-keygen -t rsa -b 4096 -C YOUR_EMAIL_ADDRESS`
+  - You'll be using the default filename and no password, so just press enter twice
 - Copy the contents of your new public key (you can print out the contents with `cat`)
 2. Copy your public key onto ieng6, into the file `~/.ssh/authorized_keys`
 - On `ieng6`, in your `.ssh` directory, create a file called `authorized_keys` (or open it if it exists already)
