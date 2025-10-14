@@ -68,7 +68,7 @@ or
   - This prints 20 bytes of `str2` in hex
 - `(gdb) x/4dw  arr`       
   - This prints 4 “words” (i.e. int32s) of `arr`, as decimal numbers 
-- You can use the following reference card [link](https://darkdust.net/files/GDB%20Cheat%20Sheet.pdf) for reference on gdb commands, and format commands for x and print.
+- You can use the following [reference card](https://darkdust.net/files/GDB%20Cheat%20Sheet.pdf) for reference on gdb commands, and format commands for x and print.
 
 If you’re done early, use the reference card to try exploring other gdb commands!
 
