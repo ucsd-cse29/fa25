@@ -52,7 +52,7 @@ The schedule below outlines topics, due dates, and links to assignments. We'll
 typically update the material for the upcoming week before Monday's lecture so
 you can see what's coming.
 
-### Week 3 – Where (Some) Things Are in Mmeory
+### Week 3 – Where (Some) Things Are in Memory
 
 **Readings**
   - [Debugging with GDB](https://diveintosystems.org/book/C3-C_debug/gdb.html)
@@ -61,7 +61,7 @@ you can see what's coming.
 
 **Lecture Materials**
   - **Monday:**
-    - <u>Joe's Lecture:</u> [Handout](lec/week3/week3-monday.pdf)
+    - <u>Joe's Lecture:</u> [Handout](lec/week3/week3-monday.pdf) | [Annotated Handout](lec/week3/Annotated-lecture-08-w3m.pdf)
     - <u>Aaron's Lecture:</u> [Slides](lec/week3/29-fa25-l8.pdf) Code on `ieng6` in dir `/home/linux/ieng6/CSE29_FA25_B00/public/lectures/10-10-strcat-memory`
 
 ### Week 2 - Number Representations, Sizes, and Signs
