@@ -86,78 +86,15 @@ SECRET
 Did not find a matching password
 ```
 
-## Useful Tools
-
-You will be using [`openssl`](https://docs.openssl.org/3.1/man3/SHA256_Init) library for this PA. This requires an extra argument for compiling your code:
-
-```
-gcc <your .c file> -o <output name> -lcrypto
-```
-
-The relevant function from that library is `SHA256`. You can follow the link above to see its official type; in terms we've been using in class its type is:
-
-``` c
-SHA256(const unsigned char data[], uint64_t count, unsigned char md_buf[]);
-```
-
-The `data` parameter is _not_ assumed to be a C string. That is, it may or may not be null terminated, `SHA256` won't check. The hash function will operate on however many bytes are specified by `count`. So, if passing a C string, the caller of `SHA256` is responsible for using something like `strlen` to calculate `count` and provide it.
-The `md_buf` argument is where the hash gets stored, and it is assumed to be at least 32 bytes long (SHA256 has a fixed output size which is 32 bytes (256 bits)).
-
-Here's a short code snippet that shows how to use it:
-
-``` c
-#include <stdint.h>
-#include <string.h>
-#include <stdlib.h>
-#include <stdio.h>
-#include <openssl/sha.h>
-
-const int SHA_LENGTH = 32;
-
-int main(int argc, char** argv) {
-    uint8_t i = 0;
-    // SHA256 hashes are always 32 bytes long (independent of input length)
-    unsigned char hash[SHA_LENGTH];
-    // argv[1] is the first command-line argument as a C string
-    SHA256(argv[1], strlen(argv[1]), hash); // result stored in hash
-    for(i = 0; i < SHA_LENGTH; i += 1) {
-        printf("%02x", hash[i]); // %02x means print as a 2-digit hex value
-    }
-    printf("\n");
-    for(i = 0; i < SHA_LENGTH; i += 1) {
-        printf("%d ", hash[i]);
-    }
-    printf("\n");
-}
-```
-
-Example:
-
-```
-[cs29fa24@ieng6-201]:~:201$ gcc sha256.c -o sha256 -lcrypto
-[cs29fa24@ieng6-201]:~:204$ ./sha256 seCret
-a2c3b02cb22af83d6d1ead1d4e18d916599be7c2ef2f017169327df1f7c844fd
-162 195 176 44 178 42 248 61 109 30 173 29 78 24 217 22 89 155 231 194 239 47 1 113 105 50 125 241 247 200 68 253
-```
-
-If you want to calculate a sha256 hash yourself you can use that program, there's also a command-line program called `openssl` that can do this from standard input:
-
-```
-[cs29fa24@ieng6-201]:~:203$ echo -n seCret | openssl dgst -sha256
-(stdin)= a2c3b02cb22af83d6d1ead1d4e18d916599be7c2ef2f017169327df1f7c844fd
-```
-
-This also generates a SHA256 hash string of `seCret`. Note that both examples show 64 characters of hex values. 2 hex characters are used to represent one byte, so 64 hex characters are used to represent 32 bytes. (The `-n` argument to `echo` means “don't add a newline.” Without this, we'd get the hash of `seCret\n`)
-
 ## Using the Problem Set for your PA
 
 Most of the needed functionality for the PA is in the problem set problems! So part of your workflow for this PA should be to move code over from the appropriate part of your problem set and into your PA code.
 
 - PSet 2 _11. cap_variants_ helps create all the variants of the strings needed for checking
-- PSet 2 _15. sha256_stdin_ helps with the main loop that does SHA on values from input (problems 14 and 16 are also related)
+- PSet 2 _15. sha256_stdin_ helps with the main loop that does SHA on values from input and has examples of calling SHA256 (problems 14 and 16 are also related)
 - Pset 2 _9. shacheck_ helps with understanding how to compare SHA values
 
-## Final Testing
+## Fun (and Authentic!) Testing
 
 To help testing your PA, we are providing you with a file containing 3 million real plaintext passwords famously found a data breach of the [RockYou
 social network](https://en.wikipedia.org/wiki/RockYou) in 2009. You can use the password file present in the `ieng6` servers by reading it into `pwcrack` using
@@ -207,7 +144,7 @@ You might have trouble with a couple of these passwords. For no additional credi
 
 ## Design Questions
 
-1. Real password crackers try many more variations than just uppercasing and lowercasing. Do a little research on password cracking and suggest at least 2 other ways to vary a password to crack it. Describe them both, and for each, write a sentence or two about what modifications you would make to your code to implement them.
+1. Real password crackers try many more variations than just uppercasing and lowercasing. Do a little research on password cracking and suggest at least 2 other ways to vary a password to crack it. Describe them both, and for each, write a sentence or two about what modifications you would make to your code to implement them. (You don't have to actually implement them).
 
 2. How much working memory is needed to store all of the variables needed to execute the password cracker? Based on your response would you say that a password cracker is more memory-limited or is it more limited by how fast the process can run the code?
 
