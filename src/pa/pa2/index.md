@@ -94,6 +94,21 @@ Most of the needed functionality for the PA is in the problem set problems! So p
 - PSet 2 _15. sha256_stdin_ helps with the main loop that does SHA on values from input and has examples of calling SHA256 (problems 14 and 16 are also related)
 - Pset 2 _9. shacheck_ helps with understanding how to compare SHA values
 
+
+## Design Questions
+
+1. Real password crackers try many more variations than just uppercasing and lowercasing. Do a little research on password cracking and suggest at least 2 other ways to vary a password to crack it. Describe them both, and for each, write a sentence or two about what modifications you would make to your code to implement them. (You don't have to actually implement them).
+
+2. How much working memory is needed to store all of the variables needed to execute the password cracker? Based on your response would you say that a password cracker is more memory-limited or is it more limited by how fast the process can run the code?
+
+## What to Hand In
+
+- Any .c files you wrote (can be one file or many; it's totally reasonable to only have one). We will run `gcc *.c -o pwcrack -lcrypto` to compile your code, so you should make sure it works when we do that.
+- A file **DESIGN.md** (with exactly that name) containing the answers to the design questions
+
+You will hand in your code to the `pa2` assignment on Gradescope. An autograder will give you information about if your code compiles and works on some simple examples like the ones from this writeup. Your implementation and design questions will be graded after the deadline with a mix of automatic and manual grading.
+
+
 ## Fun (and Authentic!) Testing
 
 To help testing your PA, we are providing you with a file containing 3 million real plaintext passwords famously found a data breach of the [RockYou
@@ -115,26 +130,18 @@ censored version of the RockYou password list. Our filtering methodology was to 
 word list. If you read the contents of the password file, note that you are doing so at your own risk, as we can not guarantee that we removed
 all offensive passwords from the list.
 
-### Staff Passwords
+### Staff Passwords Scenario
 
-You see in the news and on social media that there was a “data breach” of PrairieLearn, and the passwords of all instructors and TAs were exposed on the dark web. A classmate sends you a mysterious link that clearly contains usernames for the CSE29 staff and gibberish after each name.
+You see in the news and on social media that there was a “data breach” of PrairieLearn, and the passwords of all instructors and TAs were exposed on the “dark web”. A classmate sends you a mysterious link that clearly contains usernames for the CSE29 staff and gibberish after each name.
 
 [PrairieLearn Password Dump](https://raw.githubusercontent.com/ucsd-cse29/fa25/refs/heads/main/src/private/data/raw/sha/pw.txt)
 
 Can you figure out the passwords of each of the staff members using your `pwcrack` program, the data at that link, and the rockyou dataset shared above?
 
-## Design Questions
+Cracking these is ungraded, and just provided for fun and to get your attention with a provocative scenario where password cracking would be interesting (if unethical). They aren't our real passwords.
 
-1. Real password crackers try many more variations than just uppercasing and lowercasing. Do a little research on password cracking and suggest at least 2 other ways to vary a password to crack it. Describe them both, and for each, write a sentence or two about what modifications you would make to your code to implement them. (You don't have to actually implement them).
+It also gives us a moment to discuss something important: just because you _can_ crack passwords doesn't mean you _should_. There are plenty of laws prohibiting the use of passwords that aren't yours to access data that isn't yours, regardless of how you obtained the password. Responsibility and ethics are another – it may simply be wrong to reverse-engineer (access to) someone else's private data, even if it happens to be legal. Of course, there are good uses for doing this – cracking can recover a lost password needed for access to critical data, for example, if the hash is available. Like any powerful tool, your knowledge of C programming and passwords should be used with care and appropriately in context!
 
-2. How much working memory is needed to store all of the variables needed to execute the password cracker? Based on your response would you say that a password cracker is more memory-limited or is it more limited by how fast the process can run the code?
-
-## What to Hand In
-
-- Any .c files you wrote (can be one file or many; it's totally reasonable to only have one). We will run `gcc *.c -o pwcrack -lcrypto` to compile your code, so you should make sure it works when we do that.
-- A file **DESIGN.md** (with exactly that name) containing the answers to the design questions
-
-You will hand in your code to the `pa2` assignment on Gradescope. An autograder will give you information about if your code compiles and works on some simple examples like the ones from this writeup. Your implementation and design questions will be graded after the deadline with a mix of automatic and manual grading.
 
 ## Resources and Policy
 
