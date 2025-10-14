@@ -119,7 +119,7 @@ all offensive passwords from the list.
 
 You see in the news and on social media that there was a “data breach” of PrairieLearn, and the passwords of all instructors and TAs were exposed on the dark web. A classmate sends you a mysterious link that clearly contains usernames for the CSE29 staff and gibberish after each name.
 
-[PrairieLearn Password Dump](/private/data/raw/sha/pw.txt)
+[PrairieLearn Password Dump](../../private/data/raw/sha/pw.txt)
 
 Can you figure out the passwords of each of the staff members using your `pwcrack` program, the data at that link, and the rockyou dataset shared above?
 
