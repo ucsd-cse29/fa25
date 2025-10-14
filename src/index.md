@@ -64,6 +64,9 @@ you can see what's coming.
     - <u>Joe's Lecture:</u> [Handout](lec/week3/week3-monday.pdf) | [Annotated Handout](lec/week3/Annotated-lecture-08-w3m.pdf)
     - <u>Aaron's Lecture:</u> [Slides](lec/week3/29-fa25-l8.pdf) Code on `ieng6` in dir `/home/linux/ieng6/CSE29_FA25_B00/public/lectures/10-10-strcat-memory`
 
+- **Lab**
+  - [Lab 3 Reference](week3/lab3.md)
+
 ### Week 2 - Number Representations, Sizes, and Signs
 - **Announcements**
   - [PA 1](pa/pa1/index.md) is due Thursday 10/9 at 11:59pm. 
