@@ -44,7 +44,27 @@ If a matching password is _not_ found, the program should print:
 Did not find a matching password
 ```
 
-### Examples
+## Compilation
+
+### On ieng6
+
+Because the OpenSSL libraries on ieng6 are not in the default library search path, you need to use this command:
+
+```bash
+gcc -L/usr/lib/x86_64-linux-gnu/ *.c -o pwcrack -lcrypto -lssl
+```
+
+The `-L` flag tells the compiler where to find the crypto libraries during linking.
+
+### On Other Systems
+
+On most other Linux systems or macOS, you can compile with:
+
+```bash
+gcc *.c -o pwcrack -lcrypto
+```
+
+## Examples
 
 `seCret` has a SHA256 hash of `a2c3b02cb22af83d6d1ead1d4e18d916599be7c2ef2f017169327df1f7c844fd`, and `notinlist`
 has a SHA256 hash of `21d3162352fdd45e05d052398c1ddb2ca5e9fc0a13e534f3c183f9f5b2f4a041`
@@ -94,7 +114,6 @@ Most of the needed functionality for the PA is in the problem set problems! So p
 - PSet 2 _15. sha256_stdin_ helps with the main loop that does SHA on values from input and has examples of calling SHA256 (problems 14 and 16 are also related)
 - Pset 2 _9. shacheck_ helps with understanding how to compare SHA values
 
-
 ## Design Questions
 
 1. Real password crackers try many more variations than just uppercasing and lowercasing. Do a little research on password cracking and suggest at least 2 other ways to vary a password to crack it. Describe them both, and for each, write a sentence or two about what modifications you would make to your code to implement them. (You don't have to actually implement them).
@@ -103,11 +122,10 @@ Most of the needed functionality for the PA is in the problem set problems! So p
 
 ## What to Hand In
 
-- Any .c files you wrote (can be one file or many; it's totally reasonable to only have one). We will run `gcc *.c -o pwcrack -lcrypto` to compile your code, so you should make sure it works when we do that.
+- Any .c files you wrote (can be one file or many; it's totally reasonable to only have one). We will compile your code, so you should make sure it works when we do that.
 - A file **DESIGN.md** (with exactly that name) containing the answers to the design questions
 
 You will hand in your code to the `pa2` assignment on Gradescope. An autograder will give you information about if your code compiles and works on some simple examples like the ones from this writeup. Your implementation and design questions will be graded after the deadline with a mix of automatic and manual grading.
-
 
 ## Fun (and Authentic!) Testing
 
@@ -143,7 +161,6 @@ Cracking these is ungraded, and just provided for fun and to get your attention 
 It also gives us a moment to discuss something important: just because you _can_ crack passwords doesn't mean you _should_. There are plenty of laws prohibiting the use of passwords that aren't yours to access data that isn't yours, regardless of how you obtained the password. Responsibility and ethics are another – it may simply be wrong to reverse-engineer (access to) someone else's private data, even if it happens to be legal. Of course, there are good uses for doing this – cracking can recover a lost password needed for access to critical data, for example, if the hash is available. Like any powerful tool, your knowledge of C programming and passwords should be used with care and appropriately in context!
 
 In many cases, finding and reporting security issues is possible to do _responsibly_ – there's an entire theory and practice of [responsible disclosure](https://cheatsheetseries.owasp.org/cheatsheets/Vulnerability_Disclosure_Cheat_Sheet.html). [Researchers like Prof Aaron](https://www.wired.com/story/satellites-are-leaking-the-worlds-secrets-calls-texts-military-and-corporate-data/) do work on responsibly informing companies, governments, and the public about vulnerabilities in real-world systems. So it's critical to learn about how systems work, how secure systems fail, and how to navigate the surrounding ethical, legal, and social issues!
-
 
 ## Resources and Policy
 
