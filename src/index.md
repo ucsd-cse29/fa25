@@ -63,7 +63,7 @@ you can see what's coming.
 
   - **Wednesday:**
     - <u>Joe's Lecture:</u> [Annotated Handout](lec/week3/Annotated-lecture-09-w3w.pdf)
-    - <u>Aaron's Lecture:</u> 
+    - <u>Aaron's Lecture:</u> [Slides](lec/week3/29-fa25-l9.pdf)
 
   - **Monday:**
     - <u>Joe's Lecture:</u> [Handout](lec/week3/week3-monday.pdf) | [Annotated Handout](lec/week3/Annotated-lecture-08-w3m.pdf)
