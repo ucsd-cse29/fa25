@@ -44,9 +44,9 @@ If a matching password is _not_ found, the program should print:
 Did not find a matching password
 ```
 
-## Compilation
+### Compiling Your Code
 
-### On ieng6
+**On ieng6**
 
 Because the OpenSSL libraries on ieng6 are not in the default library search path, you need to use this command:
 
@@ -56,7 +56,7 @@ gcc -L/usr/lib/x86_64-linux-gnu/ *.c -o pwcrack -lcrypto -lssl
 
 The `-L` flag tells the compiler where to find the crypto libraries during linking.
 
-### On Other Systems
+**On Other Systems**
 
 On most other Linux systems or macOS, you can compile with:
 
@@ -64,7 +64,7 @@ On most other Linux systems or macOS, you can compile with:
 gcc *.c -o pwcrack -lcrypto
 ```
 
-## Examples
+### Examples
 
 `seCret` has a SHA256 hash of `a2c3b02cb22af83d6d1ead1d4e18d916599be7c2ef2f017169327df1f7c844fd`, and `notinlist`
 has a SHA256 hash of `21d3162352fdd45e05d052398c1ddb2ca5e9fc0a13e534f3c183f9f5b2f4a041`
