@@ -60,6 +60,11 @@ you can see what's coming.
   - [Pointers and Functions](https://diveintosystems.org/book/C2-C_depth/pointers_functions.htm)
 
 **Lecture Materials**
+
+  - **Wednesday:**
+    - <u>Joe's Lecture:</u> [Annotated Handout](lec/week3/Annotated-lecture-09-w3w.pdf)
+    - <u>Aaron's Lecture:</u> 
+
   - **Monday:**
     - <u>Joe's Lecture:</u> [Handout](lec/week3/week3-monday.pdf) | [Annotated Handout](lec/week3/Annotated-lecture-08-w3m.pdf)
     - <u>Aaron's Lecture:</u> [Slides](lec/week3/29-fa25-l8.pdf) Code on `ieng6` in dir `/home/linux/ieng6/CSE29_FA25_B00/public/lectures/10-10-strcat-memory`
