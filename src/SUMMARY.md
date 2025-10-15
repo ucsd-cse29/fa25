@@ -11,4 +11,5 @@
 # Assignments
 
 - [PA 1](./pa/pa1/index.md)
+- [PA 2](./pa/pa2/index.md)
 
