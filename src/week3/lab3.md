@@ -76,4 +76,7 @@ If you’re done early, use the reference card to try exploring other gdb comman
 # Lab 3 Work Check-Off (due Monday, Oct 20):
 In your copy of the [lab3-buggy repo](https://classroom.github.com/a/X-DdsPq-): fix the bugs in your assigned program, then commit and push your changes so they show up on GitHub.
 
+<!-- NOTE: TESTING SNEAKY LINKS FOR LAB4-->
+[test](../week4/lab4.md)
+
 
