@@ -253,6 +253,8 @@ Git also keeps a log of all the changes. The `git log` command prints this log i
 
 <!-- Add things here that students can do if they are done early -->
 
+<!-- NOTE: TESTING SNEAKY LINKS FOR LAB4-->
+[link](../week4/lab4.md)
 
 
 
