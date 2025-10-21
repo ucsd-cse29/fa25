@@ -7,23 +7,17 @@ Part 1: `.vimrc` and `.bash_profile`
 In the file `~/.bash_profile` on ieng6, add:
 
 ```
-
 alias ls="ls --color"
-
 ```
 
-In the file `~/.vimrc` on ieng6, add:
+Create the file `~/.vimrc` on ieng6, and copy in:
 
 ```
-
 set tabstop=4
-
 set softtabstop=4
-
 set shiftwidth=4
-
+set autoindent
 set number
-
 ```
 
 Part 2: Writing a Search Program
