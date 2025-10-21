@@ -84,7 +84,7 @@ If done early, implement some of the following (in no particular order)
 
     -   exit with a help message for unrecognized options (e.g. -f, -o) instead of treating them as search patterns. (Or if you pass it the -h or --help options) 
 
-    -   if it sees the option "--",  treat all following arguments as search patterns, even if they start with a "-"<a href="src/week4/mysearch_basic.md" style="color: black; ">.</a> (This is how actual command line programs allow you to search for the string "-n" instead of specifying the "-n" option.)
+    -   if it sees the option "--",  treat all following arguments as search patterns, even if they start with a "-"<a href="mysearch_basic.md" style="color: black; ">.</a> (This is how actual command line programs allow you to search for the string "-n" instead of specifying the "-n" option.)
 
     -   allow long versions of options, e.g. `--invert-match`, `--line-number`, `--count`, etc
     
