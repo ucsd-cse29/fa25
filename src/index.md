@@ -31,7 +31,7 @@ better!
 - Final exam: [AP&M Testing Center](https://map.concept3d.com/?id=1005#!m/167186?share), flexible scheduling in final exam week on [PrairieTest](https://us.prairietest.com/)
 - Professor office hours – Joe and Aaron each have 2 hours. Come to either and
   ask anything you need.
-    - Aaron: Monday 3:30pm-4:30pm and Wednesday 11am-12pm CSE3120
+    - Aaron: Monday 10am-11am and Wednesday 11am-12pm CSE3120
     - Joe: Tuesday 1:00pm-2:00pm (CSE B260 in the labs) and Wednesday 1:00-2:00pm (CSE 3206 Joe's Office)
 - Office Hours: See the [Office Hours Calendar](#office-hours-calendar)
 - Q&A forum: [Piazza](https://piazza.com/class/mfzu0oi0j2q354)
