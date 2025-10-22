@@ -61,6 +61,10 @@ you can see what's coming.
 
 - **Lecture Materials**
 
+  - **Wednesday:**
+    - [Repository](https://github.com/ucsd-cse29/fa25-12-w4w-shell/tree/main)
+    - <u>Joe's Lecture:</u> [Annotated Handout](lec/week4/Annotated-lecture-12-w4w.pdf)
+
   - **Monday:**
     - <u>Joe's Lecture:</u> [Annotated Handout](lec/week4/Annotated-lecture-11-w4m.pdf)
 
