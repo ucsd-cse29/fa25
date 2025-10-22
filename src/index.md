@@ -278,15 +278,15 @@ C in the course. You must reach that achievement level in _all_ of the
 categories to get an A, B, or C.
 
 - **A** achievement:
-  - ≥34/40 lab points
+  - ≥30/36 lab points
   - ≥16/20 assignment points
   - ≥10/12 exam points
 - **B** achievement:
-  - 30-33 lab points
+  - 26-29 lab points
   - 13-15 assignment points
   - 8-9 exam points
 - **C** achievement:
-  - 24-29 lab points
+  - 20-25 lab points
   - 10-12 assignment points
   - 6-7 exam points
 
