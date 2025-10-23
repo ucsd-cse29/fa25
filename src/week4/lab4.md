@@ -55,7 +55,8 @@ You can use the `strcmp()` function to check whether two strings are equal.
 Work Check-off
 --------------
 
-Make sure your program supports at least one of `-n`, `-v`, or `-c`, and commit/push your code.
+~~Make sure your program supports at least one of `-n`, `-v`, or `-c`, and commit/push your code.~~
+Make sure you have committed and pushed the code you were working on for your `-n`, `-v`, or `-c` file from the lab activity.
 
 If done early, implement some of the following (in no particular order)
 ------------------------------------------------------------------------------
