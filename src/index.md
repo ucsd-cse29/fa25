@@ -63,6 +63,7 @@ you can see what's coming.
 
   - **Monday:**
     - <u>Joe's Lecture:</u> [Annotated Handout](lec/week5/Annotated-lecture-14-w5m.pdf)
+    - <u>Aaron's Lecture:</u> [Slides](lec/week4/29-fa25-l14.pdf)
 
 ### Week 4 – Processes and Memory
 
@@ -75,6 +76,7 @@ you can see what's coming.
 
   - **Friday:**
     - <u>Joe's Lecture:</u> [Annotated Handout](lec/week4/Annotated-lecture-13-w4f.pdf)
+    - <u>Aaron's Lecture:</u> [Slides](lec/week4/29-fa25-l13.pdf)
 
   - **Wednesday:**
     - [Repository](https://github.com/ucsd-cse29/fa25-12-w4w-shell/tree/main)
