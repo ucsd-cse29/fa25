@@ -59,6 +59,11 @@ you can see what's coming.
   - [Dynamic Memory Allocation](https://diveintosystems.org/book/C2-C_depth/dynamic_memory.html)
   - [(For a deep dive) The Lost Art of C Structure Packing](http://www.catb.org/esr/structure-packing/)
 
+- **Lecture Materials**
+
+  - **Monday:**
+    - <u>Joe's Lecture:</u> [Annotated Handout](lec/week5/Annotated-lecture-14-w5m.pdf)
+
 ### Week 4 – Processes and Memory
 
 - **Readings**
