@@ -52,6 +52,13 @@ The schedule below outlines topics, due dates, and links to assignments. We'll
 typically update the material for the upcoming week before Monday's lecture so
 you can see what's coming.
 
+### Week 5 – Structs, Memory Management
+
+- **Readings**
+  - [Structs](https://diveintosystems.org/book/C2-C_depth/structs.html)
+  - [Dynamic Memory Allocation](https://diveintosystems.org/book/C2-C_depth/dynamic_memory.html)
+  - [(For a deep dive) The Lost Art of C Structure Packing](http://www.catb.org/esr/structure-packing/)
+
 ### Week 4 – Processes and Memory
 
 - **Readings**
