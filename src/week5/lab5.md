@@ -22,7 +22,7 @@ Host <shortcut> <possibly more shortcuts>
 Part 2: GDB Debugging
 --------------------------------
 
-(clone the github classroom repo from here: <>)
+(clone the github classroom repo from here: <https://classroom.github.com/a/iSlIHwXP>)
 
 Debug the buggy `index_of` file.  
 `/home/linux/ieng6/CSE29_FA25_A00/public/lab5/afilename??`
