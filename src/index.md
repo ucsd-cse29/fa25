@@ -75,6 +75,7 @@ you can see what's coming.
 - **Lecture Materials**
 
   - **Friday:**
+    - [Repository](https://github.com/pandrew99/fa25-13-w4f-shell/tree/main)
     - <u>Joe's Lecture:</u> [Annotated Handout](lec/week4/Annotated-lecture-13-w4f.pdf)
     - <u>Aaron's Lecture:</u> [Slides](lec/week4/29-fa25-l13.pdf)
 
