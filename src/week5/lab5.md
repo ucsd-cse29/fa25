@@ -31,7 +31,9 @@ Debug the buggy `index_of` file.
 Part 3: Hacking
 ---------------------
 
-Give yourself an A!
+Give yourself an A!  
+Here is the source code for reference:
+![gradebook source code](../images/gradebook_src.png)
 
 Work Check-off
 --------------
