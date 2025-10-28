@@ -43,8 +43,10 @@ If the next line contains a function call, steps into that function call and sto
 
 Continues to run the program from the next line until the next breakpoint.
 
-The line that is shown above the `(gdb)` prompt *has not run yet*. It is the line that will run if you type `next`.
+--
+
 ![Screenshot of GDB](gdb_line.png)
+The line that is shown above the `(gdb)` prompt *has not run yet*. It is the line that will run if you type `next`.
 
 ### Activity
 
