@@ -209,7 +209,13 @@ For each lab there are 4 possible points to earn:
 - **1** for submitting and/or getting work checked off that was done in lab
 
 If you miss lab, you can earn the third point by submitting work late, but
-cannot earn back the 3 points related to participation.
+cannot earn back the 3 points related to participation.  You can miss 2 labs
+There is no way to make up a lab beyond this 1 point, even for illness, travel,
+or emergencies. Our preference would be to require all 9 labs for an A, and
+have some kind of excused absences. However, tracking excused absences doesn't
+really scale, so the “two for any reason” policy is how we handle it. You
+don't need to justify your missed labs. Contact the instructor if you'll miss
+more than 2 labs for unavoidable reasons.
 
 ### Lecture and Discussion Sessions
 
