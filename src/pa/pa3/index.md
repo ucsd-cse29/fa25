@@ -31,7 +31,7 @@ The **PIoneer SHell**, or as we endearingly call it, `pish` (a name with such el
 
 The starter code for this assignment is hosted on GitHub classroom. Use the following link to accept the GitHub Classroom assignment:
 
-Github Classroom: https://classroom.github.com/a/qGin5nO-
+Github Classroom: [https://classroom.github.com/a/qGin5nO-](https://classroom.github.com/a/qGin5nO-)
 
 ## Overall Task
 
@@ -65,7 +65,7 @@ You should make sure your code is robust enough to handle various sorts of white
 
 For example, your shell should be able to handle the following input: `" \tls\t\t-a -l "`, and still run the ls program with the correct `argv` array.
 
-`strtok` will be VERY helpful for this.
+`strtok` will be **VERY** helpful for this.
 
 ## Built-In Commands
 
@@ -97,7 +97,7 @@ Our history file will be stored at `~/.pish_history`. (You will find a function 
 
 When the user types in the `history` command to our shell, it should print out all the contents of our history file, adding a counter to each line:
 
-```
+```bash
 ▶ history
 1 history
 ▶ pwd
@@ -129,7 +129,7 @@ You will not be able to:
 - use the tilde character (~) to represent your home directory,
 - use redirection (> and <),
 - pipe between commands (|),
-- -and many more…
+- and many more…
 
 Don't be concerned when these things don't work in your shell implementation!
 
@@ -188,35 +188,17 @@ First, run `make` to compile everything. You should see the `pish` executable in
 
 To run pish in interactive mode (accepting keyboard input), type
 
-```
+``` bash
 $ ./pish
 ```
 
 Or, to run a script (e.g., script.sh), type
 
-```
+``` bash
 $ ./pish script.sh
 ```
 
 The same applies for the reference implementation `ref-pish`.
-
-## Hints
-
-This project once more requires you to think carefully about incremental development. There are many things to do, how should you go about everything? In what order?
-
-Here's one possible plan:
-
-- Start from simple commands without any arguments, e.g., `ls`.
-- After that, start implementing running programs with `fork` and `exec`.
-- Implementing input parsing using `strtok()`. Think about how to break down the line and put it into `struct pish_arg`.
-- Once command parsing is working, go on to implement the two simple built-in commands: `exit` and `cd`. Make sure to take care of error handling.
-- Next, make sure you can parse commands with arguments, e.g., `"ls -a"`.
-- Next, make sure you can handle arbitrary whitespaces.
-- Make sure reading from a script file works just as well as from stdin.
-- Once that's working, you can finish implementing the `history` command.
-- The list above is just a suggestion. You are of course encouraged to come up with your own implementation plan. But the most important thing is that you should have a plan!
-
-Start early, start often!
 
 ## What to Hand In
 
