@@ -31,7 +31,7 @@ better!
 - Final exam: [AP&M Testing Center](https://map.concept3d.com/?id=1005#!m/167186?share), flexible scheduling in final exam week on [PrairieTest](https://us.prairietest.com/)
 - Professor office hours – Joe and Aaron each have 2 hours. Come to either and
   ask anything you need.
-    - Aaron: Monday 3:30pm-4:30pm and Wednesday 11am-12pm CSE3120
+    - Aaron: Monday 10am-11am and Wednesday 11am-12pm CSE3120
     - Joe: Tuesday 1:00pm-2:00pm (CSE B260 in the labs) and Wednesday 1:00-2:00pm (CSE 3206 Joe's Office)
 - Office Hours: See the [Office Hours Calendar](#office-hours-calendar)
 - Q&A forum: [Piazza](https://piazza.com/class/mfzu0oi0j2q354)
@@ -52,14 +52,51 @@ The schedule below outlines topics, due dates, and links to assignments. We'll
 typically update the material for the upcoming week before Monday's lecture so
 you can see what's coming.
 
+### Week 5 – Structs, Memory Management
+
+- **Readings**
+  - [Structs](https://diveintosystems.org/book/C2-C_depth/structs.html)
+  - [Dynamic Memory Allocation](https://diveintosystems.org/book/C2-C_depth/dynamic_memory.html)
+  - [(For a deep dive) The Lost Art of C Structure Packing](http://www.catb.org/esr/structure-packing/)
+
+- **Lecture Materials**
+
+  - **Monday:**
+    - <u>Joe's Lecture:</u> [Annotated Handout](lec/week5/Annotated-lecture-14-w5m.pdf)
+    - <u>Aaron's Lecture:</u> [Slides](lec/week5/29-fa25-l14.pdf)
+
+### Week 4 – Processes and Memory
+
+- **Readings**
+  - [Processes](https://diveintosystems.org/book/C13-OS/processes.html), especially [fork](https://diveintosystems.org/book/C13-OS/processes.html#_fork) and [exec](https://diveintosystems.org/book/C13-OS/processes.html#_exec)
+  - [C Structs](https://diveintosystems.org/book/C2-C_depth/structs.html)
+  - [`make` and Makefiles](https://diveintosystems.org/book/Appendix2/makefiles.html#_make_and_makefiles)
+
+- **Lecture Materials**
+
+  - **Friday:**
+    - [Repository](https://github.com/pandrew99/fa25-13-w4f-shell/tree/main)
+    - <u>Joe's Lecture:</u> [Annotated Handout](lec/week4/Annotated-lecture-13-w4f.pdf)
+    - <u>Aaron's Lecture:</u> [Slides](lec/week4/29-fa25-l13.pdf)
+
+  - **Wednesday:**
+    - [Repository](https://github.com/ucsd-cse29/fa25-12-w4w-shell/tree/main)
+    - <u>Joe's Lecture:</u> [Annotated Handout](lec/week4/Annotated-lecture-12-w4w.pdf)
+
+  - **Monday:**
+    - <u>Joe's Lecture:</u> [Annotated Handout](lec/week4/Annotated-lecture-11-w4m.pdf)
+
 ### Week 3 – Where (Some) Things Are in Memory
 
-**Readings**
+- **Readings**
   - [Debugging with GDB](https://diveintosystems.org/book/C3-C_debug/gdb.html)
   - [Arrays in C](https://diveintosystems.org/book/C2-C_depth/arrays.html)
-  - [Pointers and Functions](https://diveintosystems.org/book/C2-C_depth/pointers_functions.htm)
+  - [Pointers and Functions](https://diveintosystems.org/book/C2-C_depth/pointers_functions.html)
 
-**Lecture Materials**
+- **Lecture Materials**
+
+  - **Friday:**
+    - <u>Joe's Lecture:</u> [Annotated Handout](lec/week3/Annotated-lecture-10-w3f.pdf)
 
   - **Wednesday:**
     - <u>Joe's Lecture:</u> [Annotated Handout](lec/week3/Annotated-lecture-09-w3w.pdf)
@@ -67,7 +104,7 @@ you can see what's coming.
 
   - **Monday:**
     - <u>Joe's Lecture:</u> [Handout](lec/week3/week3-monday.pdf) | [Annotated Handout](lec/week3/Annotated-lecture-08-w3m.pdf)
-    - <u>Aaron's Lecture:</u> [Slides](lec/week3/29-fa25-l8.pdf) Code on `ieng6` in dir `/home/linux/ieng6/CSE29_FA25_B00/public/lectures/10-10-strcat-memory`
+    - <u>Aaron's Lecture:</u> [Slides](lec/week3/29-fa25-l8.pdf) | Code on `ieng6` in dir `/home/linux/ieng6/CSE29_FA25_B00/public/lectures/10-10-strcat-memory`
 
 - **Lab**
   - [Lab 3 Reference](week3/lab3.md)
@@ -263,15 +300,15 @@ C in the course. You must reach that achievement level in _all_ of the
 categories to get an A, B, or C.
 
 - **A** achievement:
-  - ≥34/40 lab points
+  - ≥30/36 lab points
   - ≥16/20 assignment points
   - ≥10/12 exam points
 - **B** achievement:
-  - 30-33 lab points
+  - 26-29 lab points
   - 13-15 assignment points
   - 8-9 exam points
 - **C** achievement:
-  - 24-29 lab points
+  - 20-25 lab points
   - 10-12 assignment points
   - 6-7 exam points
 
