@@ -23,35 +23,36 @@ Part 2: GDB Debugging
 --------------------------------
 
 ### New GDB commands
-#### `start`
+#### `start [ARGUMENTS]`
 
-Sets the program to be run at the beginning of `main`.
+Starts the program with the specified arguments and pauses at the first line of `main`.
 
-#### `break [line number]`
+#### `break LINE_NUMBER`
 
 Sets a **breakpoint** at the specified line number. (**Breakpoint**: a line in the program at which GDB will stop at before the line executes.)
 
 #### `next`
 
-Execute the next line of code.
+Executes to the next line of code.
 
 #### `step`
 
-If the next line contains a function call, steps into that function call and stops at its first line. If there is no function call, behaves the same way as `next`.
+If the next line contains a function call, steps into the first line of the function. Otherwise, behaves the same way as `next`.
 
 #### `continue`
 
-Continues to run the program from the next line until the next breakpoint.
+Continues running the program until the next breakpoint.
 
 --
 
 ![Screenshot of GDB](gdb_line.png)
+
 The line that is shown above the `(gdb)` prompt *has not run yet*. It is the line that will run if you type `next`.
+
 
 ### Activity
 
 (clone the github classroom repo from here: <https://classroom.github.com/a/iSlIHwXP>)
-
 
 Part 3: Hacking
 ---------------------
