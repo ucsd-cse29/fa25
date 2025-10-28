@@ -1,4 +1,4 @@
-# Lab 4 Reference Document
+# Lab 5 Reference Document
 
 
 Part 1: `.vimrc` addendum and ssh `config`
@@ -49,8 +49,6 @@ The line that is shown above the `(gdb)` prompt *has not run yet*. It is the lin
 ### Activity
 
 (clone the github classroom repo from here: <https://classroom.github.com/a/iSlIHwXP>)
- 
-`/home/linux/ieng6/CSE29_FA25_A00/public/`restofpath??
 
 
 Part 3: Hacking

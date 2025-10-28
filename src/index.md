@@ -86,6 +86,9 @@ you can see what's coming.
   - **Monday:**
     - <u>Joe's Lecture:</u> [Annotated Handout](lec/week4/Annotated-lecture-11-w4m.pdf)
 
+- **Lab**
+  - [Lab 5 Reference](week5/lab5.md)
+
 ### Week 3 – Where (Some) Things Are in Memory
 
 - **Readings**
