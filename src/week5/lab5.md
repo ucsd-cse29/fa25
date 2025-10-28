@@ -56,9 +56,29 @@ The line that is shown above the `(gdb)` prompt *has not run yet*. It is the lin
 Part 3: Hacking
 ---------------------
 
-Give yourself an A!  
-Here is the source code for reference:
+## 3.1. Background
+
+Imagine that you're a less ethical student than I'm sure you actually are. You
+overhear from some other students in lab that there's a binary available on the
+pi-cluster that can show you your grades on assignments before we formally
+release them. You hear quieter whispers that someone found a way to use it to
+_change_ their grade. Given our less-than-ethical assumption about your state
+of mind, you might be tempted to exploit this for yourself.  
+
+## 3.2. The Plot Thickens
+
+You see some code open on the professor's laptop during office hours.  You do
+your best to commit it to memory and write it down (remember, you're acting
+quite unethically in this story), because it strikes you that the code was
+something regarding assignment scores.  
 ![gradebook source code](../images/gradebook_src.png)
+
+Using this information, you decide to give yourself and A with a score 
+to match while maintaining a real due date.  
+**HINT**
+When important values are adjacent on the stack, overflowing an array with
+values that you control can let you assign into other stack-allocated values.
+
 
 GDB commands that may be useful for this activity:
 
@@ -87,5 +107,5 @@ GDB commands that may be useful for this activity:
 Work Check-off
 --------------
 
-To be announced.
+Push a copy-paste or screenshot of your `gdb` session from part 2 when investigating `index_of_E` to the github classroom assignment for this lab.
 
