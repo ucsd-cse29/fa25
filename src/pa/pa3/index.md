@@ -1,249 +1,232 @@
-# PA3 Resubmission - Web Server
+# PA3 - The Pioneer Shell: Due Thursday, November 6 at 11:59pm - [Github Classroom Link](https://classroom.github.com/a/qGin5nO-)
 
-- **Resubmission Due 10:10pm Wednesday, December 4, 2024**
-- Github Classroom Assignment: [https://classroom.github.com/a/hlq9KJbK](https://classroom.github.com/a/hlq9KJbK)
+This assignment is from [CSE29
+SP24](https://cse29sp24.github.io/docs/pas/pa6.html#acknowledgements), which has
+its own list of acknowledgments!
 
-## Resubmission instructions
-**If you want to resubmit PA3, please read this section carefully. You need to pass all the tests in the original PA3, while also implementing an extra functionality and answering a new design question described below.**
+## Learning Goals
 
-In addition to `/chats`, `/post`, `/react`, `/reset` requests, the chat server also listens for the following request:
-### `/edit`
+This assignment calls upon many of the concepts that you have practiced in previous PAs. Specifically, we will practice the following concepts in C:
 
-```
-/edit?id=<id>&message=<message>
-```
+- string manipulation using library functions,
+- command line arguments,
+- process management using fork(), exec(), and wait(), and of course,
+- using the terminal and vim.
 
-Edits the message in the post with the given id (the ids are the `#N` at the
-beginning of posts) by replacing it with the new message. It must
-respond with the list of all chats (including the chat with the replaced message).
+We'll also get practice with a new set of library functions for opening, reading from, and writing to files.
 
+## Introduction
 
-Limits and constraints:
+Throughout this quarter, you have been interacting with the ieng6 server via the terminal – you've used `vim` to write code, used `gcc` and `make` to compile, used `git` to commit and push your changes, etc. At the heart of all this lies the shell, which acts as the user interface for the operating system.
 
-- If the id is not the ID of some existing chat, respond with some kind of error
-(HTTP code 400 or 500)
-- If a parameter ( `id` or `message`) is missing, respond with some kind of
-error (HTTP code 400 or 500)
-- If message is longer than 255 bytes, respond with some kind of error (HTTP
-code 400 or 500)
+At its core, the shell is a program that reads and parses user input, and runs built-in commands (such as `cd`) or executable programs (such as `ls`, `gcc`, `make`, or `vim`).
 
-## Updated DESIGN questions for the resubmission
+As a way to wrap up this quarter, you will now create your own shell (a massively simplified one of course). We shall call it– (drumroll please)
 
-We recommended representing chats and reactions as structs. Another option would be to just represent every chat as the string of text that gets printed (including the id number, timestamp, username, message, any reactions, etc). This representation would be a single `char*` per chat. Then, the list of all chats would be a `char**`. Adding a reaction would append a new reaction to the string for that chat.
-  1. What is one good and one bad thing about this alternate design? For this part, consider only the original implementation without `/edit`.
-  2. How would this `char**` design make it harder to add the `/edit` feature in your code?
+### The Pioneer Shell
 
-## Web Servers and HTTP
+The **PIoneer SHell**, or as we endearingly call it, `pish` (a name with such elegance as other popular programs in the UNIX world, e.g., `git`).
 
-[HTTP](https://en.wikipedia.org/wiki/HTTP) is one of the most common protocols
-for communicating across computers. At the systems programming level, this means
-using _system calls_ (usually in C) to tell the operating system to send bytes
-over a network.
+## Getting Started
 
-One nice feature of HTTP is that it is a primarily text-based protocol, which
-makes it more straightforward for humans to read and debug. It is also well-understood by web
-browsers and programs like `curl`, making it easy to test and connect to
-user-facing devices.
+The starter code for this assignment is hosted on GitHub classroom. Use the following link to accept the GitHub Classroom assignment:
 
-It's useful to get experience with the format of HTTP, and with using system
-calls in C to manipulate HTTP requests.
+Github Classroom: https://classroom.github.com/a/qGin5nO-
 
-## Task – Chat Server
+## Overall Task
 
-In this programming assignment, you'll write a C program to implement a _chat
-room_ (think a plain-text version of [Slack](https://slack.com/) or
-[Discord](https://discord.com/)).
+### Interactive Mode
 
-It's best to complete the PA on `ieng6`, because it gives a consistent testing
-environment for the live server.
+Your basic shell simply runs on an infinite loop; it repeatedly:
 
-You can also use the client from [Lab 5](https://ucsd-cse29.github.io/fa24/week5/start-pa3.html) to try out your server.
+- prints out a prompt,
+- reads keyboard input from the user
+- parses the input into a command and argument list
+- if the input is a built-in shell command, then executes the command directly
+- otherwise, creates a child process to run the program specified in the input command, and waits for that process to finish
 
-Your programs should compile and run with:
+This mode of operation is called the **interactive mode**.
 
-```
-$ make chat-server
-$ ./chat-server <optional port number>
-```
+### Batch Mode
 
-The server should start with `./chat-server` and print a single message:
+Shell programs (like `bash`, which is what you have been using on ieng6) also support a batch execution mode, i.e., scripts. In this mode, instead of printing out a prompt and waiting for user input, the shell reads from a script file and executes the commands from that file one line at a time.
 
-```
-$./chat-server
-Server started on port PPPPP
-```
+In both modes, once the shell hits the end-of-file marker (EOF), it should call `exit(EXIT_SUCCESS)` to exit gracefully. In the interactive mode, this can be done by pressing Ctrl-D.
 
-If a port number was provided, it should use that port, otherwise it should
-print an open port that was selected.
+## Parsing Input
 
-It should continue running, listening for requests on that port, until shutdown
-with Ctrl-c. It can print any other logging messages or other output needed to
-the terminal.
+Every time the shell reads a line of input (be it from stdin or from a file), it breaks it down into our familiar `argv` array.
 
-The requests the chat server listens for are described in this section
+For instance, if the user enters `"ls -a -l\n"` (notice the newline character), the shell should break it down into `argv[0] = "ls"`, `argv[1] = "-a"`, and `argv[2] = "-l"`. In the starter code, we provide a struct to hold the parsed command.
 
-### `/chats`
+### Handling Whitespaces
 
-A request to `/chats` responds with the plain text rendering of all the chats.
+You should make sure your code is robust enough to handle various sorts of whitespace characters. In this PA, we expect your shell to handle any arbitrary number of spaces ( ) and tabs (\t) between arguments.
 
-The rendered chat format is
+For example, your shell should be able to handle the following input: `" \tls\t\t-a -l "`, and still run the ls program with the correct `argv` array.
 
-```
-[#N 20XX-MM-DD HH:MM]   <username>: <message>
-                    (<rusername>)  <reaction>
-                        ... [more reactions] ...
-... [more chats] ...
-```
+`strtok` will be VERY helpful for this.
 
-Where:
+## Built-In Commands
 
-- `#N` is `#` followed by a number like `#5` or `#33`, where the integer is the id of the
-chat (ids start at 1 and count up).
-- `YYYY-mm-dd HH:MM` is the _timestamp_ of the chat (when it was sent).
-    - `YYYY` is the year, like `2024`
-    - `mm` is the two-digit month, like `10` for October
-    - `dd` is the two-digit day, like `31`
-    - `HH` is the two-digit hour in 24-hour format, like `14` for 2pm
-    - `MM` is the two-digit minute, like `55`
-- `<username>` is the username of the user who sent the chat
-- `<message>` is the text of the message the user entered
-- `<rusername>` is the name of a user who reacted to the message
-- `<reaction>` is a _reaction_ to a message
+Whenever your shell executes a command, it should check whether the command is a built-in command or not. Specifically, the first whitespace-separated value in the user input string is the command. For example, if the user enters `ls -a -l tests/`, we break it down into `argv[0] = "ls"`, `argv[1] = "-a"`, `argv[2] = "-l"`, and `argv[3] = "tests/"`, and the command we are checking for is `argv[0]`, which is `"ls"`.
 
-In terms of alignment and spacing:
+If the command is one of the following built-in commands, your shell should invoke your implementation of that built-in command.
 
-- There should be at least one space between the number and the timestamp
-- There should be at least one space between the closing `]` and the username
-- There should be _no_ space right after the username in a chat, it should be
-immediately followed by a colon
-- There should be a single space after the colon before the message
-- There should be some space before the `(` in a reaction, no space between the
-`()` and the username, and some space after the `)` before the reaction message
+There are three built-in commands to implement for this project: `exit`, `cd`, and `history`.
 
-You can put in whatever effort you like into lining things up nicely within
-these constraints, but these are the requirements.
+### Built-in Command: `exit`
 
-So an example chats rendering might look like:
+When the user types `exit`, your shell should call the exit system call with `EXIT_SUCCESS` (macro for 0). This command does not take arguments. If any is provided, the shell raises a usage error.
+
+### Built-in Command: `cd`
+
+`cd` should be run with precisely 1 argument, which is the path to change to. You should use the `chdir()` system call with the argument supplied by the user. If `chdir()` fails (refer to man page to see how to detect failure), you should use call `perror("cd")` to print an error message.
+
+### Built-in Command: `history`
+
+When the user enters the `history` command, the shell should print out the list of commands a user has ever entered in interactive mode.
+
+(If you are on ieng6, open the `~/.bash_history` file to take a look at all the commands you have executed. How far you've come this quarter!)
+
+To do this, we will need to write the execution history to a file for persistent storage. Just like bash, we designate a hidden file in the user's home directory to store the command history.
+
+Our history file will be stored at `~/.pish_history`. (You will find a function in the starter code that will help you get this file path.)
+
+**Important:** When adding a command to history, if the user enters an empty command (0 length or whitespace-only), it should not be added to the history.
+
+When the user types in the `history` command to our shell, it should print out all the contents of our history file, adding a counter to each line:
 
 ```
-[#1 2024-10-06 09:01]         joe: hi aaron
-[#2 2024-10-06 09:02]       aaron: sup
-[#3 2024-10-06 09:04]         joe: working on the example chat for the PA
-[#4 2024-10-06 09:06]       aaron: oh cool what should it say
-[#5 2024-10-06 09:07]         joe: I dunno we could go pretty meta with it? I pushed an example go check it out. like a chat about the chat
-[#6 2024-10-06 09:10]       aaron: eh kinda lame tbh
-[#7 2024-10-06 09:11]         joe: whatever I already wrote it, going with it as-is
-[#8 2024-10-06 09:12]       aaron: ok but make sure we don't look like jerks
-[#9 2024-10-06 09:12]       aaron: or at least not me
-                            (joe)  👍🏻 
-[#10 2024-10-06 09:12]         joe: good talk
+▶ history
+1 history
+▶ pwd
+/home/jpolitz/cse29fa25/pa3/Simple-Shell
+▶ ls
+Makefile  script.sh  pish  pish.c  pish.h  pish_history.c
+pish_history.o  pish.o
+▶ history
+1 history
+2 pwd
+3 ls
+4 history
 ```
 
+Note that the number before each line is added by `history`. The contents of `.pish_history` should not contain the leading numbers.
 
-Here's another:
+## Running Programs
+
+If, instead, the command is not one of the aforementioned built-in commands, the shell treats it as a program, and spawns a child process to run and manage the program using the `fork()` and `exec()` family of system calls, along with `wait()`.
+
+## Excluded Features
+
+Now because our shells are quite simple, there are a lot of things that you may be accustomed to using that will not be present in our shell. (Just so you are aware how much work the authors of the bash shell put into their product!)
+
+You will not be able to:
+
+- use the arrow keys to navigate your command history,
+- use Tab to autocomplete commands,
+- use the tilde character (~) to represent your home directory,
+- use redirection (> and <),
+- pipe between commands (|),
+- -and many more…
+
+Don't be concerned when these things don't work in your shell implementation!
+
+If this were an upper-division C course, we would also ask you to implement redirection and piping.
+
+## Handling Errors
+
+Because the shell is quite a complex program, we expect you to handle many different errors and print appropriate error messages. To make this simple, we now introduce:
+
+### Usage Errors
+
+This only applies to built-in commands. When the user invokes one of the shell's built-in commands, we need to check if they are doing it correctly.
+
+- For `cd`, we expect `argc == 2`,
+- For `history` and `exit`, we expect `argc == 1`.
+
+If the user enters an incorrect command, e.g. `exit 1` or `cd` without a path, then you should call the `usage_error()` function in the starter code, and continue to the next iteration of the loop.
+
+### Errors to handle
+
+You need to handle errors from the following system calls/library functions using `perror()`. Please pay attention to the string we give to `perror()` in each case and reproduce it in your code exactly.
+
+- `fopen()` failure: `perror("open")`,
+- `chdir()` failure: `perror("cd")`,
+- `execvp()` failure: `perror("pish")`,
+- `fork()` failure: `perror("fork")`
+
+## The Code Base
+
+You are given the following files:
+
+- **pish.h**: Defines `struct pish_arg` for handling command parsing; declares functions handling the history feature.
+- **pish.c**: Implements the shell, including parsing, some built-in commands, and running programs.
+- **pish_history.c**: Implements the history feature.
+- **Makefile**: Builds the project.
+- **ref-pish**: A reference implementation of the shell. Note that in this version, the history is written to `~/.ref_pish_history` rather than `~/.pish_history`, to avoid conflict with your own shell program.
+
+### struct pish_arg
+
+In pish.h, you will find the definition of `struct pish_arg`:
+
+```c
+#define MAX_ARGC 64
+
+struct pish_arg {
+    int argc;
+    char *argv[MAX_ARGC];
+};
+```
+
+In our starter code, all functions handling a command (after it has been parsed) will be given a `struct pish_arg` argument.
+
+## Running pish
+
+First, run `make` to compile everything. You should see the `pish` executable in your assignment directory.
+
+To run pish in interactive mode (accepting keyboard input), type
 
 ```
-[#1 2024-10-24 13:01]        yash: hi all! react with 👍🏻 if you think the lab is good to go, or 😬 if you think it needs more testing
-                          (aaron)  👍🏻 
-                          (elena)  😬 
-                         (arunan)  😬 
-                          (janet)  😬 
-                         (travis)  😬 
-                            (joe)  🐿️
-[#2 2024-10-24 13:02]        yash: OK we'll go with what joe said
+$ ./pish
 ```
 
-### `/post`
-
-A `post` request looks like this:
-
-`/post?user=<username>&message=<message>`
-
-This creates a new chat with the given username and message string with a
-timestamp given by the time the request is received by the server.  It must
-respond with the list of all chats (including the new one).
-
-Limits and constraints:
-
-- If a parameter (`username` or `message`) is missing, respond with some kind of
-error (HTTP code 400 or 500)
-- If username is longer than 15 bytes, respond with some kind of error (HTTP
-code 400 or 500)
-- If message is longer than 255 bytes, respond with some kind of error (HTTP
-code 400 or 500)
-- If a post would make there be more than 100000 (one hundred thousand) chats,
-the server should respond with an error (HTTP code 404 or 500)
-
-### `/react`
+Or, to run a script (e.g., script.sh), type
 
 ```
-/react?user=<username>&message=<reaction>&id=<id>
+$ ./pish script.sh
 ```
 
-Creates a new *reaction* to a chat by the given username with the given message
-string, reacting to the post with the given id (the ids are the `#N` at the
-beginning of posts). It must
-respond with the list of all chats (including the new one).
+The same applies for the reference implementation `ref-pish`.
 
+## Hints
 
-Limits and constraints:
+This project once more requires you to think carefully about incremental development. There are many things to do, how should you go about everything? In what order?
 
-- If the id is not the ID of some existing chat, respond with some kind of error
-(HTTP code 400 or 500).
-- If a parameter (`username` or `message` or `id`) is missing, respond with some kind of
-error (HTTP code 400 or 500)
-- If username is longer than 15 bytes, respond with some kind of error (HTTP
-code 400 or 500)
-- If message is longer than 15 bytes, respond with some kind of error (HTTP
-code 400 or 500) – reactions are intended to be short!
-- If a reaction would make a chat have more than 100 reactions, the server
-should respond with an error (HTTP code 404 or 500)
+Here's one possible plan:
 
-### `/reset`
+- Start from simple commands without any arguments, e.g., `ls`.
+- After that, start implementing running programs with `fork` and `exec`.
+- Implementing input parsing using `strtok()`. Think about how to break down the line and put it into `struct pish_arg`.
+- Once command parsing is working, go on to implement the two simple built-in commands: `exit` and `cd`. Make sure to take care of error handling.
+- Next, make sure you can parse commands with arguments, e.g., `"ls -a"`.
+- Next, make sure you can handle arbitrary whitespaces.
+- Make sure reading from a script file works just as well as from stdin.
+- Once that's working, you can finish implementing the `history` command.
+- The list above is just a suggestion. You are of course encouraged to come up with your own implementation plan. But the most important thing is that you should have a plan!
 
-A `/reset` request _resets_ the chat server to have no chats or reactions,
-starting from the empty initial state. Should respond with a successful HTTP response with an empty body.
+Start early, start often!
 
-It should be possible to `/reset` the room many times, and after resetting the
-memory usage of the program should be the same as in the empty initial state.
+## What to Hand In
 
-After a `reset`, it should be possible to immediately shut down the program and
-have `valgrind` report no memory leaks.
+- Submit your code to Gradescope
+- We will run your program with `make` and `./pish` in both interactive and batch mode
+- There are no design questions
+- CREDITS.md is still required
 
-## Design Questions (You do not need to answer these for the resubmission)
+## Resources and Policy
 
-1. How much working memory do 10 chats take in your program, in between
-processing requests (assume no one has reacted to them)? How about 100? 1000? We
-can call this part of the memory your program uses the _chat storage_. How much
-additional working memory is used when handling the `/chats` request in your
-code for 10, 100, and 1000 chats? Speculate on ways to lower either the _chat
-storage_ or the memory used to process a request, or explain why your approach
-minimizes them.
+Refer to [the policies on assignments](https://ucsd-cse29.github.io/fa25/#assignments-and-academic-integrity) for working with others or appropriate use of tools like ChatGPT or Github Copilot.
 
-2. The PA writeup specifies many limits and constraints on the input (usernames,
-messages, ids, and so on). Choose one of these limits or constraints, and
-imagine removing it. What's something that would now work and might make a user
-happy because the limit is removed? What's a problem that could result from
-removing that limit? What impact would it have on your implementation to remove
-it (any new possibilities of errors, new cases to handle, etc)?
-
-## Implementation Guide
-
-This page is the entire _specification_ for the assignment; it's what you need
-to implement. You are free to make whatever choices you like in your code within
-these constraints. To help you on your way, we have an _implementation guide_:
-
-- A lot of the background you need is in Lab 5 [Part 2](https://ucsd-cse29.github.io/fa24/week5/header-intro.html) and [Part 3](https://ucsd-cse29.github.io/fa24/week5/number-server.html). Make sure you're comfortable with and have completed those ideas.
-- Discussion sections [this
-week](https://ucsd-cse29.github.io/fa24/index.html#week-5--managing-heap-memory)
-will cover examples related to parsing query parameters in requests
-- [HTTP](./http-server.md)
-- [Function-by-function Breakdown](./data-vs-requests.md)
-- [Representing Chats and Reactions](./representations.md)
-- [Other Useful Functions](./helpful-functions.md)
-
-## Handin
-
-- Hand in your repository on Gradescope
-- Make sure `make chat-server` builds your server (that's the command we will run), and the server runs on a predictable port with, for example, `./chat-server 8000` 
-- Don't forget `DESIGN.md` and `CREDITS.md`
+You can use any code from class, lab, or discussion in your work.
