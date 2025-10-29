@@ -65,6 +65,9 @@ you can see what's coming.
     - <u>Joe's Lecture:</u> [Annotated Handout](lec/week5/Annotated-lecture-14-w5m.pdf)
     - <u>Aaron's Lecture:</u> [Slides](lec/week5/29-fa25-l14.pdf)
 
+- **Lab**
+  - [Lab 5 Reference](week5/lab5.md)
+
 ### Week 4 – Processes and Memory
 
 - **Readings**
@@ -87,7 +90,7 @@ you can see what's coming.
     - <u>Joe's Lecture:</u> [Annotated Handout](lec/week4/Annotated-lecture-11-w4m.pdf)
 
 - **Lab**
-  - [Lab 5 Reference](week5/lab5.md)
+  - [Lab 4 Reference](week4/lab4.md)
 
 ### Week 3 – Where (Some) Things Are in Memory
 
