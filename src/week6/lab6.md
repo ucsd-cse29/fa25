@@ -52,19 +52,6 @@ $ make cse100
 
 ## Part 1: Makefile for One
 
-{: .important }
-> Most of the time, the tried and true tools we use are at least somewhat well designed, which explains and lends to their reliability. This is not one of those times.
->
-> Furthermore, in a previous lab, we’ve given you a `.vimrc` file which automatically replaces tab characters you type with four spaces. Most of the time, this is helpful. This is not one of those times.
->
-> From these two pieces of information you might be able to infer the bad news: **Makefiles by default require each line of a recipe to start with a tab character.** Four space characters on top of each other in a trench coat does not work here\! Those four spaces you see at the start of the line with the `gcc` command are supposed to be one single tab character in the Makefile (see a typical example of a rule for C in the next section below). Please run:
->
-> ```
-> $ echo "filetype plugin indent on" >> ~/.vimrc
-> ```
->
-> Make sure you have done this before starting Part 1!
-
 Exit the `part0` directory and enter the `part1` directory, where we are given a single, very simple source code file `program.c`. You can look at its contents, but there’s nothing there to see (or do).
 
 It’s not necessary to define dependencies, but we often do because Makefile automatically checks if any of its dependencies have changed more recently than the target file. If not (and if the target file already exists), then `make` does not bother to execute the recipe, because the target file must already be up to date. This means that `make` will only execute the recipe if the target file doesn’t exist, or one of its dependencies is more recently updated than the target file.
