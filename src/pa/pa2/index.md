@@ -1,5 +1,8 @@
 # PA2 - Hashing and Passwords: Due 10/23 at 11:59pm - [Github Classroom Link](https://classroom.github.com/a/DK5n-VdM)
 
+Looking for resubmission? [Click here](https://ucsd-cse29.github.io/fa25/pa/pa2/resubmission/index.html)
+
+
 [Cryptographic hash functions](https://en.wikipedia.org/wiki/Cryptographic_hash_function) take an input of arbitrary length and produces a fixed length output. The special features are that the outputs are _deterministic_ (the same input always generates the same output) and yet the outputs are apparently “random” – two similar inputs are likely to produce very different outputs, and it's difficult to determine the input by looking at the ouput.
 
 A common application of hashing is in storing passwords. Many systems store only the hash of a user's password along with their username. This ensures that even if someone gains access to the stored data, users' actual passwords are not exposed. When a user types in a password on such a system, the password handling software grants access if the hash value generated from the user's entry matches the hash stored in the password database.
