@@ -65,7 +65,7 @@ you can see what's coming.
     - [Repository](https://github.com/ucsd-cse29/fa25-16-w5f-sizeof_str/tree/main)
     - <u>Joe's Lecture:</u> [Annotated Handout](lec/week5/Annotated-lecture-16-w5f.png)
 
-  - **Wednesday**
+  - **Wednesday:**
     - <u>Joe's Lecture:</u> [Annotated Handout](lec/week5/Annotated-lecture-15-w5w.pdf)
     - <u>Aaron's Lecture:</u> [Slides](lec/week5/29-fa25-l15.pdf)
 
@@ -123,7 +123,7 @@ you can see what's coming.
 - **Lab**
   - [Lab 3 Reference](week3/lab3.md)
 
-### Week 2 - Number Representations, Sizes, and Signs
+### Week 2 – Number Representations, Sizes, and Signs
 - **Announcements**
   - [PA 1](pa/pa1/index.md) is due Thursday 10/9 at 11:59pm. 
   - Exam 1 is next week, please make a reservation ASAP for exam slots on [PrairieTest](https://us.prairietest.com/) by logging in with your @ucsd.edu account. See more info in the under [Exams](#exams) part of the syllabus below. 
