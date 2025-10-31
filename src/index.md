@@ -61,6 +61,10 @@ you can see what's coming.
 
 - **Lecture Materials**
 
+  - **Friday:**
+    - [Repository](https://github.com/ucsd-cse29/fa25-16-w5f-sizeof_str/tree/main)
+    - <u>Joe's Lecture:</u> [Annotated Handout](lec/week5/Annotated-lecture-16-w5f.png)
+
   - **Wednesday**
     - <u>Joe's Lecture:</u> [Annotated Handout](lec/week5/Annotated-lecture-15-w5w.pdf)
     - <u>Aaron's Lecture:</u> [Slides](lec/week5/29-fa25-l15.pdf)
