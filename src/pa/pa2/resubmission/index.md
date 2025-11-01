@@ -1,4 +1,4 @@
-# PA2 - Hashing and Passwords: Resubmission Due 11/5 at 11:59pm
+# PA2 - Hashing and Passwords: Resubmission Due 11/6 at 11:59pm
 
 ### If you want to resubmit PA2, please read this section carefully. You need to pass all the tests in the original PA2, while also implementing an extra functionality and answering a new design question described below.
 
