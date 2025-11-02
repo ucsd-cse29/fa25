@@ -217,32 +217,31 @@ When we use `gcc` to manually compile programs, we typically compile directly fr
 ![Build Process](https://cf-assets.www.cloudflare.com/zkvhlag99gkb/3RNZmg4aDxjJOAjAmYxFk9/c1279a03f8962b5bb74f812b66a4a448/build.png)
 (Credit: Cloudflare)
 
-The linking process resolves symbol references between object files, meaning that functions defined in one file can be used in another. In `part3`, an implementation of a linked list is given in `linked_list.c`. The corresponding header file, `linked_list.h`, contains function declarations to be shared between source files. Then, in `one_list.c`, we do things with a linked list.
+The linking process resolves symbol references between object files, meaning that functions defined in one file can be used in another. In `part3`, a long program with 50000 adder functions (each of which adds the integer in its name to the parameter and returns it) is given: `adders.c`. The corresponding header file, `adders.h`, contains function declarations to be shared between source files. Then, in `main.c`, we print the return value of `run_adders`, which calls all of the adder functions and sums their results.  
 
-We can use the following `gcc` commands to create then link the object files:
+We can use the following `gcc` commands to create then link the object files (we will run the `time` command so it will tell us how long each of these commands took to run):
 
 ```
-$ gcc -Wall -g -c -o one_list.o one_list.c
-$ gcc -Wall -g -c -o linked_list.o linked_list.c
-$ gcc -Wall -g -o one_list one_list.o linked_list.o
+$ time gcc adders.c -o adders.o -c 
+$ time gcc main.c -o main.o -c
+$ time gcc adders.o main.o -o adders
 ```
 
-We create `one_list.o` from `one_list.c`, create `linked_list.o` from `linked_list.c`, then link the two to produce the executable `one_list`. My fingers hurt from all that typing; I wish there was an easier way to *MAKE* all these files...
+We create `adders.o` from `adders.c`, create `main.o` from `main.c`, then link the two produce the executable `adders`. My fingers hurt from all that typing; I wish there was an easier way to *MAKE* all these files...
 
-An example of such a Makefile would be:
 
 ```make
 CC = gcc
 CFLAGS = -Wall -g
-TARGET = one_list
-OBJS = one_list.o linked_list.o
+TARGET = adders
+OBJS = adders.o main.o
 
 default: $(TARGET)
 
-linked_list.o: linked_list.c
+adders.o: adders.c
 	$(CC) $(CFLAGS) -c -o $@ $<
 
-one_list.o: one_list.c
+main.o: main.c
 	$(CC) $(CFLAGS) -c -o $@ $<
 
 $(TARGET): $(OBJS)
@@ -255,7 +254,7 @@ clean:
 	rm $(TARGET) $(OBJS)
 ```
 
-Here, we make extensive use of variables for the ultimate target (`one_list`) and its prerequisite object files (`one_list.o` and `linked_list.o`) so that we can easily use these strings in multiple places, e.g. in both the compile command and in the `rm` command. Examine this Makefile and feel free to ask your groupmates, tutors, or TA about anything unclear.
+Here, we make extensive use of variables for the ultimate target (`adders`) and its prerequisite object files (`adders.o` and `main.o`) so that we can easily use these strings in multiple places, e.g. in both the compile command and in the `rm` command. Examine this Makefile and feel free to ask your groupmates, tutors, or TA about anything unclear.
 
 ## Makefile Challenge
 
