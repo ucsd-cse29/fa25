@@ -56,6 +56,11 @@ you can see what's coming.
 
 - **Lecture Materials**
 
+- **Readings**
+  - [Debugging Memory with Valgrind](https://diveintosystems.org/book/C3-C_debug/valgrind.html)
+  - [The void* type](https://diveintosystems.org/book/C2-C_depth/advanced_voidstar.html)
+  - [C libraries](https://diveintosystems.org/book/C2-C_depth/advanced_libraries.html) and [Compiling Multiple Files](https://diveintosystems.org/book/C2-C_depth/advanced_writing_libraries.html)
+
   - **Monday:**
     - <u>Joe's Lecture:</u> [Annotated Handout](lec/week6/Annotated-lecture-17-w6m.pdf)
 
