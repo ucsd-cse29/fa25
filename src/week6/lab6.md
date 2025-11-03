@@ -190,9 +190,6 @@ default: program1 program2 program3
 
 This pattern rule now matches any name (not just names that begin with "program") to be a target, and defines its dependency to be a file with that name plus the ".c" suffix.
 
-{: .important }
-After setting up your Makefile, try `make program1` through `make program3` to verify that it works as intended, then put a screenshot of your Makefile into your lab report. **No need to have a tutor or TA check it!**
-
 In this section, we’ve developed a Makefile to be increasingly more flexible, both in making future changes easier and expanding the scope of valid targets. An important point to make (pun intended?) is that each of these Makefiles is a valid Makefile for compiling the three programs given in this directory, and they have their own pros and cons. For example, a Makefile similar to the last one was used in last week’s lab to easily compile programs with different names, where the compilation process is the same across programs. However, it might be undesirable to enable the programmer to attempt compiling any file ending in “.c”. On the other hand, the first Makefile might be a good fit for a use case where we know we will customize the build process for each program, but this could lead to a very large Makefile.
 
 ## Part 3: Linking Object Files
