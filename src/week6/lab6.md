@@ -251,7 +251,7 @@ OBJS = adders.o main.o
 
 default: $(TARGET)
 
-adders.o: adders.c
+adders.o: adders.c adders.h
 	$(CC) $(CFLAGS) -c -o $@ $<
 
 main.o: main.c
