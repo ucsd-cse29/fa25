@@ -3,8 +3,6 @@
 (clone the github classroom repo from here: <>)
 
 # Part 1: Header Guards and Makefiles
---------------------------------
-
 
 Header files enable source files to use functionalities from other source files. In multi-file projects, each source file (like `mod.c`) has a corresponding header file (like `mod.h`) with an "outline" of its contents: struct, variable, and function declarations. In a language that lacks a more sophisticated module system like that in Java, header files enable programmers to build large-scale C projects containing numerous source files with dependencies between them.
 
@@ -274,17 +272,32 @@ Here, we make extensive use of variables for the ultimate target (`adders`) and 
 Let's go back to the `headers` directory and open the `Makefile` there, which is partially completed. Complete the `Makefile` according to the requirements listed inside it. Feel free to copy code segments from above. Once you're done, try `make` to see your Makefile in action\!
 
 ## Part 2: Valgrind
---------------------------------
 
-Notice how the heap summary gives you information on where each memory error occurs. Inspect the source code to see how each type is caused.
+### How to Run `valgrind`
+Compile your code, filling in PROGRAM with your actual program name, and ARGS if your program takes any command-line arguments:
+```
+gcc -Wall -g PROGRAM.c -o PROGRAM
+```
+Then, run the Valgrind command:
+```
+valgrind --leak-check=full ./PROGRAM ARGS
+```
+We can add the `--leak-check=full` flag to instruct Valgrind to report the locations where leaked memory had been allocated. 
 
-- Definitely lost: Besides myself, memory leaks are also considered "definitely lost" when the pointer to the memory becomes inaccessible. This can happen when the pointer is deleted when a function ends and its stack frame is deleted, or when the pointer is set to another value.
-- Indirectly lost: Blocks of memory are considered "indirectly lost" when there exists a pointer in another leaked memory to the block. In this case, the memory pointed to by `pp` (i.e. `*pp`) is definitely lost, and the memory pointed to by `*pp` (i.e. `**pp`) is indirectly lost.
-- Possibly lost: "Possibly lost" memory leaks occur when we have a pointer to some part of the leaked memory, but not to the base of the memory block, likely because the pointer was modified. In this case, we allocate an array of integers, then move the pointer to point to the middle of the array.
-- Still reachable: Memory leaks are "still reachable" when the pointer is not lost when program exits, but the memory is still unfreed. This can occur when a global variable contains a pointer to leaked memory.
-- Suppressed: Users can specify the flag `--suppressions=<filename>` to Valgrind to intentionally ignore leaks that are known to be harmless or unavoidable. If you want to learn how to use this flag, you can check out this [StackOverflow post](https://stackoverflow.com/questions/13692890/suppress-potential-memory-leak-in-valgrind), although in our (at least one tutor and at least one TA) experience this flag is seldom used, if at all.
+### `time` command
+You can add `time` to the beginning of a command to report the actual time it takes for that command to run! i.e.
+```
+time valgrind ./PROGRAM
+```
 
-Work Check-off
---------------
+### Valgrind Memory Errors
+Notice how the heap summary gives you information on where each memory error occurs:
+- **Definitely lost:** Besides myself, memory leaks are also considered "definitely lost" when the pointer to the memory becomes inaccessible. This can happen when the pointer is deleted when a function ends and its stack frame is deleted, or when the pointer is set to another value.
+- **Indirectly lost:** Blocks of memory are considered "indirectly lost" when there exists a pointer in another leaked memory to the block. In this case, the memory pointed to by `pp` (i.e. `*pp`) is definitely lost, and the memory pointed to by `*pp` (i.e. `**pp`) is indirectly lost.
+- **Possibly lost:** "Possibly lost" memory leaks occur when we have a pointer to some part of the leaked memory, but not to the base of the memory block, likely because the pointer was modified. In this case, we allocate an array of integers, then move the pointer to point to the middle of the array.
+- **Still reachable:** Memory leaks are "still reachable" when the pointer is not lost when program exits, but the memory is still unfreed. This can occur when a global variable contains a pointer to leaked memory.
+- **Suppressed:** Users can specify the flag `--suppressions=<filename>` to Valgrind to intentionally ignore leaks that are known to be harmless or unavoidable. If you want to learn how to use this flag, you can check out this [StackOverflow post](https://stackoverflow.com/questions/13692890/suppress-potential-memory-leak-in-valgrind), although in our (at least one tutor and at least one TA) experience this flag is seldom used, if at all.
 
-To Be Determined
+## Lab 6 Work Check-off (Due Monday, November 10)
+
+Commit and push your fix for `student.c` to your Github Classroom repo from the Valgrind section above! 
