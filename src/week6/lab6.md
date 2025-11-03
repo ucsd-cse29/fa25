@@ -43,7 +43,7 @@ The compiler seems to be confused by the duplicated definition for `struct strin
 
 ## Makefiles
 
-### Part 0: Recipes and Dependencies
+### Part 1-0: Recipes and Dependencies
 
 **Exit the `headers` directory and enter the `part1-0` directory.** We have given you an example `Makefile` that illustrates its basic structure. A Makefile mostly consists of "rules", which have the form:
 
@@ -64,7 +64,7 @@ Use this explanation to understand the contents of the `Makefile` in `part1-0`. 
 $ make cse100
 ```
 
-### Part 1: Makefile for One
+### Part 1-1: Makefile for One
 
 Exit the `part1-0` directory and enter the `part1-1` directory, where we are given a single, very simple source code file `program.c`. You can look at its contents, but there’s nothing there to see (or do).
 
@@ -144,7 +144,7 @@ clean:
 
 All the rules (and phony target definition) can be defined in any order, except `default` must be placed at the top in order to be executed when you run `$ make` by itself.
 
-## Part 2: Makefile for Many
+## Part 1-2: Makefile for Many
 
 In this section, we’ll show multiple valid Makefiles for the programs **in the `part1-2` directory**. As you follow along, pick one and use it to compile all three programs.
 
@@ -221,7 +221,7 @@ This pattern rule now matches any name (not just names that begin with "program"
 
 In this section, we’ve developed a Makefile to be increasingly more flexible, both in making future changes easier and expanding the scope of valid targets. An important point to make (pun intended?) is that each of these Makefiles is a valid Makefile for compiling the three programs given in this directory, and they have their own pros and cons. For example, a Makefile similar to the last one was used in last week’s lab to easily compile programs with different names, where the compilation process is the same across programs. However, it might be undesirable to enable the programmer to attempt compiling any file ending in “.c”. On the other hand, the first Makefile might be a good fit for a use case where we know we will customize the build process for each program, but this could lead to a very large Makefile.
 
-### Part 3: Linking Object Files
+### Part 1-3: Linking Object Files
 
 When we use `gcc` to manually compile programs, we typically compile directly from the source file to the executable program. But, the build process involves multiple steps with intermediary files. One of these intermediary files are *object files*, which contain machine code from a particular *module* (.c and .h combo) and are linked into the eventual executable file. If `.class` files from Java sound familiar to you, object files are like `.class` files. To instruct `gcc` to compile a source file into an object file, we add the `-c` flag.
 
