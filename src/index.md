@@ -52,6 +52,13 @@ The schedule below outlines topics, due dates, and links to assignments. We'll
 typically update the material for the upcoming week before Monday's lecture so
 you can see what's coming.
 
+### Week 6
+
+- **Lecture Materials**
+
+  - **Monday:**
+    - <u>Joe's Lecture:</u> [Annotated Handout](lec/week6/Annotated-lecture-17-w6m.pdf)
+
 ### Week 5 – Structs, Memory Management
 
 - **Readings**
