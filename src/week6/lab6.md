@@ -2,14 +2,47 @@
 
 (clone the github classroom repo from here: <>)
 
-Part 1: Header Guards
+# Part 1: Header Guards and Makefiles
 --------------------------------
+
+
+Header files enable source files to use functionalities from other source files. In multi-file projects, each source file (like `mod.c`) has a corresponding header file (like `mod.h`) with an "outline" of its contents: struct, variable, and function declarations. In a language that lacks a more sophisticated module system like that in Java, header files enable programmers to build large-scale C projects containing numerous source files with dependencies between them.
+
+In Java, you might have dealt with `interface`s and `abstract class`es, which can contain method declarations without a definition. You can think of a header file as the "interface" of its corresponding source file. In large projects, when an individual contributor wants to use a particular module, they can read its header file to understand its interface, i.e., what functions it provides and what each function does, without having to sift through complex implementation code in its source file. For example, check out [stdlib.h](https://github.com/openbsd/src/blob/10a2be2b7251d70b50321c1bb144122eed08c16c/include/stdlib.h#L109), which concisely lists some functions provided by the C standard library. Furthermore, header files represent a "contract" between a module and the modules that depend on it. When a module (a .c and .h file combo) needs to change as software evolves, programmers can freely change its source file as long as it still satisfies the interface described by its header file without worrying that their change might break other modules. Thus, header files symbolize abstraction in software architecture.
+
+In lab, we also introduced header guards, which look like:
+
+```c
+#ifndef EXAMPLE_H
+#define EXAMPLE_H
+
+struct example {
+    char *str;
+};
+
+#endif
+```
+
+Header guards prevent the content within them from being processed multiple times by the compiler.
+This can be problematic if the header file intends to *define* any symbol, not just *declare* them.
+In the example above, the header guard ensures that `struct example` is defined at most once.
+Let's illustrate the utility of header guards with a concrete example.
+
+In the Github classroom repository, `cd` into `headers` and inspect the contents of the five files inside. These files together represent 3 "modules" with the following dependency graph:
 
 ![header_diagram](../images/lab6_header_dep.svg)
 
+When the compiler reads `test.c`, its preprocessor will process `span.h` twice: once through the direct arrow pointing to `span.h` and once through `queries.h`, which also points to `span.h`. As a result, the contents of `span.h` will be "pasted" into the source file twice. Since `span.h` contains a struct *definition* for `struct string_span`, this definition will be repeated twice. Try the following compilation command to see what this causes:
+
+```
+$ gcc span.c queries.c test.c -Wall -o test
+```
+
+The compiler seems to be confused by the duplicated definition for `struct string_span`, which is the first error it reports. Use what you have learned about header guards to fix this compiler error! Please note that by convention, everything in a header file is wrapped in a header guard.
 
 
-Part 2: Makefiles
+
+## Part 2: Makefiles
 ---------------------
 
 # Makefiles
