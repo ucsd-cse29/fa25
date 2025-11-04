@@ -2,13 +2,36 @@
 
 (clone the github classroom repo from here: <>)
 
-# Part 1: Header Guards and Makefiles
+## Part 1: Valgrind
 
-Header files enable source files to use functionalities from other source files. In multi-file projects, each source file (like `mod.c`) has a corresponding header file (like `mod.h`) with an "outline" of its contents: struct, variable, and function declarations. In a language that lacks a more sophisticated module system like that in Java, header files enable programmers to build large-scale C projects containing numerous source files with dependencies between them.
+### How to Run `valgrind`
+Compile your code, filling in PROGRAM with your actual program name, and ARGS if your program takes any command-line arguments:
+```
+gcc -Wall -g PROGRAM.c -o PROGRAM
+```
+Then, run the Valgrind command:
+```
+valgrind --leak-check=full ./PROGRAM ARGS
+```
+We can add the `--leak-check=full` flag to instruct Valgrind to report the locations where leaked memory had been allocated. 
 
-In Java, you might have dealt with `interface`s and `abstract class`es, which can contain method declarations without a definition. You can think of a header file as the "interface" of its corresponding source file. In large projects, when an individual contributor wants to use a particular module, they can read its header file to understand its interface, i.e., what functions it provides and what each function does, without having to sift through complex implementation code in its source file. For example, check out [stdlib.h](https://github.com/openbsd/src/blob/10a2be2b7251d70b50321c1bb144122eed08c16c/include/stdlib.h#L109), which concisely lists some functions provided by the C standard library. Furthermore, header files represent a "contract" between a module and the modules that depend on it. When a module (a .c and .h file combo) needs to change as software evolves, programmers can freely change its source file as long as it still satisfies the interface described by its header file without worrying that their change might break other modules. Thus, header files symbolize abstraction in software architecture.
+### `time` command
+You can add `time` to the beginning of a command to report the actual time it takes for that command to run! i.e.
+```
+time valgrind ./PROGRAM
+```
 
-In lab, we also introduced header guards, which look like:
+### Valgrind Memory Errors
+Notice how the heap summary gives you information on where each memory error occurs:
+- **Definitely lost:** Besides myself, memory leaks are also considered "definitely lost" when the pointer to the memory becomes inaccessible. This can happen when the pointer is deleted when a function ends and its stack frame is deleted, or when the pointer is set to another value.
+- **Indirectly lost:** Blocks of memory are considered "indirectly lost" when there exists a pointer in another leaked memory to the block. In this case, the memory pointed to by `pp` (i.e. `*pp`) is definitely lost, and the memory pointed to by `*pp` (i.e. `**pp`) is indirectly lost.
+- **Possibly lost:** "Possibly lost" memory leaks occur when we have a pointer to some part of the leaked memory, but not to the base of the memory block, likely because the pointer was modified. In this case, we allocate an array of integers, then move the pointer to point to the middle of the array.
+- **Still reachable:** Memory leaks are "still reachable" when the pointer is not lost when program exits, but the memory is still unfreed. This can occur when a global variable contains a pointer to leaked memory.
+- **Suppressed:** Users can specify the flag `--suppressions=<filename>` to Valgrind to intentionally ignore leaks that are known to be harmless or unavoidable. If you want to learn how to use this flag, you can check out this [StackOverflow post](https://stackoverflow.com/questions/13692890/suppress-potential-memory-leak-in-valgrind), although in our (at least one tutor and at least one TA) experience this flag is seldom used, if at all.
+
+## Part 2: Header Guards and Makefiles
+
+Header Guards:
 
 ```c
 #ifndef EXAMPLE_H
@@ -41,7 +64,7 @@ The compiler seems to be confused by the duplicated definition for `struct strin
 
 ## Makefiles
 
-### Part 1-0: Recipes and Dependencies
+### Part 2-0: Recipes and Dependencies
 
 **Exit the `headers` directory and enter the `part1-0` directory.** We have given you an example `Makefile` that illustrates its basic structure. A Makefile mostly consists of "rules", which have the form:
 
@@ -62,7 +85,7 @@ Use this explanation to understand the contents of the `Makefile` in `part1-0`. 
 $ make cse100
 ```
 
-### Part 1-1: Makefile for One
+### Part 2-1: Makefile for One
 
 Exit the `part1-0` directory and enter the `part1-1` directory, where we are given a single, very simple source code file `program.c`. You can look at its contents, but there’s nothing there to see (or do).
 
@@ -142,7 +165,7 @@ clean:
 
 All the rules (and phony target definition) can be defined in any order, except `default` must be placed at the top in order to be executed when you run `$ make` by itself.
 
-## Part 1-2: Makefile for Many
+## Part 2-2: Makefile for Many
 
 In this section, we’ll show multiple valid Makefiles for the programs **in the `part1-2` directory**. As you follow along, pick one and use it to compile all three programs.
 
@@ -219,7 +242,7 @@ This pattern rule now matches any name (not just names that begin with "program"
 
 In this section, we’ve developed a Makefile to be increasingly more flexible, both in making future changes easier and expanding the scope of valid targets. An important point to make (pun intended?) is that each of these Makefiles is a valid Makefile for compiling the three programs given in this directory, and they have their own pros and cons. For example, a Makefile similar to the last one was used in last week’s lab to easily compile programs with different names, where the compilation process is the same across programs. However, it might be undesirable to enable the programmer to attempt compiling any file ending in “.c”. On the other hand, the first Makefile might be a good fit for a use case where we know we will customize the build process for each program, but this could lead to a very large Makefile.
 
-### Part 1-3: Linking Object Files
+### Part 2-3: Linking Object Files
 
 When we use `gcc` to manually compile programs, we typically compile directly from the source file to the executable program. But, the build process involves multiple steps with intermediary files. One of these intermediary files are *object files*, which contain machine code from a particular *module* (.c and .h combo) and are linked into the eventual executable file. If `.class` files from Java sound familiar to you, object files are like `.class` files. To instruct `gcc` to compile a source file into an object file, we add the `-c` flag.
 
@@ -267,37 +290,10 @@ clean:
 
 Here, we make extensive use of variables for the ultimate target (`adders`) and its prerequisite object files (`adders.o` and `main.o`) so that we can easily use these strings in multiple places, e.g. in both the compile command and in the `rm` command. Examine this Makefile and feel free to ask your groupmates, tutors, or TA about anything unclear.
 
-### Part 1-4: Makefile challenge in `headers` directory
+### Part 2-4: Makefile challenge in `headers` directory
 
 Let's go back to the `headers` directory and open the `Makefile` there, which is partially completed. Complete the `Makefile` according to the requirements listed inside it. Feel free to copy code segments from above. Once you're done, try `make` to see your Makefile in action\!
 
-## Part 2: Valgrind
-
-### How to Run `valgrind`
-Compile your code, filling in PROGRAM with your actual program name, and ARGS if your program takes any command-line arguments:
-```
-gcc -Wall -g PROGRAM.c -o PROGRAM
-```
-Then, run the Valgrind command:
-```
-valgrind --leak-check=full ./PROGRAM ARGS
-```
-We can add the `--leak-check=full` flag to instruct Valgrind to report the locations where leaked memory had been allocated. 
-
-### `time` command
-You can add `time` to the beginning of a command to report the actual time it takes for that command to run! i.e.
-```
-time valgrind ./PROGRAM
-```
-
-### Valgrind Memory Errors
-Notice how the heap summary gives you information on where each memory error occurs:
-- **Definitely lost:** Besides myself, memory leaks are also considered "definitely lost" when the pointer to the memory becomes inaccessible. This can happen when the pointer is deleted when a function ends and its stack frame is deleted, or when the pointer is set to another value.
-- **Indirectly lost:** Blocks of memory are considered "indirectly lost" when there exists a pointer in another leaked memory to the block. In this case, the memory pointed to by `pp` (i.e. `*pp`) is definitely lost, and the memory pointed to by `*pp` (i.e. `**pp`) is indirectly lost.
-- **Possibly lost:** "Possibly lost" memory leaks occur when we have a pointer to some part of the leaked memory, but not to the base of the memory block, likely because the pointer was modified. In this case, we allocate an array of integers, then move the pointer to point to the middle of the array.
-- **Still reachable:** Memory leaks are "still reachable" when the pointer is not lost when program exits, but the memory is still unfreed. This can occur when a global variable contains a pointer to leaked memory.
-- **Suppressed:** Users can specify the flag `--suppressions=<filename>` to Valgrind to intentionally ignore leaks that are known to be harmless or unavoidable. If you want to learn how to use this flag, you can check out this [StackOverflow post](https://stackoverflow.com/questions/13692890/suppress-potential-memory-leak-in-valgrind), although in our (at least one tutor and at least one TA) experience this flag is seldom used, if at all.
-
 ## Lab 6 Work Check-off (Due Monday, November 10)
 
-Commit and push your fix for `student.c` to your Github Classroom repo from the Valgrind section above! 
+Commit and push your fix for `student.c` from the Part 1 Valgrind section to your Github Classroom repo from the Valgrind section above! 
