@@ -72,7 +72,7 @@ The compiler seems to be confused by the duplicated definition for `struct strin
 
 ### Part 2-0: Recipes and Dependencies
 
-**Exit the `headers` directory and enter the `part1-0` directory.** We have given you an example `Makefile` that illustrates its basic structure. A Makefile mostly consists of "rules", which have the form:
+**Exit the `headers` directory and enter the `part2-0` directory.** We have given you an example `Makefile` that illustrates its basic structure. A Makefile mostly consists of "rules", which have the form:
 
 ```make
 target: dependencies
@@ -85,7 +85,7 @@ In a lot of ways, you can think of defining rules in Makefiles like defining fun
 * The *dependencies* are files or other targets that the creation of the target depends on. For C programs, these dependencies are usually source code and object files.
 * The *recipe* contains the commands that are executed when `make` uses this rule. Recipes can have one or more different commands to be executed sequentially.
 
-Use this explanation to understand the contents of the `Makefile` in `part1-0`. Try running `make` with the `cse100` target to ask Make to build `cse100` along with its dependencies:
+Use this explanation to understand the contents of the `Makefile` in `part2-0`. Try running `make` with the `cse100` target to ask Make to build `cse100` along with its dependencies:
 
 ```
 $ make cse100
@@ -93,7 +93,7 @@ $ make cse100
 
 ### Part 2-1: Makefile for One
 
-Exit the `part1-0` directory and enter the `part1-1` directory, where we are given a single, very simple source code file `program.c`. You can look at its contents, but there’s nothing there to see (or do).
+Exit the `part2-0` directory and enter the `part2-1` directory, where we are given a single, very simple source code file `program.c`. You can look at its contents, but there’s nothing there to see (or do).
 
 It’s not necessary to define dependencies, but we often do because Makefile automatically checks if any of its dependencies have changed more recently than the target file. If not (and if the target file already exists), then `make` does not bother to execute the recipe, because the target file must already be up to date. This means that `make` will only execute the recipe if the target file doesn’t exist, or one of its dependencies is more recently updated than the target file.
 
@@ -173,7 +173,7 @@ All the rules (and phony target definition) can be defined in any order, except 
 
 ### Part 2-2: Makefile for Many
 
-In this section, we’ll show multiple valid Makefiles for the programs **in the `part1-2` directory**. As you follow along, pick one and use it to compile all three programs.
+In this section, we’ll show multiple valid Makefiles for the programs **in the `part2-2` directory**. As you follow along, pick one and use it to compile all three programs.
 
 When we have multiple programs to be compiled in a single project, we could create a Makefile with rules for each:
 
@@ -255,7 +255,7 @@ When we use `gcc` to manually compile programs, we typically compile directly fr
 ![Build Process](https://cf-assets.www.cloudflare.com/zkvhlag99gkb/3RNZmg4aDxjJOAjAmYxFk9/c1279a03f8962b5bb74f812b66a4a448/build.png)
 (Credit: Cloudflare)
 
-The linking process resolves symbol references between object files, meaning that functions defined in one file can be used in another. In `part1-3`, a long program with 50000 adder functions (each of which adds the integer in its name to the parameter and returns it) is given: `adders.c`. The corresponding header file, `adders.h`, contains function declarations to be shared between source files. Then, in `main.c`, we print the return value of `run_adders`, which calls all of the adder functions and sums their results.  
+The linking process resolves symbol references between object files, meaning that functions defined in one file can be used in another. In `part2-3`, a long program with 50000 adder functions (each of which adds the integer in its name to the parameter and returns it) is given: `adders.c`. The corresponding header file, `adders.h`, contains function declarations to be shared between source files. Then, in `main.c`, we print the return value of `run_adders`, which calls all of the adder functions and sums their results.  
 
 ![](../images/one-million-functions.png)
 
