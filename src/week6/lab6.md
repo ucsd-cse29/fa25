@@ -91,6 +91,19 @@ Use this explanation to understand the contents of the `Makefile` in `part2-0`. 
 $ make cse100
 ```
 
+Pretty cool! It might also be useful to clean out and remove any files that got produced if we want to run `make` again, like all the `cse` files that we just made in this Makefile. We do that using: 
+
+```
+$ make clean
+```
+
+This will remove all the files that start with `cse`. Now, after running `make clean`, we can run: 
+```
+$ make cse30
+$ make cse100
+```
+See what files get made at each step! Try out the other targets as well, like `cse12` and `cse29`.
+
 ### Part 2-1: Makefile for One
 
 Exit the `part2-0` directory and enter the `part2-1` directory, where we are given a single, very simple source code file `program.c`. You can look at its contents, but there’s nothing there to see (or do).
