@@ -2,9 +2,9 @@
 
 (clone the github classroom repo from here: <>)
 
-## Part 1: Valgrind
+# Part 1: Valgrind
 
-### How to Run `valgrind`
+## How to Run `valgrind`
 Compile your code, filling in PROGRAM with your actual program name, and ARGS if your program takes any command-line arguments:
 ```
 gcc -Wall -g PROGRAM.c -o PROGRAM
@@ -15,13 +15,13 @@ valgrind --leak-check=full ./PROGRAM ARGS
 ```
 We can add the `--leak-check=full` flag to instruct Valgrind to report the locations where leaked memory had been allocated. 
 
-### `time` command
+## `time` command
 You can add `time` to the beginning of a command to report the actual time it takes for that command to run! i.e.
 ```
 time valgrind ./PROGRAM
 ```
 
-### Valgrind Memory Errors
+## Valgrind Memory Errors
 Notice how the heap summary gives you information on where each memory error occurs:
 - **Definitely lost:** Besides myself, memory leaks are also considered "definitely lost" when the pointer to the memory becomes inaccessible. This can happen when the pointer is deleted when a function ends and its stack frame is deleted, or when the pointer is set to another value.
 - **Indirectly lost:** Blocks of memory are considered "indirectly lost" when there exists a pointer in another leaked memory to the block. In this case, the memory pointed to by `pp` (i.e. `*pp`) is definitely lost, and the memory pointed to by `*pp` (i.e. `**pp`) is indirectly lost.
@@ -29,9 +29,9 @@ Notice how the heap summary gives you information on where each memory error occ
 - **Still reachable:** Memory leaks are "still reachable" when the pointer is not lost when program exits, but the memory is still unfreed. This can occur when a global variable contains a pointer to leaked memory.
 - **Suppressed:** Users can specify the flag `--suppressions=<filename>` to Valgrind to intentionally ignore leaks that are known to be harmless or unavoidable. If you want to learn how to use this flag, you can check out this [StackOverflow post](https://stackoverflow.com/questions/13692890/suppress-potential-memory-leak-in-valgrind), although in our (at least one tutor and at least one TA) experience this flag is seldom used, if at all.
 
-## Part 2: Header Guards and Makefiles
+# Part 2: Header Guards and Makefiles
 
-Header Guards:
+## Header Guards
 
 ```c
 #ifndef EXAMPLE_H
@@ -49,7 +49,7 @@ This can be problematic if the header file intends to *define* any symbol, not j
 In the example above, the header guard ensures that `struct example` is defined at most once.
 Let's illustrate the utility of header guards with a concrete example.
 
-After cloning the Github classroom repository onto `ieng6`, `cd` into `1lab6-headers-and-makefiles`. Then `cd` into `headers` and inspect the contents of the five files inside. These files together represent 3 "modules" with the following dependency graph:
+After cloning the Github classroom repository onto `ieng6`, `cd` into `2lab6-headers-and-makefiles`. Then `cd` into `headers` and inspect the contents of the five files inside. These files together represent 3 "modules" with the following dependency graph:
 
 ![header_diagram](../images/lab6_header_dep.svg)
 
@@ -165,7 +165,7 @@ clean:
 
 All the rules (and phony target definition) can be defined in any order, except `default` must be placed at the top in order to be executed when you run `$ make` by itself.
 
-## Part 2-2: Makefile for Many
+### Part 2-2: Makefile for Many
 
 In this section, we’ll show multiple valid Makefiles for the programs **in the `part1-2` directory**. As you follow along, pick one and use it to compile all three programs.
 
@@ -183,7 +183,7 @@ program3: program3.c
 
 Notice how much repetition there is between each rule here. In this case, the repetition is just mildly annoying, but if you have more independent programs (like I do when designing lab activities), mildly annoying becomes very annoying\! We’ll see how we can reduce repetition in two different ways that we’ll use together to create a very concise and flexible Makefile.
 
-### Variables
+#### Variables
 
 Like in C programs, you can also define variables in Makefiles. But unlike C programs, where defined variables are allocated in some memory when the program is run, variables in Makefiles just represent some string value. This lets us reduce the amount of repetition when we want to, for example, change the `gcc` flags to use in all rules. As such, some common values we can define as variables are the compiler command and its flags:
 
@@ -203,7 +203,7 @@ program3: program3.c
 
 The variables `CC` and `CFLAGS` are defined with the values `gcc` and `-Wall -g`, respectively. Then we use these variables in each of the recipes. Note that there is a special syntax when we use the variables: `$(X)`, where `X` is the variable name. This syntax tells the Makefile to expand the variable `X` to use its value, instead of interpreting "X" as a literal string.
 
-### Pattern Rules
+#### Pattern Rules
 
 Each of these three rules have a similar pattern: each one is identical to the others except for a single number that changes. To eliminate this repetition, we can merge these rules into one *pattern rule*:
 
@@ -292,8 +292,8 @@ Here, we make extensive use of variables for the ultimate target (`adders`) and 
 
 ### Part 2-4: Makefile challenge in `headers` directory
 
-Let's go back to the `headers` directory and open the `Makefile` there, which is partially completed. Complete the `Makefile` according to the requirements listed inside it. Feel free to copy code segments from above. Once you're done, try `make` to see your Makefile in action\!
+Let's go back to the `headers` directory from the [Header Guards section](#header-guards) and open the `Makefile` there, which is partially completed. Complete the `Makefile` according to the requirements listed inside it. Feel free to copy code segments from above. Once you're done, try `make` to see your Makefile in action\!
 
-## Lab 6 Work Check-off (Due Monday, November 10)
+# Lab 6 Work Check-off (Due Monday, November 10)
 
-Commit and push your fix for `student.c` from the Part 1 Valgrind section to your Github Classroom repo from the Valgrind section above! 
+Commit and push your fix for `student.c` from the Part 1 Valgrind section to your Github Classroom repo! 
