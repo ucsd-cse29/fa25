@@ -63,6 +63,9 @@ you can see what's coming.
   - **Monday:**
     - <u>Joe's Lecture:</u> [Annotated Handout](lec/week6/Annotated-lecture-17-w6m.pdf)
 
+- **Lab**
+  - [Lab 6 Reference](week6/lab6.md)
+
 
 ### Week 5 – Structs, Memory Management
 
