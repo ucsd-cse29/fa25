@@ -1,6 +1,6 @@
 # Lab 6 Reference Document
 
-(clone the github classroom repo from here: <https://classroom.github.com/a/oTFGxPnL>)
+(clone the GitHub Classroom repo from here: <https://classroom.github.com/a/oTFGxPnL>)
 
 # Part 1: Valgrind
 
@@ -15,7 +15,7 @@ $ valgrind --leak-check=full ./PROGRAM ARGS
 ```
 We can add the `--leak-check=full` flag to instruct Valgrind to report the locations where leaked memory had been allocated. 
 
-For `search.c`, we could search for alp:
+For `search.c`, we could search for `alp`:
 ```
 $ gcc -Wall -g search.c -o search
 $ valgrind --leak-check=full ./search alp < alpaca.txt
@@ -315,4 +315,4 @@ Let's go back to the `headers` directory from the [Header Guards section](#heade
 
 # Lab 6 Work Check-off (Due Monday, November 10)
 
-Commit and push your fix for `student.c` from the Part 1 Valgrind section to your Github Classroom repo! 
+Commit and push your fix for `student.c` from the [Part 1 Valgrind](#part-1-valgrind) section to your [Github Classroom repo](https://classroom.github.com/a/oTFGxPnL)! 
