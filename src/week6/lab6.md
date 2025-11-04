@@ -7,13 +7,19 @@
 ## How to Run `valgrind`
 Compile your code, filling in PROGRAM with your actual program name, and ARGS if your program takes any command-line arguments:
 ```
-gcc -Wall -g PROGRAM.c -o PROGRAM
+$ gcc -Wall -g PROGRAM.c -o PROGRAM
 ```
 Then, run the Valgrind command:
 ```
-valgrind --leak-check=full ./PROGRAM ARGS
+$ valgrind --leak-check=full ./PROGRAM ARGS
 ```
 We can add the `--leak-check=full` flag to instruct Valgrind to report the locations where leaked memory had been allocated. 
+
+For `search.c`, we could search for alp:
+```
+$ gcc -Wall -g search.c -o search
+$ valgrind --leak-check=full ./search alp < alpaca.txt
+```
 
 ## `time` command
 You can add `time` to the beginning of a command to report the actual time it takes for that command to run! i.e.
