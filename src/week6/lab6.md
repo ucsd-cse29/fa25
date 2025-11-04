@@ -71,7 +71,9 @@ When the compiler reads `test.c`, its preprocessor will process `span.h` twice: 
 $ gcc span.c queries.c test.c -Wall -o test
 ```
 
-The compiler seems to be confused by the duplicated definition for `struct string_span`, which is the first error it reports. Use what you have learned about header guards to fix this compiler error! Please note that by convention, everything in a header file is wrapped in a header guard.
+The compiler seems to be confused by the duplicated definition for `struct string_span`, which is the first error it reports. 
+
+**To Do**: Use what you have learned about header guards to fix this compiler error! Please note that by convention, everything in a header file is wrapped in a header guard.
 
 
 ## Makefiles
