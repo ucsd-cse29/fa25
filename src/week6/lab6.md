@@ -268,7 +268,7 @@ When we use `gcc` to manually compile programs, we typically compile directly fr
 ![Build Process](https://cf-assets.www.cloudflare.com/zkvhlag99gkb/3RNZmg4aDxjJOAjAmYxFk9/c1279a03f8962b5bb74f812b66a4a448/build.png)
 (Credit: Cloudflare)
 
-The linking process resolves symbol references between object files, meaning that functions defined in one file can be used in another. In `part2-3`, a long program with 50000 adder functions (each of which adds the integer in its name to the parameter and returns it) is given: `adders.c`. The corresponding header file, `adders.h`, contains function declarations to be shared between source files. Then, in `main.c`, we print the return value of `run_adders`, which calls all of the adder functions and sums their results.  
+The linking process resolves symbol references between object files, meaning that functions defined in one file can be used in another. In `part2-3`, a long program with 50000 adder functions (each of which adds the integer in its name to the parameter and returns it) is given in `adders.c`. The corresponding header file, `adders.h`, contains function declarations to be shared between source files. Then, in `main.c`, we print the return value of `run_adders`, which calls all of the adder functions and sums their results.  
 
 ![](../images/one-million-functions.png)
 
