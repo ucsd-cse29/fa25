@@ -1,6 +1,6 @@
 # Lab 6 Reference Document
 
-(clone the github classroom repo from here: <>)
+(clone the github classroom repo from here: <https://classroom.github.com/a/oTFGxPnL>)
 
 # Part 1: Valgrind
 
