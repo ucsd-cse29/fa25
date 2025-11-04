@@ -21,6 +21,12 @@ $ gcc -Wall -g search.c -o search
 $ valgrind --leak-check=full ./search alp < alpaca.txt
 ```
 
+For `student.c`:
+```
+$ gcc -Wall -g student.c  -o student 
+$ valgrind --leak-check=full ./student < students.txt
+```
+
 ## `time` command
 You can add `time` to the beginning of a command to report the actual time it takes for that command to run! i.e.
 ```
