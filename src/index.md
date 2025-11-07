@@ -60,6 +60,9 @@ you can see what's coming.
   - [C libraries](https://diveintosystems.org/book/C2-C_depth/advanced_libraries.html) and [Compiling Multiple Files](https://diveintosystems.org/book/C2-C_depth/advanced_writing_libraries.html)
 
 - **Lecture Materials**
+  - **Wednesday:**
+    - <u>Joe's Lecture:</u> [Annotated Handout](lec/week6/Annotated-lecture-18-w6w.pdf)
+
   - **Monday:**
     - <u>Joe's Lecture:</u> [Annotated Handout](lec/week6/Annotated-lecture-17-w6m.pdf)
 
