@@ -1,6 +1,5 @@
 # Testing
 
-
 For this PA we provide you with some local testing code to help you make sure your program is working; you will need to write more thorough tests than what we've provided! But we give you a big start
 
 ## Test Programs
@@ -68,29 +67,29 @@ If you load this image and call `vminfo()`, you can see exactly how this image i
 vmload: heap created at 0x7c2abd1da000 (4096 bytes).
 vmload: heap initialization done.
 ---------------------------------------
- #      stat    offset   size     prev   
+ #      stat    offset   size     prev
 ---------------------------------------
- 0      BUSY    8        48       BUSY   
- 1      BUSY    56       48       BUSY   
- 2      FREE    104      48       BUSY   
- 3      BUSY    152      32       FREE   
- 4      FREE    184      32       BUSY   
- 5      BUSY    216      48       FREE   
- 6      FREE    264      128      BUSY   
- 7      BUSY    392      112      FREE   
- 8      BUSY    504      32       BUSY   
- 9      FREE    536      112      BUSY   
- 10     BUSY    648      352      FREE   
- 11     BUSY    1000     304      BUSY   
- 12     BUSY    1304     336      BUSY   
- 13     FREE    1640     320      BUSY   
- 14     BUSY    1960     288      FREE   
- 15     BUSY    2248     448      BUSY   
- 16     BUSY    2696     256      BUSY   
- 17     BUSY    2952     96       BUSY   
- 18     BUSY    3048     368      BUSY   
- 19     FREE    3416     672      BUSY   
- END    N/A     4088     N/A      N/A    
+ 0      BUSY    8        48       BUSY
+ 1      BUSY    56       48       BUSY
+ 2      FREE    104      48       BUSY
+ 3      BUSY    152      32       FREE
+ 4      FREE    184      32       BUSY
+ 5      BUSY    216      48       FREE
+ 6      FREE    264      128      BUSY
+ 7      BUSY    392      112      FREE
+ 8      BUSY    504      32       BUSY
+ 9      FREE    536      112      BUSY
+ 10     BUSY    648      352      FREE
+ 11     BUSY    1000     304      BUSY
+ 12     BUSY    1304     336      BUSY
+ 13     FREE    1640     320      BUSY
+ 14     BUSY    1960     288      FREE
+ 15     BUSY    2248     448      BUSY
+ 16     BUSY    2696     256      BUSY
+ 17     BUSY    2952     96       BUSY
+ 18     BUSY    3048     368      BUSY
+ 19     FREE    3416     672      BUSY
+ END    N/A     4088     N/A      N/A
 ---------------------------------------
 Total: 4080 bytes, Free: 6, Busy: 14, Total: 20
 ```

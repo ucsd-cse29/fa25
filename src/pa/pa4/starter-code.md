@@ -1,4 +1,3 @@
-
 # Getting Started
 
 The starter code for this assignment is hosted on GitHub Classroom. Use the

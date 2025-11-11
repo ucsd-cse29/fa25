@@ -18,7 +18,7 @@ study. In this project, we'll explore how to implement a basic version of
 `malloc` and `free` that would be sufficient for many of the programs we have
 written.
 
-Specfically, we will practice the following concepts in C:
+Specifically, we will practice the following concepts in C:
 
 - bitwise operations,
 - pointer arithmetic,
@@ -27,7 +27,7 @@ Specfically, we will practice the following concepts in C:
 
 ## Task Specification
 
-You will implement and test two functions.
+You will implement and test two functions. As with all PAs, you can use all your code from PSet 4 for helper functions and to help you understand the task.
 
 ### `vmalloc`
 
@@ -40,8 +40,8 @@ This has the same meaning as the usual `malloc` we have been using: the returned
 pointer is to the start of `size` bytes of memory that is now exclusively
 available to the caller.
 
-Note the `void *` return type, whic is the same as the usual `malloc`.  `void *`
-is not associatd with any concrete data type. It is used as a generic pointer,
+Note the `void *` return type, which is the same as the usual `malloc`. `void *`
+is not associated with any concrete data type. It is used as a generic pointer,
 and can be implicitly assigned to any other type of pointer.
 
 This is how `malloc` (and our `vmalloc`) allow assigning the result to any pointer type:
@@ -60,8 +60,19 @@ Your implementation of `vmalloc` must:
 - Use a “best fit” allocation policy
 - Always return an address that is a multiple of **16**
 - Always allocate space on **16-byte** boundaries
+- Ensure that all blocks, either free or allocated, have correct block headers and footers
 
-More details are in the implementation guide.
+#### Best Fit Allocation Policy
+
+Many allocation _policies_ are possible – choosing the first block that fits, choosing the last block that fits, choosing the most-recently-freed block that fits, and so on. The one you **must** implement for this PA is the best-fit policy.
+
+That is, once you have determined the size requirement of the desired heap block, you need to traverse the entire heap to find the best-fitting block – the smallest block that is large enough to fit the allocation. If there are multiple candidates of the same size, then you should use the first one you find.
+
+If the best-fitting block you find is larger than what we need, then we need to **split** that block into two. For example, if we are looking for a 16-byte block for vmalloc(4), and the best fitting candidate is a 64-byte block, then we will split it into a 16-byte block and a 48-byte block. The former is allocated and returned to the caller, the latter remains free. Make sure to create a block header for any new blocks, and update block headers of modified blocks.
+
+#### Returning the Address
+
+After updating all the relevant metadata, vmalloc should return a pointer to the start of the payload. Do not return the address of the block header!
 
 ### `vmfree`
 
@@ -69,16 +80,19 @@ More details are in the implementation guide.
 void vmfree(void* ptr)
 ```
 
-The `vmfree` function expects a **16-byte** aligned address obtained by a previous
-call to `vmalloc`. If the address ptr is `NULL`, then vmfree does not perform any
-action and returns directly. If the block appears to be a free block, then
-`vmfree` does not perform any action and returns.
+The `vmfree` function expects a **16-byte** aligned address obtained by a previous call to `vmalloc`. If the address ptr is `NULL`, then vmfree does not perform any action and returns directly. If the block appears to be a free block, then `vmfree` does not perform any action and returns.
 
-For allocated blocks, `vmfree` updates the block metadata to indicate that it is
-free, and _coalesces_ with adjacent (previous and next) blocks if they are also
-free.
+For allocated blocks, `vmfree` updates the block metadata to indicate that it is free, and _coalesces_ with adjacent (previous and next) blocks if they are also free.
 
-More details are in the implementation guide.
+#### Coalescing freed blocks
+
+Just freeing a block is not necessarily enough, since this may leave us with many small free blocks that can't hold a large allocation. When freeing, we also want to check if the next / previous block in the heap are free, and coalesce with them to make one large free block.
+
+If you are coalescing two blocks, remember to update both the header and the footer!
+
+### Block footers / Previous Bit
+
+You will need to update both your `vmalloc` and your `vmfree` implementation to add code for creating/updating accurate footers, and making sure the "previous block busy" bit is correct.
 
 ## Design Questions
 
@@ -86,15 +100,15 @@ _Heap fragmentation_ occurs when there are many available blocks that are
 small-sized and not adjacent (so they cannot be coalesced).
 
 1. Give an example of a program (in C or pseudocode) that sets up a situation
-where a 20-byte `vmalloc` call **fails** to allocate despite the heap having (in
-total) over 200 bytes free across many blocks. Assume all the policies and
-layout of the allocator from the PA are used (best fit, alignment, coalescing
-rules, and so on)
+   where a 20-byte `vmalloc` call **fails** to allocate despite the heap having (in
+   total) over 200 bytes free across many blocks. Assume all the policies and
+   layout of the allocator from the PA are used (best fit, alignment, coalescing
+   rules, and so on)
 
 2. Give an example of a program (in C or pseudocode) where all the allocations
-succeed if using the _best fit_ allocation policy (like in this PA), but some
-allocations would fail due to fragmentation if the _first fit_ allocation policy
-was used instead, keeping everything else the same.
+   succeed if using the _best fit_ allocation policy (like in this PA), but some
+   allocations would fail due to fragmentation if the _first fit_ allocation policy
+   was used instead, keeping everything else the same.
 
 ## Submission
 
@@ -108,5 +122,4 @@ not change.
 To get started, read through the next few sections about the PA:
 
 - [Starter Code](./starter-code.md)
-- [Implementation Guide](./guide.md)
 - [Testing](./testing.md)
