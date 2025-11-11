@@ -3,7 +3,7 @@
 _This assignment is thanks to the [staff of CSE29 spring 2024](https://cse29sp24.github.io/docs/instructors.html), especially [Gerald Soosairaj](https://geraldsoosairaj.github.io) and Jerry Yu._
 
 - **Due Thursday, Nov 20, 11:59pm**
-- GitHub Classroom: [https://classroom.github.com/a/ngxgHFB3](https://classroom.github.com/a/D4iRGMuI)
+- GitHub Classroom: [https://classroom.github.com/a/nmnXdILJ](https://classroom.github.com/a/nmnXdILJ)
 
 In class, quizzes, and PAs we've _used_ `malloc` and `free` to manage memory.
 These are functions [written in
