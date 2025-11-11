@@ -2,7 +2,7 @@
 
 The starter code for this assignment is hosted on GitHub Classroom. Use the
 following link to accept the GitHub Classroom assignment:
-[https://classroom.github.com/a/D4iRGMuI](https://classroom.github.com/a/D4iRGMuI)
+[https://classroom.github.com/a/nmnXdILJ](https://classroom.github.com/a/nmnXdILJ)
 
 Just like on previous PAs, clone the repository to ieng6 server.
 
