@@ -1,60 +1,10 @@
-# PA4 Resubmission – Malloc
+# PA4 – Malloc
 
 _This assignment is thanks to the [staff of CSE29 spring 2024](https://cse29sp24.github.io/docs/instructors.html), especially [Gerald Soosairaj](https://geraldsoosairaj.github.io) and Jerry Yu._
 
-- **Resubmission Due Tuesday, Dec 10, 10:10pm**
-- GitHub Classroom: [https://classroom.github.com/a/ngxgHFB3](https://classroom.github.com/a/ngxgHFB3)
+- **Due Thursday, Nov 20, 11:59pm**
+- GitHub Classroom: [https://classroom.github.com/a/ngxgHFB3](https://classroom.github.com/a/D4iRGMuI)
 
-## Resubmission instructions
-**If you want to resubmit PA4, please read this section carefully. You need to pass all the tests in the original PA4, while also implementing an extra functionality and answering a new design question described below.**
-
-### `vminfo`
-
-In `utils.c`, we have implemented the function vminfo(), which traverses through the heap blocks and prints out the metadata in each block header.
-Update the function so that at the end of its output, it prints details about the largest available block as follows:
-```
-The largest free block is #x with size y.
-```
-where `x` is the blockid starting from 0, and `y` is the size (including header) of the largest available block for allocation.
-If there are multiple candidates for the largest block, `x` should be the smallest blockid of the candidates.
-Refer the following updated output of `vminfo` as an example:
-```
-vminit: heap created at 0x707df3026000 (4096 bytes).
-vminit: heap initialization done.
----------------------------------------
- #      stat    offset   size     prev   
----------------------------------------
- 0      BUSY    8        48       BUSY   
- 1      FREE    56       32       BUSY   
- 2      BUSY    88       112      FREE   
- 3      BUSY    200      96       BUSY   
- 4      FREE    296      208      BUSY   
- 5      BUSY    504      64       FREE   
- 6      BUSY    568      320      BUSY   
- 7      FREE    888      208      BUSY   
- 8      BUSY    1096     160      FREE   
- 9      BUSY    1256     368      BUSY   
- 10     BUSY    1624     272      BUSY   
- 11     FREE    1896     672      BUSY   
- 12     BUSY    2568     128      FREE   
- 13     BUSY    2696     464      BUSY   
- 14     FREE    3160     672      BUSY   
- 15     BUSY    3832     160      FREE   
- 16     FREE    3992     96       BUSY   
- END    N/A     4088     N/A      N/A    
----------------------------------------
-Total: 4080 bytes, Free: 6, Busy: 11, Total: 17
-The largest free block is #11 with size 672
-```
-In this example, there are six `FREE` blocks with the two largest `FREE` blocks being 672 bytes in size: the output line shows the index of the 672 sized block that comes first.
-
-## Updated DESIGN question for the resubmission
-
-In our implementation, when freeing an allocated block, we coalesce it with the previous and next blocks in the heap if they are free - to make one larger free block.
-
-1. Consider an updated implementation where in case of freeing, we only coalesce it with **exactly 1 next block** in the heap if it is free. Give an example of a program (in C or pseudocode) where all the allocations succeed in the current design (like in this PA), but some allocations would fail with the updated freeing strategy.
-
-<hr>
 In class, quizzes, and PAs we've _used_ `malloc` and `free` to manage memory.
 These are functions [written in
 C](https://sourceware.org/git/?p=glibc.git;a=blob;f=malloc/malloc.c)! `glibc`
@@ -74,7 +24,6 @@ Specfically, we will practice the following concepts in C:
 - pointer arithmetic,
 - memory management, and of course,
 - using the terminal and vim.
-
 
 ## Task Specification
 
@@ -131,7 +80,7 @@ free.
 
 More details are in the implementation guide.
 
-## Design Questions (You do not need to answer these for the resubmission)
+## Design Questions
 
 _Heap fragmentation_ occurs when there are many available blocks that are
 small-sized and not adjacent (so they cannot be coalesced).
@@ -150,13 +99,14 @@ was used instead, keeping everything else the same.
 ## Submission
 
 You'll submit on Gradescope as usual. Refer to the [policies on
-collaboration](https://ucsd-cse29.github.io/fa24/#policies) if you need to
+collaboration](https://ucsd-cse29.github.io/fa25/#policies) if you need to
 refresh your memory.
 
-We will compile your program using the provided `Makefile`s, which you should
+**Important:** We will compile your program using the provided `Makefile`s, which you should
 not change.
 
-To get started read through the next few sections about the PA:
-  - [Starter Code](./starter-code.md)
-  - [Implementation Guide and Milestones](./guide.md)
-  - [Testing](./testing.md)
+To get started, read through the next few sections about the PA:
+
+- [Starter Code](./starter-code.md)
+- [Implementation Guide](./guide.md)
+- [Testing](./testing.md)

@@ -3,9 +3,9 @@
 
 The starter code for this assignment is hosted on GitHub Classroom. Use the
 following link to accept the GitHub Classroom assignment:
-[https://classroom.github.com/a/ngxgHFB3](https://classroom.github.com/a/ngxgHFB3)
+[https://classroom.github.com/a/D4iRGMuI](https://classroom.github.com/a/D4iRGMuI)
 
-Just like on PA2/3, clone the repository to ieng6 server.
+Just like on previous PAs, clone the repository to ieng6 server.
 
 ## The Code Base
 
@@ -39,8 +39,6 @@ For this programming assignment, we want the addresses returned by `vmalloc` to 
 
 Block sizes here refer to the size of the block **including** the header. The smallest possible block is 16 bytes, and would consist of an 8 byte header followed by 8 bytes of allocatable memory. When free, the last 8 bytes of the block would instead contain the block footer, to be used for coalescing free blocks.
 
-The `size_t` data type, which you will see frequently throughout this PA, is a 64-bit (8-byte) unsigned integer type.
-
 Begin by reading through the `vm.h` file, where we define the internal data structures for the heap. This is where you will find the all-important block headers and block footers. Focus on understanding how struct `block_header` is used. You will see it in action later.
 
 Next, open `vminit.c`. This is a very big file containing functions that create and set up the simulated heap for this assignment. Find the `init_heap()` function, and read through the entire thing to understand how it is setting up the heap. There is pointer arithmetic involved, you will need to do similar things for implementing `vmalloc` and `vmfree`, so make sure you have a solid understanding of that. (Why is it necessary to cast pointers to different types?)
@@ -48,9 +46,3 @@ Next, open `vminit.c`. This is a very big file containing functions that create 
 Just like production allocators, we create a large chunk of memory as our heap using `mmap`, and allocations/frees are performed in that memory region.
 
 Once you understand what the `init_heap()` function is doing, open up `utils.c`. Here we have implemented the function `vminfo()`, which will be your ally throughout this PA. This function traverses through the heap blocks and prints out the metadata in each block header. You should find inspiration for how to write your own `vmalloc` function here. Look at how it manipulates the pointer to jump between blocks!
-
-
-
-
-
-
