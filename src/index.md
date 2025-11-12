@@ -56,6 +56,9 @@ you can see what's coming.
 
 - **Lecture Materials**
 
+  - **Wednesday:**
+    - <u>Joe's Lecture:</u> [Handout](lec/week7/Lecture-21-w7w.pdf)
+
   - **Monday:**
     - <u>Joe's Lecture:</u> [Handout](lec/week7/Lecture-20-w7m.pdf) | [Annotated Handout](lec/week7/Annotated-lecture-20-w7m.pdf)
 
