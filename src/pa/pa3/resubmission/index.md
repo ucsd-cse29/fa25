@@ -37,4 +37,6 @@ pish_history.o  pish.o
 
 ## Coding Style Resubmission
 
-If you got a point off for coding style in the original PA3, and full autograder points, you **do not** have to do the new functionality. You can just resubmit your previous code with the coding style fixed to get that point back.
+If you got a point off for coding style in the original PA3, you **do not** have to do the new functionality for that point.
+
+Refer to the Piazza post for more details.
