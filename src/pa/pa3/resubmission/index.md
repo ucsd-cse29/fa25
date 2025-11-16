@@ -35,6 +35,13 @@ pish_history.o  pish.o
 7 history
 ```
 
+## Errors
+
+For each of the following errors, call the `usage_error()` function in the starter code and continue to the next iteration of the loop.
+
+- If the user enters `!!` as the very first command (there is no last command to execute).
+- If the user enters `!! <anything>` (if argc != 1).
+
 ## Coding Style Resubmission
 
 If you got a point off for coding style in the original PA3, you **do not** have to do the new functionality for that point.
