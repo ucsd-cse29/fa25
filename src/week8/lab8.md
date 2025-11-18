@@ -8,14 +8,14 @@ Part 1: git good
 Get into groups of 2, and decide who will be **Partner 1** and **Partner 2**.
 
 #### Partner 1 ONLY:
-1. Accept the Github Classroom assignment (DO NOT accept until we do this together in class): <https://classroom.github.com/a/IcKc8biR> 
+1. Create a new team on the Github Classroom assignment for you and your partner (DO NOT accept until we do this together in class): <https://classroom.github.com/a/IcKc8biR> 
 
-2. Add Partner 2 to your repo (Settings > Collaborators > Add people)
-
+#### Partner 2 ONLY:
+2. Join the team that Partner 1 created.
 
 #### Both:
 
-3. Clone Partner 1's repo to ieng6
+3. Clone the repo to ieng6
 4. Edit `hello.c` to fill in your own name in the print statement
 
 
