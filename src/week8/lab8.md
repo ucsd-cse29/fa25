@@ -8,7 +8,7 @@ Part 1: git good
 Get into groups of 2, and decide who will be **Partner 1** and **Partner 2**.
 
 #### Partner 1 ONLY:
-1. Accept the Github Classroom assignment: TODO fill link (DO NOT accept until we do this together in class)
+1. Accept the Github Classroom assignment (DO NOT accept until we do this together in class): <https://classroom.github.com/a/cAxhhAO1> 
 2. Add Partner 2 to your repo (Settings > Collaborators > Add people)
 
 
