@@ -54,7 +54,7 @@ Copy the file `[FILE]` to the location specified by `[PATH]`.
 
 Copy the file `[FILE]` to the location specified by `[PATH]`. `[FILE]` and `[PATH]` can both be located on a server. So for example, if you had `Screenshot.png` in your working directory, you could `scp` it to the home directory on `ieng6` by (also filling in USERNAME with your actual username):
 ```
-scp Screenshot.png [USERNAME]@ieng6.ucsd.edu:~/
+scp Screenshot.png USERNAME@ieng6.ucsd.edu:~/
 ```
 
 
