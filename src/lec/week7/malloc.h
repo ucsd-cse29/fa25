@@ -1,7 +1,7 @@
 #ifndef MALLOC_H
 #define MALLOC_H
-
-void* mymalloc(int size);
-void myfree(void* ptr);
-
+#include <stddef.h>
+void* malloc(size_t size);
+void free(void* ptr);
+void print_heap();
 #endif

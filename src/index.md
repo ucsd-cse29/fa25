@@ -32,7 +32,7 @@ better!
 - Professor office hours – Joe and Aaron each have 2 hours. Come to either and
   ask anything you need.
     - Aaron: Monday 10am-11am and Wednesday 11am-12pm CSE3120
-    - Joe: Tuesday 1:00pm-2:00pm (CSE B260 in the labs) and Wednesday 1:00-2:00pm (CSE 3206 Joe's Office)
+    - Joe: Tuesday 1:00pm-2:00pm (CSE B260 in the labs: adjusted to 12:30-1:30 on Nov 18) and Wednesday 1:00-2:00pm (CSE 3206 Joe's Office)
 - Office Hours: See the [Office Hours Calendar](#office-hours-calendar)
 - Q&A forum: [Piazza](https://piazza.com/class/mfzu0oi0j2q354)
 - PrairieLearn: [https://us.prairielearn.com](https://us.prairielearn.com)
