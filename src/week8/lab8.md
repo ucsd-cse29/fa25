@@ -57,6 +57,10 @@ Copy the file `[FILE]` to the location specified by `[PATH]`. `[FILE]` and `[PAT
 scp Screenshot.png USERNAME@ieng6.ucsd.edu:~/
 ```
 
+Here's the diagram of what that looks like to `scp` from your laptop/desktop to the repo on `ieng6`, and then push to `GitHub`:
+![scp.png](./scp.png)
+
+
 
 
 Work Check-off
