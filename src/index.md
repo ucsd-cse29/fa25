@@ -52,6 +52,16 @@ The schedule below outlines topics, due dates, and links to assignments. We'll
 typically update the material for the upcoming week before Monday's lecture so
 you can see what's coming.
 
+### Week 8
+
+- **Lecture Materials**
+
+  - **Monday:**
+    - <u>Joe's Lecture:</u> [Annotated Handout](lec/week8/Annotated-lecture-23-w8m.pdf)
+
+- **Lab**
+  - [Lab 8 Reference](week8/lab8.md)
+
 ### Week 7
 
 - **Lecture Materials**
@@ -64,9 +74,6 @@ you can see what's coming.
 
   - **Monday:**
     - <u>Joe's Lecture:</u> [Handout](lec/week7/Lecture-20-w7m.pdf) | [Annotated Handout](lec/week7/Annotated-lecture-20-w7m.pdf)
-
-- **Lab**
-  - [Lab 8 Reference](week8/lab8.md)
 
 ### Week 6
 
