@@ -57,7 +57,6 @@ you can see what's coming.
 - **Readings**
   - [Starting a Process](https://diveintosystems.org/book/C13-OS/impl.html)
   - [Virtual Memory](https://diveintosystems.org/book/C13-OS/vm.html)
-  - 
 
 - **Lecture Materials**
 
