@@ -60,6 +60,9 @@ you can see what's coming.
 
 - **Lecture Materials**
 
+  - **Friday:**
+    - <u>Joe's Lecture:</u> [Repository](https://github.com/ucsd-cse29/fa25-25-w8f-simple-server) | [Annotated Handout](lec/week8/Annotated-lecture-25-w8f.pdf)
+
   - **Wednesday:**
     - <u>Joe's Lecture:</u> [Annotated Handout](lec/week8/Annotated-lecture-24-w8w.pdf)
 
