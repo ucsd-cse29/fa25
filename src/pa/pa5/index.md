@@ -2,7 +2,7 @@
 
 **Due Thursday, December 4, 11:59PM**
 
-Github Classroom Assignment: <https://classroom.github.com/a/hlq9KJbK>
+Github Classroom Assignment: [https://classroom.github.com/a/0wvJcgvj](https://classroom.github.com/a/0wvJcgvj)
 
 **Important**: there is no resubmission available for PA5. Plan your development and testing accordingly. We will also have no hidden tests for PA5 so that you can get immediate feedback on your code.
 
