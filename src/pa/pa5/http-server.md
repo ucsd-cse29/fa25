@@ -6,7 +6,7 @@ learn from reading it!).
 
 It provides one function for you to use:
 
-```
+```c
 void start_server(void(*handler)(char*, int), int port);
 ```
 
@@ -19,7 +19,7 @@ of a function. To use `start_server`, we define a function (it can have any
 name) with the appropriate signature and pass it into `start_server` as an
 argument. The `handler` function takes two arguments:
 
-```
+```c
 void(*handler)(char*, int)
 ```
 
@@ -30,7 +30,7 @@ write a response using the `write` system call
 
 Here's a straightforward example that just responds to the user with a constant string:
 
-```
+```c
 #include "http-server.h" // http-server includes a lot of other useful things
 char const* HTTP_200_OK = "HTTP/1.1 200 OK\r\nContent-Type: text/plain\r\n\r\n";
 void handle_response(char *request, int client_socket) {
@@ -43,7 +43,7 @@ int main() {
 }
 ```
 
-```
+```bash
 $ gcc -o print-request print-request.c http-server.c
 $ ./print-request
 Server started on port PPPPP (will be a specific number for you)
@@ -60,7 +60,7 @@ Accept: */*
 
 (in another terminal)
 
-```
+```bash
 $ curl "http://localhost:PPPPP/post?user=joe&message=hi"
 Hello!
 $ curl "http://localhost:PPPPP/post?user=aaron&message=sup"
@@ -86,7 +86,7 @@ The first argument to `handler` is a `char*` with a a reference to the HTTP
 request. For our `chat-server`, all requests will be `GET` requests and will
 look something like
 
-```
+```bash
 GET /post?user=joe&message=hi HTTP/1.1
 Host: localhost:36611 User-Agent:
 curl/7.68.0 Accept: */ *
@@ -112,7 +112,7 @@ sends bytes directly back to whatever client made the request.
 
 The format of a HTTP response for a successful response is
 
-```
+```bash
 HTTP/1.1 200 OK
 Content-Type: text/plain
 
@@ -127,7 +127,7 @@ work on Windows). Some software will work with just a `\n` for line breaks, but
 the correct thing to do is use `\r\n`, so in a string literal the HTTP header above
 would look like
 
-```
+```bash
 "HTTP/1.1 200 OK\r\nContent-Type: text/plain\r\n\r\n...response body...
 ```
 

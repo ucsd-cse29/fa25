@@ -17,7 +17,7 @@ You could consider structures like these; what are some tradeoffs? (We've
 assumed that the program defines some useful constants to avoid repeating
 specific numbers).
 
-```
+```c
 struct Reaction {
     char user[USERNAME_SIZE];
     char message[REACTION_SIZE];
@@ -32,7 +32,7 @@ struct Chat {
 }
 ```
 
-```
+```c
 struct Reaction {
     char *user;
     char *message;
@@ -53,10 +53,3 @@ These are ideas – some combination of them might work, and they are not necess
 - Which fields can grow?
 - Which fields can change?
 - What are limits for them described in the specification?
-
-
-
-
-
-
-

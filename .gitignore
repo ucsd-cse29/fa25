@@ -3,3 +3,4 @@ book/
 *.fls
 *.aux
 *.log
+.DS_Store
