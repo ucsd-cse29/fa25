@@ -52,6 +52,13 @@ The schedule below outlines topics, due dates, and links to assignments. We'll
 typically update the material for the upcoming week before Monday's lecture so
 you can see what's coming.
 
+### Week 9
+
+- **Lecture Materials**
+
+  - **Monday:**
+    - <u>Joe's Lecture:</u> [Repository](https://github.com/ucsd-cse29/fa25-26-w9m-number-server)
+
 ### Week 8
 
 - **Readings**
