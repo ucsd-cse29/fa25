@@ -40,7 +40,7 @@ If a port number was provided, it should use that port, otherwise it should prin
 
 It should continue running, listening for requests on that port, until shutdown with Ctrl-c. It can print any other logging messages or other output needed to the terminal.
 
-The requests the chat server listens for are described in this section
+The requests the chat server listens for are described in this section:
 
 ### /chats
 
@@ -55,7 +55,7 @@ The rendered chat format is
 ... [more chats] ...
 ```
 
-Chats must be rendered properly, as in PSet5. You can put in whatever effort you like into lining things up nicely within these constraints, but these are the requirements.
+Chats must be rendered properly, as in HW5.5. You can put in whatever effort you like into lining things up nicely within these constraints, but these are the requirements.
 
 Example chats rendering might look like:
 
@@ -71,19 +71,6 @@ Example chats rendering might look like:
 [#9 2024-10-06 09:12]       aaron: or at least not me
                             (joe)  👍🏻
 [#10 2024-10-06 09:12]         joe: good talk
-```
-
-Here's another:
-
-```
-[#1 2024-10-24 13:01]        yash: hi all! react with 👍🏻 if you think the lab is good to go, or 😬 if you think it needs more testing
-                          (aaron)  👍🏻
-                          (elena)  😬
-                         (arunan)  😬
-                          (janet)  😬
-                         (travis)  😬
-                            (joe)  🐿️
-[#2 2024-10-24 13:02]        yash: OK we'll go with what joe said
 ```
 
 ### /post
@@ -117,9 +104,9 @@ Limits and constraints:
 
 ## **Implementation Guide**
 
-This page is the entire _specification_ for the assignment; it's what you need to implement. You are free to make whatever choices you like in your code within these constraints. To help you on your way, we have an _implementation guide_:
+This page is the entire _specification_ for the assignment; it's what you need to implement. You are free to make whatever choices you like in your code within these constraints. To help you on your way, we have some _implementation notes_ below with suggestions and ideas for how to get started and what to think about. These are not requirements, just suggestions!
 
-Make sure to do **Problem Set 5** first if you haven't already! It will create helper functions you can use here.
+Make sure to do **Problem Set 5** first if you haven't already! It will create helper functions you can use as well as help you develop an understanding of your task.
 
 ## The `http-server` Library
 
@@ -149,7 +136,7 @@ void(*handler)(char*, int)
 - The first, the `char*`, is a string containing the request from the internet.
   It will be an HTTP request.
 - The second, the `int`, is a _file descriptor_ that our program can use to
-  write a response using the `write` system call
+  write a response using the `write` or `send` system call
 
 Here's a straightforward example that just responds to the user with a constant string:
 
@@ -191,7 +178,7 @@ Hello!
 ```
 
 Then, every time the server gets a request, it will call the `handle_request`
-function, which will print the contents of the request, and then use the `write` system call to send a response back to the client (in this case with a constant string). This is the entry point to our program, and it's a good starting point for you to build up from!
+function, which will print the contents of the request, and then use the `write` or `send` system call to send a response back to the client (in this case with a constant string). This is the entry point to our program, and it's a good starting point for you to build up from!
 
 One other tip for using `start_server`:
 
@@ -343,7 +330,7 @@ the client that made the request. It might include:
 
 #### **`handle_post`**
 
-```
+```c
 // path is a string like "/post?user=joe&message=hi"
 void handle_post(char* path, int client)
 ```
@@ -429,44 +416,11 @@ This PA explores several features that are straightforward to use, but there are
 
 - [`atoi`](https://cplusplus.com/reference/cstdlib/atoi/?kw=atoi): convert `char*` to integer
 
-  For example:
-
-  ```c
-  #include <stdio.h>
-  #include <stdlib.h>
-
-  int main() {
-    char numeric[] = "123";
-    int asnum = atoi(numeric);
-    printf("%d\n", asnum * 2);
-  }
-  ```
-
 - **Time functions:**
 
   - [`time`](https://en.cppreference.com/w/c/chrono/time): get the current time
   - [`localtime`](https://en.cppreference.com/w/c/chrono/localtime): convert the time to the current local time zone
   - [`strftime`](https://en.cppreference.com/w/c/chrono/strftime): print the time in a given format
-
-    For example:
-
-    ```c
-    #include <time.h>
-    #include <stdio.h>
-
-    int main() {
-        char buffer[100];
-        time_t now = time(NULL);
-        struct tm *tm_info = localtime(&now);
-        strftime(buffer, sizeof(buffer), "%Y-%m-%d %H:%M:%S", tm_info);
-        printf("%s", buffer);
-    }
-    ```
-
-<!-- - [HTTP](https://ucsd-cse29.github.io/fa25/pa/pa5/http-server.html)
-- [Function-by-function Breakdown](https://ucsd-cse29.github.io/fa25/pa/pa5/data-vs-requests.html) -->
-<!-- - [Representing Chats and Reactions](https://ucsd-cse29.github.io/fa25/pa/pa5/representations.html) -->
-<!-- - [Other Useful Functions](https://ucsd-cse29.github.io/fa25/pa/pa5/helpful-functions.html) -->
 
 ## Handin
 
