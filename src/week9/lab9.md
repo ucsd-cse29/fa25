@@ -1,7 +1,6 @@
 # Lab 9 Reference Document
 
-(Accept and clone the github classroom assignment here
-https://classroom.github.com/a/avrMqKHM)
+(Accept and clone the github classroom assignment at [this link](https://classroom.github.com/a/avrMqKHM))
 
 Part 1 - Connecting to the chat server
 --------------------------------------
