@@ -60,17 +60,17 @@ Chats must be rendered properly, as in HW5.5. You can put in whatever effort you
 Example chats rendering might look like:
 
 ```
-[#1 2024-10-06 09:01]         joe: hi aaron
-[#2 2024-10-06 09:02]       aaron: sup
-[#3 2024-10-06 09:04]         joe: working on the example chat for the PA
-[#4 2024-10-06 09:06]       aaron: oh cool what should it say
-[#5 2024-10-06 09:07]         joe: I dunno we could go pretty meta with it? I pushed an example go check it out. like a chat about the chat
-[#6 2024-10-06 09:10]       aaron: eh kinda lame tbh
-[#7 2024-10-06 09:11]         joe: whatever I already wrote it, going with it as-is
-[#8 2024-10-06 09:12]       aaron: ok but make sure we don't look like jerks
-[#9 2024-10-06 09:12]       aaron: or at least not me
+[#1 2025-11-06 09:01]         joe: hi aaron
+[#2 2025-11-06 09:02]       aaron: sup
+[#3 2025-11-06 09:04]         joe: working on the example chat for the PA
+[#4 2025-11-06 09:06]       aaron: oh cool what should it say
+[#5 2025-11-06 09:07]         joe: I dunno we could go pretty meta with it? like a chat about the chat
+[#6 2025-11-06 09:10]       aaron: eh kinda lame tbh
+[#7 2025-11-06 09:11]         joe: whatever I already wrote it, going with it as-is
+[#8 2025-11-06 09:12]       aaron: ok but make sure we don't look like jerks
+[#9 2025-11-06 09:12]       aaron: or at least not me
                             (joe)  👍🏻
-[#10 2024-10-06 09:12]         joe: good talk
+[#10 2025-11-06 09:12]         joe: good talk
 ```
 
 ### /post
@@ -106,147 +106,9 @@ Limits and constraints:
 
 This page is the entire _specification_ for the assignment; it's what you need to implement. You are free to make whatever choices you like in your code within these constraints. To help you on your way, we have some _implementation notes_ below with suggestions and ideas for how to get started and what to think about. These are not requirements, just suggestions!
 
-Make sure to do **Problem Set 5** first if you haven't already! It will create helper functions you can use as well as help you develop an understanding of your task.
+First, make sure to do **Problem Set 5** first if you haven't already! While completing it you will create helper functions you can use as well as help you develop an understanding of your task.
 
-## The `http-server` Library
-
-We've provided you with `http-server.c` and `http-server.h`. This is code for
-you to treat as a _library_, you shouldn't change it at all (though you may
-learn from reading it!).
-
-It provides one function for you to use:
-
-```c
-void start_server(void(*handler)(char*, int), int port);
-```
-
-This function takes two arguments: a `handler` that takes HTTP requests and
-writes responses, and a `port` for telling the server what address to use. The
-`port` can be `0` to ask the operating system to choose one for us.
-
-The type for `handler` is the type of a _function pointer_, which is the address
-of a function. To use `start_server`, we define a function (it can have any
-name) with the appropriate signature and pass it into `start_server` as an
-argument. The `handler` function takes two arguments:
-
-```c
-void(*handler)(char*, int)
-```
-
-- The first, the `char*`, is a string containing the request from the internet.
-  It will be an HTTP request.
-- The second, the `int`, is a _file descriptor_ that our program can use to
-  write a response using the `write` or `send` system call
-
-Here's a straightforward example that just responds to the user with a constant string:
-
-```c
-#include "http-server.h" // http-server includes a lot of other useful things
-char const* HTTP_200_OK = "HTTP/1.1 200 OK\r\nContent-Type: text/plain\r\n\r\n";
-void handle_response(char *request, int client_socket) {
-    printf("The user sent a request with: %s\n", request);
-    write(client_socket, HTTP_200_OK, strlen(HTTP_200_OK));
-    write(client_socket, "Hello!", 6);
-}
-int main() {
-    start_server(&handle_response, 0);
-}
-```
-
-```bash
-$ gcc -o print-request print-request.c http-server.c
-$ ./print-request
-Server started on port PPPPP (will be a specific number for you)
-# the lines below print *when the request is received*
-The user sent a request with: GET /post?user=joe&message=hi HTTP/1.1
-Host: localhost:36611
-User-Agent: curl/7.68.0
-Accept: */*
-The user sent a request with: GET /post?user=aaron&message=sup HTTP/1.1
-Host: localhost:36611
-User-Agent: curl/7.68.0
-Accept: */*
-```
-
-(in another terminal)
-
-```bash
-$ curl "http://localhost:PPPPP/post?user=joe&message=hi"
-Hello!
-$ curl "http://localhost:PPPPP/post?user=aaron&message=sup"
-Hello!
-```
-
-Then, every time the server gets a request, it will call the `handle_request`
-function, which will print the contents of the request, and then use the `write` or `send` system call to send a response back to the client (in this case with a constant string). This is the entry point to our program, and it's a good starting point for you to build up from!
-
-One other tip for using `start_server`:
-
-- If `port` is 0, the library will pick an open port provided by the operating
-  system. This is convenient for getting started
-- However, when you restart a program it's annoying to have to change the port
-  number in any requests you have in your bash history, etc. So you can also
-  provide the port number as an argument, which could be hardcoded or taken from a
-  command-line argument. You can do that to re-run the program with the same port
-  it used last time to keep your examples consistent
-
-### HTTP Requests
-
-The first argument to `handler` is a `char*` with a a reference to the HTTP
-request. For our `chat-server`, all requests will be `GET` requests and will
-look something like
-
-```bash
-GET /post?user=joe&message=hi HTTP/1.1
-Host: localhost:36611 User-Agent:
-curl/7.68.0 Accept: */ *
-```
-
-The string after `GET` is the path of the request, and that's the part that will
-change depending on the type of request we get. Part of the job of the
-`chat-server` will be to extract the relevant information from the path, like
-which action to take (post, react, etc.) and the parameters of the action (user,
-message, etc.) in order to work with them.
-
-It probably makes sense to use some C string library functions to do this. In
-particular `strtok` will allow you to “split up” a string by replacing
-delimiters like ` `, `&`, and `=` with null terminators. You may also find
-`strcspn`, `strstr`, or `strpbrk` useful; it's up to you to come up with a plan
-to put these together to extract the information out of each request.
-
-### HTTP Responses
-
-The second argument to `handler` is an `int` that is a file descriptor for the
-response. The `http-server` library has set things up so writing to the socket
-sends bytes directly back to whatever client made the request.
-
-The format of a HTTP response for a successful response is
-
-```bash
-HTTP/1.1 200 OK
-Content-Type: text/plain
-
-... response body ...
-```
-
-**Note**: A nuance of this is that the newlines in HTTP responses are not just
-`\n`; [they are required to be
-`\r\n`](https://en.wikipedia.org/wiki/HTTP_message_body) (which, interestingly,
-is how line endings
-work on Windows). Some software will work with just a `\n` for line breaks, but
-the correct thing to do is use `\r\n`, so in a string literal the HTTP header above
-would look like
-
-```bash
-"HTTP/1.1 200 OK\r\nContent-Type: text/plain\r\n\r\n...response body...
-```
-
-There are many other `Content-Type`s in the world other than `text/plain`! But
-we will focus on just plain text reponses for this assignment.
-
-## Working Incrementally: Data vs. Requests
-
-One way to break down the work the server needs to do is:
+Then, one way to break down the work the server needs to do is:
 
 - Parsing and interpreting requests (is the request a new post, a reaction, etc)
 - Updating the current data (chats and reactions) based on the parameters in the request
@@ -255,7 +117,7 @@ One way to break down the work the server needs to do is:
 One way to work incrementally is to separate the _data handling_ and the
 _request handling_ parts into different functions.
 
-The _data handling_ functions can be tested with `assert`s, and the _request
+The _data handling_ functions can be tested with by writing a `main` and using `printf` or `assert`, and the _request
 handling_ can be tested with `curl` or a client.
 
 We think the following functions might be useful for you to implement. In your
@@ -369,46 +231,8 @@ A chat has several components, which may be good candidates for struct fields:
 A reaction has the message content and the user who posted it (no timestamp or
 reactions-to-reactions), both of which are fixed-size.
 
-You could consider structures like these; what are some tradeoffs? (We've
-assumed that the program defines some useful constants to avoid repeating
-specific numbers).
-
-```c
-struct Reaction {
-    char user[USERNAME_SIZE];
-    char message[REACTION_SIZE];
-}
-struct Chat {
-    uint32_t id;
-    char user[USERNAME_SIZE];
-    char message[MESSAGE_SIZE];
-    char timestamp[TIMESTAMP_SIZE];
-    uint32_t num_reactions;
-    Reaction reactions[MAX_REACTIONS];
-}
-```
-
-```c
-struct Reaction {
-    char *user;
-    char *message;
-}
-struct Chat {
-    uint32_t id;
-    char *user;
-    char *message;
-    char *timestamp;
-    uint32_t num_reactions;
-    Reaction *reactions;
-}
-```
-
-These are ideas – some combination of them might work, and they are not necessarily perfect or complete. Some things to think about:
-
-- Which fields are fixed-size?
-- Which fields can grow?
-- Which fields can change?
-- What are limits for them described in the specification?
+You should make `struct`s to hold the `Chat`s and `Reaction`s in your server, and use the constrains above
+about the lengths of usernames, messages, and so on to help you decide what data to store.
 
 ## Other Helpful Functions
 
