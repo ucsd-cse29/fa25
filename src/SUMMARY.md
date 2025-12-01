@@ -12,7 +12,6 @@
 - [Lab 6](./week6/lab6.md)
 - [Lab 8](./week8/lab8.md)
 - [Lab 9](./week9/lab9.md)
-- [.](./week10/pokemon.md)
 
 
 # Assignments
