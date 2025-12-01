@@ -13,7 +13,8 @@
 - [Lab 8](./week8/lab8.md)
 - [Lab 9](./week9/lab9.md)
 
-# Assignments
+
+# Assignments[.](./week10/pokemon.md)
 
 - [PA 1](./pa/pa1/index.md)
 - [PA 1 Resubmission](./pa/pa1/resubmission/index.md)
