@@ -1,9 +1,9 @@
-# [You've got Mail!](http://www.aolsucks.org/aolsound.htm){:target="_blank"}
+# [You've got Mail!](http://www.aolsucks.org/aolsound.htm)
 
 The `mail` command, unlike other commands we’ve taught you in this lab and previous ones, is especially unique: literally no one* uses this! As such, this section is not relevant to any course material. But the idea of sending each other mail via the terminal, all 1970s-core, is too appealing to pass up on.
 
-{: .note }
-*By "literally no one", I mean "literally no one, except for at least one person at this university", so I've been told.
+> [!NOTE]
+>*By "literally no one", I mean "literally no one, except for at least one person at this university", so I've been told.
 
 Throughout this section, we’ll use `myname` and `friendname` to refer to your and your partner’s UCSD username, respectively. This is the username you use for your UCSD email, and the one you use to log into `ieng6`.
 
@@ -21,8 +21,8 @@ $ ssh myname@ieng6-640.ucsd.edu
 
 And enter your password as usual. Make sure both you and your partner are on cluster 640.
 
-{: .important }
-In the following instructions, you will use the `mail` command, but it is not
+> [!IMPORTANT]
+>In the following instructions, you will use the `mail` command, but it is not
 available on the `ieng6-2xx` servers. Please make sure to **log out of `ieng6`**
 and **then** sign into **`ieng6-640.ucsd.edu`**! This specific cluster runs an older
 operating system that still has the `mail` command.
@@ -90,8 +90,8 @@ Use the below command to generate a ".pk" file with the name of the Pokemon you 
 ```
 ./pokeget.sh 25 > pikachu.pk
 ```
-{: .note }
-If the `pokeget.sh` script seems to take more than a few seconds to finish running, try using `Ctrl` + `C` to interrupt the program and try running the same command again.
+> [!NOTE]
+>If the `pokeget.sh` script seems to take more than a few seconds to finish running, try using `Ctrl` + `C` to interrupt the program and try running the same command again.
 
 Once you have a ".pk" file, use the following command to send it to your partner, using the `-a` option. Replace "pikachu.pk" with the name of your Pokemon file if it is different.
 
@@ -115,8 +115,7 @@ Extracting the attachment in a readable form from the email itself is quite invo
 ./extract_pokemon.sh pokemon.mail > pokemon.pk
 cat pokemon.pk
 ```
-{: .note }
->
+> [!NOTE]
 > If you get an error running `extract_pokemon.sh` that mentions something about a bad interpreter, this is likely because the file hasn't been formatted for unix correctly yet. Run `sed -i 's/\r$//' extract_pokemon.sh` to reformat the file and try again.
 
 
@@ -124,10 +123,6 @@ If everything went well, you should get the Pokemon your partner sent you! Have 
 
 
 ## Adding Pokemon to `.bash_profile`
-{: .d-inline-block }
-
-Optional
-{: .label .label-purple }
 
 If you would like your Pokemon to appear when you open ieng6, you may do the following.
 
