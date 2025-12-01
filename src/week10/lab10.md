@@ -32,8 +32,8 @@ If you would like to ask us questions, please fill out this form:
 
 ## Room 2
 
-### Exam prep
+### Work on PAs / Exam prep
 
-If you would like to go over any problems from past exams or problem sets, we can go over them.
-
-If you have any questions about PA5 or the PA4 resubmit, we can go over that as well
+Free time to work on your PAs or prepping for the final exams.
+If you would like to go over any problems from past exams or problem sets, we can go over them like in discussion.
+If you have any questions about PA5 or the PA4 resubmit, we can go over that as well.
