@@ -1,5 +1,15 @@
 # Lab 10 Reference Document
 
+### Room 1: B240 will be the activities room. Activities include but may not be limited to:
+Scripting and Pokemon mailtime – learn how to bash script and use Unix Mail to send each other pokemon, and how to add pokemon to your ieng6 sign in process
+
+Staff AM(Almost)A – you may ask staff members questions about cse29, UCSD, and more
+
+### Room 2: B250 will be the preparations room. Activities include:
+Going over old exam or pset problems to prepare for the makeup exam
+
+Reviewing PA5 or PA4 resubmission topics 
+
 
 ## Room 1
 ### Pokemon and scripting. 
@@ -7,10 +17,12 @@ There is a lab which has been taught many times in this class which involves bas
 
 The starter code for this lab can be found [here](https://github.com/ucsd-cse29/lab10-scripting-and-pokemon)  
 
-This lab can be found [here](https://cse29spring2025.github.io/lab9) among other places.
+This lab can be found [here](https://cse29spring2025.github.io/lab9).
 
 If you would just like the pokemon part of the lab:  
 [Pokemon](pokemon.md)
+
+If you would like a list of pokemon for reference: [here](https://www.pokemon.com/us/pokedex).
 
 ### Staff AM(Almost)A
 
