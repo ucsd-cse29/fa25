@@ -15,9 +15,9 @@ Reviewing PA5 or PA4 resubmission topics
 ### Pokemon and scripting. 
 There is a lab which has been taught many times in this class which involves bash scripting and pokemon. Specifically, it focuses on how to make bash scripts and ends with using a fancy bash script from the internet that prints out pokemon.
 
-The starter code for this lab can be found [here](https://github.com/ucsd-cse29/lab10-scripting-and-pokemon)  
+The starter code for this lab can be found in the github classroom [here](https://classroom.github.com/a/2JAid0LY)  
 
-This lab can be found here -> [github classroom](https://classroom.github.com/a/2JAid0LY).
+This lab can be found [here](https://cse29spring2025.github.io/lab9).
 
 If you would just like the pokemon part of the lab:  
 [Pokemon](pokemon.md)
