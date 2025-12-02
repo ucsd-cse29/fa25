@@ -17,7 +17,7 @@ There is a lab which has been taught many times in this class which involves bas
 
 The starter code for this lab can be found [here](https://github.com/ucsd-cse29/lab10-scripting-and-pokemon)  
 
-This lab can be found [here](https://cse29spring2025.github.io/lab9).
+This lab can be found here -> [github classroom](https://classroom.github.com/a/2JAid0LY).
 
 If you would just like the pokemon part of the lab:  
 [Pokemon](pokemon.md)
