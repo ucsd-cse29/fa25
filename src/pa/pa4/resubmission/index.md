@@ -47,7 +47,7 @@ In this example, there are six `FREE` blocks with the two largest `FREE` blocks 
 
 ## Updated DESIGN question for the resubmission
 
-In our implementation, when freeing an allocated block, we coalesce it with the previous and next blocks in the heap if they are free - to make one larger free block That is, we do **NOT** coalesce backwards.
+In our implementation, when freeing an allocated block, we coalesce it with the previous and next blocks in the heap if they are free - to make one larger free block.
 
 1. Consider an updated implementation where in case of freeing, we only coalesce it with exactly 1 next block in the heap if it is free. Give an example of a program (in C or pseudocode) where all the allocations succeed in the current design (like in this PA), but some allocations would fail with the updated freeing strategy.
 
