@@ -442,6 +442,25 @@ your grade for it. You **cannot** communicate with anyone during the exam.
 
 You can work on problem sets with other students.
 
+### Device Policy
+
+To a large degree, you are responsible for managing your time, attention, and
+learning in lecture, and I hesitate to make policies that attempt to govern or
+restrict your choices with respect to note taking or device use. However,
+lecture is a communal space, and your actions can affect others' learning. In
+particular, what you have on your screen _may be unavoidably in the field of
+view of other students_. Because of this, you are responsible for a fragment of
+the attention of everyone in a cone of space behind you.  With this in mind,
+the policy for lecture is that _if you use a device, you must have
+lecture-related content onscreen_. There is even [research that
+shows](https://www.sciencedirect.com/science/article/pii/S0360131520301007)
+that the content of screens in the classroom, even quite far away, can have a
+detrimental affect on learning. If you cannot resist checking social media,
+playing a game, or doing other off-topic tasks during lecture, sit in the back
+2 rows so that you are only having an affect on your own attention, or the
+attention of others with a similar mindset.
+
+
 ## FAQ/AFQ (Anticipated Frequent Questions)
 
 **Can I attend a lab section other than the one I'm enrolled in?**
